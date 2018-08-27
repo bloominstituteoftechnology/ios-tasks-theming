@@ -10,6 +10,7 @@ import UIKit
 
 enum Appearance {
     static var taskGreen = UIColor(red: 92/255.0, green: 190/255.0, blue: 165/255.0, alpha: 1.0)
+    static var sectionColor = UIColor(red: 226/255.0, green: 203/255.0, blue: 173/255.0, alpha: 1.0)
     
     static func setupAppearance() {
         let textAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
@@ -23,6 +24,7 @@ enum Appearance {
         UIBarButtonItem.appearance().tintColor = .white
         
         UITableViewCell.appearance().backgroundColor = taskGreen
+        UITableViewHeaderFooterView.appearance().tintColor = sectionColor
         
         UILabel.appearance().textColor = .white
         
