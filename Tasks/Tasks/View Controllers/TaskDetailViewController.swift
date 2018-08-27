@@ -14,6 +14,8 @@ class TaskDetailViewController: UIViewController {
         super.viewDidLoad()
 
         updateViews()
+        
+        view.backgroundColor = Appearance.darkBlue
     }
 
     @IBAction func save(_ sender: Any) {
