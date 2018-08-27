@@ -47,6 +47,8 @@ class TaskDetailViewController: UIViewController {
     
     private func updateViews() {
         guard isViewLoaded else { return }
+        view.backgroundColor = Appearance.taskGreen
+        notesTextView.backgroundColor = Appearance.backgroundColor
         
         title = task?.name ?? "Create Task"
         nameTextField.text = task?.name
