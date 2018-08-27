@@ -21,6 +21,10 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateViews()
+        }
+    
+    private func updateViews() {
         tableView.tableFooterView = UIView(frame: .zero)
         tableView.separatorColor = Appearance.tableViewSeperatorColor
     }
