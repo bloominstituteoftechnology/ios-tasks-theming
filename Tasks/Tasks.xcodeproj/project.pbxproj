@@ -18,6 +18,7 @@
 		9D4408E5211FF7CC005E2116 /* TaskDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4408E4211FF7CC005E2116 /* TaskDetailViewController.swift */; };
 		9D70DFF921248F8E006D4DF5 /* TaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D70DFF821248F8E006D4DF5 /* TaskController.swift */; };
 		9D70DFFC21249442006D4DF5 /* TaskRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D70DFFB21249442006D4DF5 /* TaskRepresentation.swift */; };
+		DEFE41E521348A440003674B /* AppearanceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFE41E421348A440003674B /* AppearanceHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		9D70DFF821248F8E006D4DF5 /* TaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskController.swift; sourceTree = "<group>"; };
 		9D70DFFA21249145006D4DF5 /* Tasks 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Tasks 3.xcdatamodel"; sourceTree = "<group>"; };
 		9D70DFFB21249442006D4DF5 /* TaskRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRepresentation.swift; sourceTree = "<group>"; };
+		DEFE41E421348A440003674B /* AppearanceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				9D4408E6211FF988005E2116 /* Model Controllers */,
 				9D4408DA211FF50D005E2116 /* View Controllers */,
 				9D4408D8211FF4BA005E2116 /* Resources */,
+				DEFE41E421348A440003674B /* AppearanceHelper.swift */,
 			);
 			path = Tasks;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 			files = (
 				9D70DFF921248F8E006D4DF5 /* TaskController.swift in Sources */,
 				9D70DFFC21249442006D4DF5 /* TaskRepresentation.swift in Sources */,
+				DEFE41E521348A440003674B /* AppearanceHelper.swift in Sources */,
 				9D4408E5211FF7CC005E2116 /* TaskDetailViewController.swift in Sources */,
 				9D4408DD211FF51C005E2116 /* Tasks.xcdatamodeld in Sources */,
 				9D4408E3211FF752005E2116 /* TasksTableViewController.swift in Sources */,
