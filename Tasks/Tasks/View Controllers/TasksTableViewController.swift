@@ -11,6 +11,12 @@ import CoreData
 
 class TasksTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    
+    }
+    
     @IBAction func refresh(_ sender: Any) {
         taskController.fetchTasksFromServer { _ in
             DispatchQueue.main.async {
@@ -34,6 +40,8 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         
         let task = fetchedResultsController.object(at: indexPath)
         cell.textLabel?.text = task.name
+        
+        style(cell: cell)
         
         return cell
     }
@@ -68,8 +76,13 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         }
     }
     
-    // MARK: - NSFetchedResultsControllerDelegate
+    // MARK: - UI Style Methods
     
+    private func style(cell: UITableViewCell) {
+        cell.textLabel?.font = Appearance.applicationFont(with: .title2, pointSize: 25)
+    }
+    
+    // MARK: - NSFetchedResultsControllerDelegate
     
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tableView.beginUpdates()
