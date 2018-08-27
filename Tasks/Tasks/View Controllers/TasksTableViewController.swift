@@ -19,6 +19,11 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         }
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.tableFooterView = UIView(frame: .zero)
+    }
+    
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
