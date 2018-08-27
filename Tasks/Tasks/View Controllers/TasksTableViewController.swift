@@ -10,7 +10,11 @@ import UIKit
 import CoreData
 
 class TasksTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
-    
+
+
+	override func viewDidLoad() {
+	}
+
     @IBAction func refresh(_ sender: Any) {
         taskController.fetchTasksFromServer { _ in
             DispatchQueue.main.async {
@@ -20,6 +24,26 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
     }
     
     // MARK: - Table view data source
+	override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+		guard let view = view as? UITableViewHeaderFooterView else {return}
+
+		guard let sectionInfo = fetchedResultsController.sections?[section] else { return }
+		// this is kinda weak, but it's it's a little tricky
+		// with the fetched results thing so this is fine
+		switch(sectionInfo.name.capitalized) {
+		case "Critical":
+			view.textLabel?.textColor = Appearance.salmon
+		case "High":
+			view.textLabel?.textColor = Appearance.skies
+		case "Normal":
+			view.textLabel?.textColor = Appearance.cream
+		case "Low":
+			view.textLabel?.textColor = Appearance.grass
+		default:
+			break
+		}
+
+	}
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return fetchedResultsController.sections?.count ?? 1
