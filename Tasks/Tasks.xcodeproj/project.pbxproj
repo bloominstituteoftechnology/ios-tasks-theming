@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8FBBD7E82134804100502B3D /* AppearanceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBBD7E72134804100502B3D /* AppearanceHelper.swift */; };
+		8FBBD7EB2134950D00502B3D /* SFBurlingtonScript.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8FBBD7EA2134950D00502B3D /* SFBurlingtonScript.ttf */; };
 		9D4408C7211FF431005E2116 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4408C6211FF431005E2116 /* AppDelegate.swift */; };
 		9D4408CC211FF431005E2116 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D4408CA211FF431005E2116 /* Main.storyboard */; };
 		9D4408CE211FF434005E2116 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D4408CD211FF434005E2116 /* Assets.xcassets */; };
@@ -23,7 +24,7 @@
 
 /* Begin PBXFileReference section */
 		8FBBD7E72134804100502B3D /* AppearanceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceHelper.swift; sourceTree = "<group>"; };
-		8FBBD7E921348B3100502B3D /* madison.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = madison.ttf; sourceTree = "<group>"; };
+		8FBBD7EA2134950D00502B3D /* SFBurlingtonScript.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFBurlingtonScript.ttf; sourceTree = "<group>"; };
 		9D4408C3211FF431005E2116 /* Tasks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tasks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D4408C6211FF431005E2116 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D4408CB211FF431005E2116 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -88,7 +89,7 @@
 				9D4408CF211FF434005E2116 /* LaunchScreen.storyboard */,
 				9D4408D2211FF434005E2116 /* Info.plist */,
 				8FBBD7E72134804100502B3D /* AppearanceHelper.swift */,
-				8FBBD7E921348B3100502B3D /* madison.ttf */,
+				8FBBD7EA2134950D00502B3D /* SFBurlingtonScript.ttf */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -179,6 +180,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FBBD7EB2134950D00502B3D /* SFBurlingtonScript.ttf in Resources */,
 				9D4408D1211FF434005E2116 /* LaunchScreen.storyboard in Resources */,
 				9D4408CE211FF434005E2116 /* Assets.xcassets in Resources */,
 				9D4408CC211FF431005E2116 /* Main.storyboard in Resources */,

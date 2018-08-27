@@ -13,11 +13,26 @@ enum Appearance {
     
     static func setupAppearance() {
         let textAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        
         UINavigationBar.appearance().barTintColor = taskGreen
         UINavigationBar.appearance().titleTextAttributes = textAttributes
         UINavigationBar.appearance().largeTitleTextAttributes = textAttributes
+        
         UISegmentedControl.appearance().tintColor = taskGreen
+        
         UIBarButtonItem.appearance().tintColor = .white
-        //UILabel.appearance().textColor = .white
+        
+        UITableViewCell.appearance().backgroundColor = taskGreen
+        
+        UILabel.appearance().textColor = .white
+        
+        UITextField.appearance().tintColor = taskGreen
+        UITextView.appearance().tintColor = taskGreen
+        
+    }
+    
+    static func applicationFont(pointSize: CGFloat) -> UIFont {
+        let result = UIFont(name: "SF Burlington Script", size: pointSize)!
+        return result
     }
 }
