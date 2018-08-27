@@ -12,6 +12,7 @@ class TaskDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+		view.backgroundColor = Appearance.umbra
 
         updateViews()
     }
@@ -54,13 +55,23 @@ class TaskDetailViewController: UIViewController {
         if let taskPriority = task?.priority {
             priority = TaskPriority(rawValue: taskPriority)!
         } else {
-            priority = .normal
+            priority = .critical
         }
         priorityControl.selectedSegmentIndex = TaskPriority.allPriorities.index(of: priority)!
         notesTextView.text = task?.notes
     }
     
-    // MARK: Properties
+	@IBAction func priorityChanged(_ sender: Any) {
+		let priorityColors = [
+			Appearance.grass,
+			Appearance.cream,
+			Appearance.skies,
+			Appearance.salmon,
+		]
+
+		priorityControl.tintColor = priorityColors[priorityControl.selectedSegmentIndex]
+	}
+	// MARK: Properties
     
     var task: Task? {
         didSet {
