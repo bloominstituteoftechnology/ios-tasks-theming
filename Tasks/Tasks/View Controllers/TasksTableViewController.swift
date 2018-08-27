@@ -22,12 +22,11 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
   // MARK: - Table view data source
   override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
     guard let sectionInfo = fetchedResultsController.sections?[section] else { return nil }
-//        return sectionInfo.name.capitalized
     return Appearance.setupTableViewSectionHeaders(section: section, sectionName: sectionInfo.name.capitalized)
   }
 
   override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-    return 45
+    return 105
   }
   
   override func numberOfSections(in tableView: UITableView) -> Int {

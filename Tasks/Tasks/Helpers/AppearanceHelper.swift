@@ -16,16 +16,20 @@ enum Appearance {
   }
 
   static func setupTableViewSectionHeaders(section: Int, sectionName: String) -> UIView {
+    let result = UIFont(name: "OpenSans-Regular", size: 20)!
+    
     let view = UIView()
 
     let label = UILabel()
     label.text = sectionName
+//    let font = UIFont.systemFont(ofSize: 20, weight: UIFont.Weight(rawValue: 0))
+    label.font = UIFontMetrics(forTextStyle: .caption1).scaledFont(for: result)
     label.textColor = .white
-    label.frame = CGRect(x: 16, y: 5, width: 100, height: 35)
+    label.frame = CGRect(x: 16, y: 5, width: 200, height: 95)
     view.addSubview(label)
-
+    
     if section == 0 {
-      view.backgroundColor = UIColor(red: 0.95, green: 0.15, blue: 0.07, alpha: 0.75)
+      view.backgroundColor = UIColor(red: 0.95, green: 0.15, blue: 0.07, alpha: 1.0)
     } else if section == 1 {
       view.backgroundColor = UIColor(red: 0.98, green: 0.41, blue: 0.05, alpha: 1.0)
     } else if section == 3 {

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		134AA21F21348A7F00EE15DB /* AppearanceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134AA21E21348A7F00EE15DB /* AppearanceHelper.swift */; };
+		13CF638A2134ADEC0096D5A8 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 13CF63882134ADEC0096D5A8 /* OpenSans-Regular.ttf */; };
+		13CF638B2134ADEC0096D5A8 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 13CF63892134ADEC0096D5A8 /* OpenSans-Bold.ttf */; };
 		9D4408C7211FF431005E2116 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4408C6211FF431005E2116 /* AppDelegate.swift */; };
 		9D4408CC211FF431005E2116 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D4408CA211FF431005E2116 /* Main.storyboard */; };
 		9D4408CE211FF434005E2116 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D4408CD211FF434005E2116 /* Assets.xcassets */; };
@@ -23,6 +25,8 @@
 
 /* Begin PBXFileReference section */
 		134AA21E21348A7F00EE15DB /* AppearanceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceHelper.swift; sourceTree = "<group>"; };
+		13CF63882134ADEC0096D5A8 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		13CF63892134ADEC0096D5A8 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		9D4408C3211FF431005E2116 /* Tasks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tasks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D4408C6211FF431005E2116 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D4408CB211FF431005E2116 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -91,6 +95,8 @@
 		9D4408D8211FF4BA005E2116 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				13CF63892134ADEC0096D5A8 /* OpenSans-Bold.ttf */,
+				13CF63882134ADEC0096D5A8 /* OpenSans-Regular.ttf */,
 				9D4408CA211FF431005E2116 /* Main.storyboard */,
 				9D4408CD211FF434005E2116 /* Assets.xcassets */,
 				9D4408CF211FF434005E2116 /* LaunchScreen.storyboard */,
@@ -187,6 +193,8 @@
 			files = (
 				9D4408D1211FF434005E2116 /* LaunchScreen.storyboard in Resources */,
 				9D4408CE211FF434005E2116 /* Assets.xcassets in Resources */,
+				13CF638A2134ADEC0096D5A8 /* OpenSans-Regular.ttf in Resources */,
+				13CF638B2134ADEC0096D5A8 /* OpenSans-Bold.ttf in Resources */,
 				9D4408CC211FF431005E2116 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
