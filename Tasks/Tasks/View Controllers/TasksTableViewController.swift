@@ -61,7 +61,7 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         var headerLabel = UILabel()
         headerLabel = UILabel(frame: CGRect(x: 12, y: 0, width: tableView.frame.size.width, height: 34))
         headerLabel.textColor = UIColor.white
-        headerLabel.font =  UIFont.systemFont(ofSize: 20.0)
+        headerLabel.font = UIFont(name: "foo", size: 30)
         headerLabel.text = self.tableView(self.tableView, titleForHeaderInSection: section)
         headerView.addSubview(headerLabel)
         

@@ -21,19 +21,27 @@ enum Appearance
     {
         UINavigationBar.appearance().barTintColor = darkSalmonColor
         
-        let textAttributes = [NSAttributedStringKey.foregroundColor: offWhiteColor]
+        let navigationFont = UIFont(name: "Penguin Attack", size: 20)!
+        let navigationLargeFont = UIFont(name: "foo", size: 44)! //34 is Large Title size by default
+        
+        let textAttributes = [NSAttributedStringKey.foregroundColor: offWhiteColor, NSAttributedStringKey.font: navigationFont]
         UINavigationBar.appearance().titleTextAttributes = textAttributes
-        UINavigationBar.appearance().largeTitleTextAttributes = textAttributes
+        
+        let largeTextAttributes = [NSAttributedStringKey.foregroundColor: offWhiteColor, NSAttributedStringKey.font: navigationLargeFont]
+        UINavigationBar.appearance().largeTitleTextAttributes = largeTextAttributes
         
         UIBarButtonItem.appearance().tintColor = offWhiteColor
         UILabel.appearance().textColor = darkSalmonColor
+        UILabel.appearance().font = applicationFont(with: .caption1, pointSize: 30)
         UISegmentedControl.appearance().tintColor = darkSalmonColor
-        //UILabel.appearance().backgroundColor = .clear
-        
-        //UIView.appearance().backgroundColor = lightSalmonColor
-        //UITableViewCell.appearance().backgroundColor = lowAlphaSalmonColor
-        
+        UITextField.appearance().tintColor = mediumSalmonColor
         UITableViewCell.appearance().backgroundColor = lightSalmonColor
         
+    }
+    
+    static func applicationFont(with textStyle: UIFontTextStyle, pointSize: CGFloat) -> UIFont
+    {
+        let result = UIFont(name: "Penguin Attack", size: pointSize)!
+        return UIFontMetrics(forTextStyle: textStyle).scaledFont(for: result)
     }
 }
