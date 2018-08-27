@@ -21,9 +21,11 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
   
   // MARK: - Table view data source
   override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-    return Appearance.setupTableViewSectionHeaders(section: section)
+    guard let sectionInfo = fetchedResultsController.sections?[section] else { return nil }
+//        return sectionInfo.name.capitalized
+    return Appearance.setupTableViewSectionHeaders(section: section, sectionName: sectionInfo.name.capitalized)
   }
-  
+
   override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
     return 45
   }
@@ -45,10 +47,11 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
     return cell
   }
   
-  override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-    guard let sectionInfo = fetchedResultsController.sections?[section] else { return nil }
-    return sectionInfo.name.capitalized
-  }
+//  override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//    print(section)
+//    guard let sectionInfo = fetchedResultsController.sections?[section] else { return nil }
+//    return sectionInfo.name.capitalized
+//  }
   
   override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
     if editingStyle == .delete {

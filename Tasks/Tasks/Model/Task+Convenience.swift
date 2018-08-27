@@ -11,19 +11,19 @@ import CoreData
 
 enum TaskPriority: String {
     case low
-    case normal
+    case medium
     case high
     case critical
     
     static var allPriorities: [TaskPriority] {
-        return [.low, .normal, .high, .critical]
+        return [.low, .medium, .high, .critical]
     }
 }
 
 extension Task {
     convenience init(name: String,
                      notes: String? = nil,
-                     priority: TaskPriority = .normal,
+                     priority: TaskPriority = .medium,
                      identifier: UUID = UUID(),
                      context: NSManagedObjectContext = CoreDataStack.shared.mainContext) {
         self.init(context: context)
