@@ -11,6 +11,12 @@ import CoreData
 
 class TasksTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setStyles()
+    }
+    
     @IBAction func refresh(_ sender: Any) {
         taskController.fetchTasksFromServer { _ in
             DispatchQueue.main.async {
@@ -34,8 +40,21 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         
         let task = fetchedResultsController.object(at: indexPath)
         cell.textLabel?.text = task.name
+        cell.textLabel?.font = Appearance.applicationFont(with: .caption1, pointSize: 30)
+        cell.textLabel?.tintColor = Appearance.darkBlue
+        //cell.backgroundColor = Appearance.lightBlue
         
         return cell
+    }
+    
+    private func setStyles() {
+        tableView.separatorColor = Appearance.mediumBlue
+        tableView.sectionHeaderHeight = 40
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        let header = view as! UITableViewHeaderFooterView
+        header.textLabel?.textColor = .white
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -46,7 +65,6 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let task = fetchedResultsController.object(at: indexPath)
-            
             
             taskController.deleteTaskFromServer(task) { (error) in
                 if let error = error {

@@ -8,11 +8,12 @@
 
 import UIKit
 
-class TaskDetailViewController: UIViewController {
+class TaskDetailViewController: UIViewController, UITextViewDelegate, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        notesTextView.delegate = self
+        nameTextField.delegate = self
         updateViews()
     }
 
@@ -45,6 +46,33 @@ class TaskDetailViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
+    // MARK: - TextFieldDelegate
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        nameTextField.layer.borderWidth = 2.0
+        nameTextField.layer.borderColor = Appearance.turqoise.cgColor
+        nameTextField.layer.cornerRadius = 10
+        nameTextField.clipsToBounds = true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        nameTextField.layer.borderWidth = 0
+        nameTextField.layer.borderColor = nil
+    }
+    
+    // MARK: - TextViewDelegate
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        notesTextView.layer.borderWidth = 2.0
+        notesTextView.layer.borderColor = Appearance.turqoise.cgColor
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        notesTextView.layer.borderWidth = 0
+        notesTextView.layer.borderColor = nil
+        
+    }
+    
     private func updateViews() {
         guard isViewLoaded else { return }
         
@@ -58,6 +86,18 @@ class TaskDetailViewController: UIViewController {
         }
         priorityControl.selectedSegmentIndex = TaskPriority.allPriorities.index(of: priority)!
         notesTextView.text = task?.notes
+        
+        styleButton()
+        view.backgroundColor = Appearance.darkBlue
+        notesTextView.layer.cornerRadius = 10
+        notesTextView.clipsToBounds = true
+    }
+    
+    private func styleButton() {
+        let cornerRadius = saveButton.frame.height / 2
+        saveButton.layer.cornerRadius = cornerRadius
+        saveButton.backgroundColor = Appearance.turqoise
+        saveButton.tintColor = .white
     }
     
     // MARK: Properties
@@ -73,4 +113,5 @@ class TaskDetailViewController: UIViewController {
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var priorityControl: UISegmentedControl!
     @IBOutlet var notesTextView: UITextView!
+    @IBOutlet weak var saveButton: UIButton!
 }
