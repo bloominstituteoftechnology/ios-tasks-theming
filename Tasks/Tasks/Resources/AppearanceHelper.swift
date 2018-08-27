@@ -31,8 +31,8 @@ enum Appearance {
         
     }
     
-    static func applicationFont(pointSize: CGFloat) -> UIFont {
+    static func applicationFont(withTextStyle textStyle: UIFontTextStyle, pointSize: CGFloat) -> UIFont {
         let result = UIFont(name: "SF Burlington Script", size: pointSize)!
-        return result
+        return UIFontMetrics(forTextStyle: textStyle).scaledFont(for: result)
     }
 }

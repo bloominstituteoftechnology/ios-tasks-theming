@@ -41,7 +41,7 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
     }
     
     private func style(cell: UITableViewCell) {
-        cell.textLabel?.font = Appearance.applicationFont(pointSize: 30)
+        cell.textLabel?.font = Appearance.applicationFont(withTextStyle: .title1, pointSize: 30)
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
