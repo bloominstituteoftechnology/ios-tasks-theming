@@ -41,5 +41,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>5thgradecursive-2.ttf</string>
+		<string>rm_typerighter_medium.ttf</string>
+		<string>Tahu!.ttf</string>
+	</array>
 </dict>
 </plist>

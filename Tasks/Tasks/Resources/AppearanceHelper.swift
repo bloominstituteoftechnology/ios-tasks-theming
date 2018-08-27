@@ -36,7 +36,7 @@ enum Appearance {
     }
     
     static func titleFont(with textStyle: UIFontTextStyle, pointSize: CGFloat) -> UIFont {
-        let result = UIFont(name: "Avenir next", size: pointSize)!
+        let result = UIFont(name: "Tahu!", size: pointSize)!
         
         return UIFontMetrics(forTextStyle: textStyle).scaledFont(for: result)
     }
