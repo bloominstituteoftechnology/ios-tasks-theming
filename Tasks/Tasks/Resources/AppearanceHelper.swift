@@ -24,6 +24,12 @@ enum Appearance {
         UIBarButtonItem.appearance().tintColor = purple
         UISegmentedControl.appearance().tintColor = purple
         
+        UITableViewCell.appearance().backgroundColor = backgroundBlack
+        
+        UITextField.appearance().keyboardAppearance = .dark
+        UITextField.appearance().tintColor = purple
+        UITextView.appearance().tintColor = purple
+        
     }
     
 }
