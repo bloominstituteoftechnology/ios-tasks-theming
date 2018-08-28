@@ -11,6 +11,11 @@ import CoreData
 
 class TasksTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    
+    }
+    
     @IBAction func refresh(_ sender: Any) {
         taskController.fetchTasksFromServer { _ in
             DispatchQueue.main.async {
@@ -35,6 +40,8 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         let task = fetchedResultsController.object(at: indexPath)
         cell.textLabel?.text = task.name
         
+        style(cell: cell)
+        
         return cell
     }
     
@@ -42,6 +49,38 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         guard let sectionInfo = fetchedResultsController.sections?[section] else { return nil }
         return sectionInfo.name.capitalized
     }
+    
+//    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//
+//        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: 30))
+//        if section == 0 {
+//            headerView.backgroundColor = Appearance.bloodOrange
+//        } else {
+//            headerView.backgroundColor = UIColor.clear
+//        }
+//        return headerView
+//    }
+    // Problem: can't display text, just color
+    
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        
+        switch section {
+        case 0:
+            view.tintColor = Appearance.yellow
+        case 1:
+            view.tintColor = Appearance.orange
+        case 2:
+            view.tintColor = Appearance.lime
+        case 3:
+            view.tintColor = Appearance.cyan
+        default:
+            view.tintColor = UIColor.white
+        }
+//        view.tintColor = Appearance.yellow
+        let header = view as! UITableViewHeaderFooterView
+        header.textLabel?.textColor = Appearance.darkBlue
+    }
+    
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
@@ -68,8 +107,13 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         }
     }
     
-    // MARK: - NSFetchedResultsControllerDelegate
+    // MARK: - UI Style Methods
     
+    private func style(cell: UITableViewCell) {
+        cell.textLabel?.font = Appearance.applicationFont(with: .title2, pointSize: 20)
+    }
+    
+    // MARK: - NSFetchedResultsControllerDelegate
     
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tableView.beginUpdates()
