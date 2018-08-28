@@ -15,6 +15,7 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         super.viewDidLoad()
         
         tableView.backgroundColor = Appearance.backgroundYellow
+        
     }
     
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
