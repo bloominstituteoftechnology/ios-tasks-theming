@@ -72,7 +72,7 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         case 2:
             view.tintColor = Appearance.lime
         case 3:
-            view.tintColor = Appearance.bloodOrange
+            view.tintColor = Appearance.cyan
         default:
             view.tintColor = UIColor.white
         }

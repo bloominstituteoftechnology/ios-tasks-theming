@@ -16,6 +16,7 @@ class TaskDetailViewController: UIViewController {
         updateViews()
         
         view.backgroundColor = Appearance.darkBlue
+        changeColorOfEachSegment()
     }
 
     @IBAction func save(_ sender: Any) {
@@ -60,6 +61,13 @@ class TaskDetailViewController: UIViewController {
         }
         priorityControl.selectedSegmentIndex = TaskPriority.allPriorities.index(of: priority)!
         notesTextView.text = task?.notes
+    }
+    
+    private func changeColorOfEachSegment() {
+        (priorityControl.subviews[0] as UIView).tintColor = Appearance.yellow
+        (priorityControl.subviews[1] as UIView).tintColor = Appearance.cyan
+        (priorityControl.subviews[2] as UIView).tintColor = Appearance.lime
+        (priorityControl.subviews[3] as UIView).tintColor = Appearance.pink
     }
     
     // MARK: Properties
