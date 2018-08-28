@@ -18,6 +18,10 @@
 		9D4408E5211FF7CC005E2116 /* TaskDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4408E4211FF7CC005E2116 /* TaskDetailViewController.swift */; };
 		9D70DFF921248F8E006D4DF5 /* TaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D70DFF821248F8E006D4DF5 /* TaskController.swift */; };
 		9D70DFFC21249442006D4DF5 /* TaskRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D70DFFB21249442006D4DF5 /* TaskRepresentation.swift */; };
+		DEFE41E521348A440003674B /* AppearanceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFE41E421348A440003674B /* AppearanceHelper.swift */; };
+		DEFE41E82134B20D0003674B /* actionis.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DEFE41E62134AED40003674B /* actionis.ttf */; };
+		DEFE41E92134B2100003674B /* PenguinAttack.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DEFE41E72134B13D0003674B /* PenguinAttack.ttf */; };
+		DEFE41EB2134B6360003674B /* foo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DEFE41EA2134B6360003674B /* foo.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,10 @@
 		9D70DFF821248F8E006D4DF5 /* TaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskController.swift; sourceTree = "<group>"; };
 		9D70DFFA21249145006D4DF5 /* Tasks 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Tasks 3.xcdatamodel"; sourceTree = "<group>"; };
 		9D70DFFB21249442006D4DF5 /* TaskRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRepresentation.swift; sourceTree = "<group>"; };
+		DEFE41E421348A440003674B /* AppearanceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceHelper.swift; sourceTree = "<group>"; };
+		DEFE41E62134AED40003674B /* actionis.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = actionis.ttf; sourceTree = "<group>"; };
+		DEFE41E72134B13D0003674B /* PenguinAttack.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PenguinAttack.ttf; sourceTree = "<group>"; };
+		DEFE41EA2134B6360003674B /* foo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = foo.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +81,7 @@
 				9D4408E6211FF988005E2116 /* Model Controllers */,
 				9D4408DA211FF50D005E2116 /* View Controllers */,
 				9D4408D8211FF4BA005E2116 /* Resources */,
+				DEFE41E421348A440003674B /* AppearanceHelper.swift */,
 			);
 			path = Tasks;
 			sourceTree = "<group>";
@@ -84,6 +93,9 @@
 				9D4408CD211FF434005E2116 /* Assets.xcassets */,
 				9D4408CF211FF434005E2116 /* LaunchScreen.storyboard */,
 				9D4408D2211FF434005E2116 /* Info.plist */,
+				DEFE41E62134AED40003674B /* actionis.ttf */,
+				DEFE41EA2134B6360003674B /* foo.ttf */,
+				DEFE41E72134B13D0003674B /* PenguinAttack.ttf */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -176,6 +188,9 @@
 			files = (
 				9D4408D1211FF434005E2116 /* LaunchScreen.storyboard in Resources */,
 				9D4408CE211FF434005E2116 /* Assets.xcassets in Resources */,
+				DEFE41E82134B20D0003674B /* actionis.ttf in Resources */,
+				DEFE41EB2134B6360003674B /* foo.ttf in Resources */,
+				DEFE41E92134B2100003674B /* PenguinAttack.ttf in Resources */,
 				9D4408CC211FF431005E2116 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -189,6 +204,7 @@
 			files = (
 				9D70DFF921248F8E006D4DF5 /* TaskController.swift in Sources */,
 				9D70DFFC21249442006D4DF5 /* TaskRepresentation.swift in Sources */,
+				DEFE41E521348A440003674B /* AppearanceHelper.swift in Sources */,
 				9D4408E5211FF7CC005E2116 /* TaskDetailViewController.swift in Sources */,
 				9D4408DD211FF51C005E2116 /* Tasks.xcdatamodeld in Sources */,
 				9D4408E3211FF752005E2116 /* TasksTableViewController.swift in Sources */,

@@ -12,7 +12,16 @@ class TaskDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        view.backgroundColor = Appearance.lightSalmonColor
+        
+        let font = Appearance.applicationFont(with: .caption1, pointSize: 18)
+        priorityControl.setTitleTextAttributes([NSAttributedStringKey.font: font], for: .normal)
+        nameTextField.textColor = Appearance.darkTextColor
+        nameTextField.font = Appearance.applicationFont(with: .caption1, pointSize: 30)
+        notesTextView.textColor = Appearance.darkTextColor
+        notesTextView.font = Appearance.applicationFont(with: .caption1, pointSize: 30)
+        
+        
         updateViews()
     }
 

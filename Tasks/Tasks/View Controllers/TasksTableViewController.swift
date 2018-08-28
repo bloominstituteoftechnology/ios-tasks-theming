@@ -19,6 +19,12 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         }
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.separatorColor = Appearance.mediumSalmonColor
+        tableView.tableFooterView = UIView(frame: CGRect.zero)
+    }
+    
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -40,7 +46,32 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         guard let sectionInfo = fetchedResultsController.sections?[section] else { return nil }
+        
         return sectionInfo.name.capitalized
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView?
+    {
+        let headerView = UIView()
+        headerView.backgroundColor = Appearance.salmonColor
+        var headerLabel = UILabel()
+        headerLabel = UILabel(frame: CGRect(x: 12, y: 0, width: tableView.frame.size.width, height: 34))
+        headerLabel.numberOfLines = 0
+        headerLabel.textColor = UIColor.white
+        headerLabel.font = UIFont(name: "foo", size: 30)
+        headerLabel.text = self.tableView(self.tableView, titleForHeaderInSection: section)
+        headerView.addSubview(headerLabel)
+        
+        return headerView
+    }
+    
+    override func tableView(_ tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
+        return 34
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat
+    {
+        return UITableViewAutomaticDimension
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {

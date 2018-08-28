@@ -41,5 +41,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>actionis.ttf</string>
+		<string>PenguinAttack.ttf</string>
+		<string>foo.ttf</string>
+	</array>
 </dict>
 </plist>
