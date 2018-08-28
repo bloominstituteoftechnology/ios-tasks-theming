@@ -21,8 +21,9 @@ enum Appearance
     {
         UINavigationBar.appearance().barTintColor = darkSalmonColor
         
-        let navigationFont = UIFont(name: "Penguin Attack", size: 20)!
-        let navigationLargeFont = UIFont(name: "foo", size: 44)! //34 is Large Title size by default
+        let navigationFont = applicationFont(with: .title1, pointSize: 20)
+        let largeFont = UIFont(name: "foo", size: 35)
+        let navigationLargeFont = UIFontMetrics(forTextStyle: .headline).scaledFont(for: largeFont!)
         
         let textAttributes = [NSAttributedStringKey.foregroundColor: offWhiteColor, NSAttributedStringKey.font: navigationFont]
         UINavigationBar.appearance().titleTextAttributes = textAttributes
@@ -35,6 +36,7 @@ enum Appearance
         UILabel.appearance().font = applicationFont(with: .caption1, pointSize: 30)
         UISegmentedControl.appearance().tintColor = darkSalmonColor
         UITextField.appearance().tintColor = mediumSalmonColor
+        UITextView.appearance().tintColor = mediumSalmonColor
         UITableViewCell.appearance().backgroundColor = lightSalmonColor
         
     }

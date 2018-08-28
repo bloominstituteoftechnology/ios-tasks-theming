@@ -41,12 +41,8 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         let task = fetchedResultsController.object(at: indexPath)
         cell.textLabel?.text = task.name
         
-        
-        
         return cell
     }
-    
-    
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         guard let sectionInfo = fetchedResultsController.sections?[section] else { return nil }
@@ -60,6 +56,7 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         headerView.backgroundColor = Appearance.salmonColor
         var headerLabel = UILabel()
         headerLabel = UILabel(frame: CGRect(x: 12, y: 0, width: tableView.frame.size.width, height: 34))
+        headerLabel.numberOfLines = 0
         headerLabel.textColor = UIColor.white
         headerLabel.font = UIFont(name: "foo", size: 30)
         headerLabel.text = self.tableView(self.tableView, titleForHeaderInSection: section)
@@ -68,9 +65,13 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         return headerView
     }
     
+    override func tableView(_ tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
+        return 34
+    }
+    
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat
     {
-        return 34
+        return UITableViewAutomaticDimension
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {

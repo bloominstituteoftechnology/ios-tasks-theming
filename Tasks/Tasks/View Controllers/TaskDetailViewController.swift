@@ -14,11 +14,12 @@ class TaskDetailViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = Appearance.lightSalmonColor
         
-        let font = UIFont(name: "Penguin Attack", size: 17)
-        priorityControl.setTitleTextAttributes([NSAttributedStringKey.font: font!], for: .normal)
+        let font = Appearance.applicationFont(with: .caption1, pointSize: 18)
+        priorityControl.setTitleTextAttributes([NSAttributedStringKey.font: font], for: .normal)
         nameTextField.textColor = Appearance.darkTextColor
+        nameTextField.font = Appearance.applicationFont(with: .caption1, pointSize: 30)
         notesTextView.textColor = Appearance.darkTextColor
-        notesTextView.font = UIFont(name: "Penguin Attack", size: 25)
+        notesTextView.font = Appearance.applicationFont(with: .caption1, pointSize: 30)
         
         
         updateViews()
