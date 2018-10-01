@@ -49,12 +49,7 @@ class TaskDetailViewController: UIViewController {
     @IBAction func updatePriority(_ sender: Any) {
         let priorityIndex = priorityControl.selectedSegmentIndex
         let priority = TaskPriority.allPriorities[priorityIndex]
-        switch priority {
-        case .critical: styleAccents(with: Appearance.criticalPriorityColor)
-        case .high: styleAccents(with: Appearance.highPriorityColor)
-        case .normal: styleAccents(with: Appearance.normalPriorityColor)
-        case .low: styleAccents(with: Appearance.lowPriorityColor)
-        }
+        styleAccents(for: priority)
     }
     
     private func updateViews() {
@@ -68,12 +63,8 @@ class TaskDetailViewController: UIViewController {
         } else {
             priority = .normal
         }
-        switch priority {
-        case .critical: styleAccents(with: Appearance.criticalPriorityColor)
-        case .high: styleAccents(with: Appearance.highPriorityColor)
-        case .normal: styleAccents(with: Appearance.normalPriorityColor)
-        case .low: styleAccents(with: Appearance.lowPriorityColor)
-        }
+        
+        styleAccents(for: priority)
         priorityControl.selectedSegmentIndex = TaskPriority.allPriorities.index(of: priority)!
         notesTextView.text = task?.notes
     }
@@ -89,12 +80,23 @@ class TaskDetailViewController: UIViewController {
 
     }
     
-    private func styleAccents(with color: UIColor) {
+    private func styleAccents(for priority: TaskPriority) {
+        var color: UIColor
+        
+        switch priority {
+        case .critical: color = Appearance.criticalPriorityColor
+        case .high: color = Appearance.highPriorityColor
+        case .normal: color = Appearance.normalPriorityColor
+        case .low: color = Appearance.lowPriorityColor
+        }
+        
+        color = Appearance.colorForPosition(color: color, position: 6)
+        
         nameTextField.tintColor = color
         priorityControl.tintColor = color
         notesTextView.tintColor = color
         navigationController?.navigationBar.largeTitleTextAttributes = [.foregroundColor: color, .font: Appearance.applicationFont(with: .title1, at: 30)]
-        navigationController?.navigationItem.backBarButtonItem?.tintColor = color
+        navigationController?.navigationBar.tintColor = color
     }
     
     // MARK: Properties

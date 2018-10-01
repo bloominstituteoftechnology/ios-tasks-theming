@@ -11,14 +11,12 @@ import CoreData
 
 class TasksTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         navigationController?.navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor.white, .font: Appearance.applicationFont(with: .title1, at: 30)]
+        navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.isTranslucent = false
     }
     
     @IBAction func refresh(_ sender: Any) {
@@ -92,8 +90,6 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
     }
     
     // MARK: - NSFetchedResultsControllerDelegate
-    
-    
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tableView.beginUpdates()
     }
@@ -139,9 +135,7 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         }
     }
     
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    // MARK: - Navigation]
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowTaskDetail" {
             let detailVC = segue.destination as! TaskDetailViewController

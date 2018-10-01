@@ -11,18 +11,14 @@ import UIKit
 enum Appearance {
     static let darkBackground = UIColor(red: 0.125, green: 0.125, blue: 0.145, alpha: 1)
     static let criticalPriorityColor = UIColor(red: 122/255, green: 40/255, blue: 38/255, alpha: 1)
-    static let highPriorityColor = UIColor(red: 145/255, green: 83/255, blue: 37/255, alpha: 1)
+    static let highPriorityColor = UIColor(red: 168/255, green: 96/255, blue: 43/255, alpha: 1)
     static let normalPriorityColor = UIColor(red: 166/255, green: 136/255, blue: 43/255, alpha: 1)
-    static let lowPriorityColor = UIColor(red: 57/255, green: 54/255, blue: 140/255, alpha: 1)
+    static let lowPriorityColor = UIColor(red: 65/255, green: 58/255, blue: 171/255, alpha: 1)
     
     static func setupDarkTheme() {
         
         UINavigationBar.appearance().barTintColor = darkBackground
-        //let attributedStringKeys = [NSAttributedString.Key.foregroundColor: UIColor.white]
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white, .font: applicationFont(with: .title1, at: 16)]
-        //UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.white, .font: applicationFont(with: .title1, at: 24)]
-        
-        UIBarButtonItem.appearance().tintColor = .white
         
         UITableView.appearance().backgroundColor = darkBackground
         UITableViewCell.appearance().backgroundColor = darkBackground
