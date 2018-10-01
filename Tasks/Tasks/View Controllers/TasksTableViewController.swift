@@ -19,6 +19,11 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         }
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "Pricedown", size: 20)!]
+    }
+    
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -40,6 +45,7 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
     
     private func style(cell: UITableViewCell) {
         cell.textLabel?.textColor = .white
+        //cell.textLabel?.font = Appearance.applicationFont(pointSize: 26)
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {

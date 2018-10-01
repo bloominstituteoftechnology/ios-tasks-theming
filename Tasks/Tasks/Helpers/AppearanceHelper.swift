@@ -14,9 +14,12 @@ enum Appearance {
     static var royalBlue = UIColor(red: 21.0/255.0, green: 51.0/255.0, blue: 145.0/255.0, alpha: 1.0)
     
     static func setDarkBlueAppearance() {
-        UINavigationBar.appearance().barTintColor = royalBlue
         
-        let attributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        UINavigationBar.appearance().barTintColor = royalBlue
+        let navigationLargeFont = applicationFont(pointSize: 40)
+        
+        
+        let attributes = [NSAttributedStringKey.foregroundColor: UIColor.white, NSAttributedStringKey.font: navigationLargeFont]
         
         UINavigationBar.appearance().titleTextAttributes = attributes
         UINavigationBar.appearance().largeTitleTextAttributes = attributes
@@ -27,8 +30,20 @@ enum Appearance {
         
         UITableViewCell.appearance().backgroundColor = darkBlue
         UITableView.appearance().backgroundColor = darkBlue
+        
+        
         UITextView.appearance().backgroundColor = .white
         UITextField.appearance().backgroundColor = .white
+        
+        
         UILabel.appearance().textColor = .white
+    }
+    
+    static func applicationFont(pointSize: CGFloat) -> UIFont {
+        guard let font = UIFont(name: "Pricedown", size: pointSize) else {
+            fatalError("The font wasn't found. Check the name of the font.")
+        }
+        //return font
+        return UIFontMetrics(forTextStyle: UIFontTextStyle(rawValue: "Pricedown")).scaledFont(for: font)
     }
 }

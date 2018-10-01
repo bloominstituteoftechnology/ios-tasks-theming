@@ -20,6 +20,7 @@
 		9D70DFFC21249442006D4DF5 /* TaskRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D70DFFB21249442006D4DF5 /* TaskRepresentation.swift */; };
 		A137D4B22162CA1600ABF675 /* AppearanceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A137D4B12162CA1600ABF675 /* AppearanceHelper.swift */; };
 		A137D4B42162CB6800ABF675 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A137D4B32162CB6800ABF675 /* UIView+Extension.swift */; };
+		A137D4B62162D60800ABF675 /* pricedownbl.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A137D4B52162D60800ABF675 /* pricedownbl.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		9D70DFFB21249442006D4DF5 /* TaskRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRepresentation.swift; sourceTree = "<group>"; };
 		A137D4B12162CA1600ABF675 /* AppearanceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceHelper.swift; sourceTree = "<group>"; };
 		A137D4B32162CB6800ABF675 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		A137D4B52162D60800ABF675 /* pricedownbl.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pricedownbl.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				9D4408CA211FF431005E2116 /* Main.storyboard */,
+				A137D4B52162D60800ABF675 /* pricedownbl.ttf */,
 				9D4408CD211FF434005E2116 /* Assets.xcassets */,
 				9D4408CF211FF434005E2116 /* LaunchScreen.storyboard */,
 				9D4408D2211FF434005E2116 /* Info.plist */,
@@ -189,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D4408D1211FF434005E2116 /* LaunchScreen.storyboard in Resources */,
+				A137D4B62162D60800ABF675 /* pricedownbl.ttf in Resources */,
 				9D4408CE211FF434005E2116 /* Assets.xcassets in Resources */,
 				9D4408CC211FF431005E2116 /* Main.storyboard in Resources */,
 			);
