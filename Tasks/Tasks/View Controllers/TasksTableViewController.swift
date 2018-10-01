@@ -40,6 +40,7 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         
         let task = fetchedResultsController.object(at: indexPath)
         cell.textLabel?.text = task.name
+        cell.detailTextLabel?.text = task.notes
         styleCell(cell: cell)
         return cell
     }
@@ -80,6 +81,11 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         let font = Appearance.setLibelFont(textStyle: .footnote, size: 20)
         cell.textLabel?.font = UIFontMetrics.default.scaledFont(for: font)
         cell.textLabel?.adjustsFontForContentSizeCategory = true
+        
+        let subFont = Appearance.setLibelFont(textStyle: .footnote, size: 15)
+        cell.detailTextLabel?.font = UIFontMetrics.default.scaledFont(for: subFont)
+        cell.detailTextLabel?.textColor = Appearance.udacityPurple
+        cell.detailTextLabel?.adjustsFontForContentSizeCategory = true
     }
     
     /// Style bra button
