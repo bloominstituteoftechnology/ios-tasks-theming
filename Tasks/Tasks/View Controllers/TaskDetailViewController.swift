@@ -12,8 +12,13 @@ class TaskDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setTheme()
         updateViews()
+    }
+    
+    private func setTheme() {
+        view.backgroundColor = Appearance.darkBlue
+        notesTextView.layer.cornerRadius = 20
     }
 
     @IBAction func save(_ sender: Any) {

@@ -18,6 +18,9 @@
 		9D4408E5211FF7CC005E2116 /* TaskDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4408E4211FF7CC005E2116 /* TaskDetailViewController.swift */; };
 		9D70DFF921248F8E006D4DF5 /* TaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D70DFF821248F8E006D4DF5 /* TaskController.swift */; };
 		9D70DFFC21249442006D4DF5 /* TaskRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D70DFFB21249442006D4DF5 /* TaskRepresentation.swift */; };
+		A137D4B22162CA1600ABF675 /* AppearanceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A137D4B12162CA1600ABF675 /* AppearanceHelper.swift */; };
+		A137D4B42162CB6800ABF675 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A137D4B32162CB6800ABF675 /* UIView+Extension.swift */; };
+		A137D4B62162D60800ABF675 /* pricedownbl.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A137D4B52162D60800ABF675 /* pricedownbl.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		9D70DFF821248F8E006D4DF5 /* TaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskController.swift; sourceTree = "<group>"; };
 		9D70DFFA21249145006D4DF5 /* Tasks 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Tasks 3.xcdatamodel"; sourceTree = "<group>"; };
 		9D70DFFB21249442006D4DF5 /* TaskRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRepresentation.swift; sourceTree = "<group>"; };
+		A137D4B12162CA1600ABF675 /* AppearanceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceHelper.swift; sourceTree = "<group>"; };
+		A137D4B32162CB6800ABF675 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		A137D4B52162D60800ABF675 /* pricedownbl.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pricedownbl.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +74,7 @@
 		9D4408C5211FF431005E2116 /* Tasks */ = {
 			isa = PBXGroup;
 			children = (
+				A137D4B02162C9F200ABF675 /* Helpers */,
 				9D4408C6211FF431005E2116 /* AppDelegate.swift */,
 				9D4408D9211FF4EA005E2116 /* Model */,
 				9D4408E6211FF988005E2116 /* Model Controllers */,
@@ -81,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				9D4408CA211FF431005E2116 /* Main.storyboard */,
+				A137D4B52162D60800ABF675 /* pricedownbl.ttf */,
 				9D4408CD211FF434005E2116 /* Assets.xcassets */,
 				9D4408CF211FF434005E2116 /* LaunchScreen.storyboard */,
 				9D4408D2211FF434005E2116 /* Info.plist */,
@@ -104,6 +112,7 @@
 			children = (
 				9D4408E2211FF752005E2116 /* TasksTableViewController.swift */,
 				9D4408E4211FF7CC005E2116 /* TaskDetailViewController.swift */,
+				A137D4B32162CB6800ABF675 /* UIView+Extension.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -114,6 +123,14 @@
 				9D70DFF821248F8E006D4DF5 /* TaskController.swift */,
 			);
 			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		A137D4B02162C9F200ABF675 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A137D4B12162CA1600ABF675 /* AppearanceHelper.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D4408D1211FF434005E2116 /* LaunchScreen.storyboard in Resources */,
+				A137D4B62162D60800ABF675 /* pricedownbl.ttf in Resources */,
 				9D4408CE211FF434005E2116 /* Assets.xcassets in Resources */,
 				9D4408CC211FF431005E2116 /* Main.storyboard in Resources */,
 			);
@@ -189,11 +207,13 @@
 			files = (
 				9D70DFF921248F8E006D4DF5 /* TaskController.swift in Sources */,
 				9D70DFFC21249442006D4DF5 /* TaskRepresentation.swift in Sources */,
+				A137D4B22162CA1600ABF675 /* AppearanceHelper.swift in Sources */,
 				9D4408E5211FF7CC005E2116 /* TaskDetailViewController.swift in Sources */,
 				9D4408DD211FF51C005E2116 /* Tasks.xcdatamodeld in Sources */,
 				9D4408E3211FF752005E2116 /* TasksTableViewController.swift in Sources */,
 				9D4408C7211FF431005E2116 /* AppDelegate.swift in Sources */,
 				9D4408DF211FF67E005E2116 /* Task+Convenience.swift in Sources */,
+				A137D4B42162CB6800ABF675 /* UIView+Extension.swift in Sources */,
 				9D4408E1211FF6A0005E2116 /* CoreDataStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,7 +359,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VXUQXR6S56;
+				DEVELOPMENT_TEAM = 7WH6XTF8JG;
 				INFOPLIST_FILE = "$(SRCROOT)/Tasks/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -357,7 +377,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VXUQXR6S56;
+				DEVELOPMENT_TEAM = 7WH6XTF8JG;
 				INFOPLIST_FILE = "$(SRCROOT)/Tasks/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
