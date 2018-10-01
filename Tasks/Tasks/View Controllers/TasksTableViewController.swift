@@ -34,8 +34,12 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         
         let task = fetchedResultsController.object(at: indexPath)
         cell.textLabel?.text = task.name
-        
+        style(cell: cell)
         return cell
+    }
+    
+    private func style(cell: UITableViewCell) {
+        cell.textLabel?.textColor = .white
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
