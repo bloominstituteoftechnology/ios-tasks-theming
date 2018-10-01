@@ -28,6 +28,8 @@ enum Appearance {
         /// Change Bar Buttons tint color
         UIBarButtonItem.appearance().tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         
+        UINavigationBar.appearance()
+        
         /// Change Labels text color
         let font = setLibelFont(textStyle: .callout, size: 20)
         UILabel.appearance().textColor = robinhoodPink
