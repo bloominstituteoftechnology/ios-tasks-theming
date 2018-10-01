@@ -34,7 +34,7 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         
         let task = fetchedResultsController.object(at: indexPath)
         cell.textLabel?.text = task.name
-        
+        styleCell(cell: cell)
         return cell
     }
     
@@ -47,13 +47,12 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         if editingStyle == .delete {
             let task = fetchedResultsController.object(at: indexPath)
             
-            
             taskController.deleteTaskFromServer(task) { (error) in
                 if let error = error {
-                    NSLog("Error deleting task from server: \(error)")
+                    NSLog("Error deleting task from server: \(error.localizedDescription)")
                     return
                 }
-                
+            
                 DispatchQueue.main.async {
                     let moc = CoreDataStack.shared.mainContext
                     moc.delete(task)
@@ -61,15 +60,26 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
                         try moc.save()
                     } catch {
                         moc.reset()
-                        NSLog("Error saving managed object context: \(error)")
+                        NSLog("Error saving managed object context: \(error.localizedDescription)")
                     }
                 }
             }
         }
     }
     
-    // MARK: - NSFetchedResultsControllerDelegate
+    /// Style cell
+    func styleCell(cell: UITableViewCell) {
+        cell.textLabel?.font = Appearance.setLibelFont(textStyle: .footnote, size: 20)
+        cell.textLabel?.adjustsFontForContentSizeCategory = true
+    }
     
+    /// Style bra button
+    func styleBarButton(){
+        navigationItem.rightBarButtonItem?.tintColor
+    }
+    
+    
+    // MARK: - NSFetchedResultsControllerDelegate
     
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tableView.beginUpdates()

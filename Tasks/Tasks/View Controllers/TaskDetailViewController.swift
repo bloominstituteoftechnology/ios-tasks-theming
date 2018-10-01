@@ -12,9 +12,10 @@ class TaskDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        styleText()
         updateViews()
     }
+
 
     @IBAction func save(_ sender: Any) {
         guard let name = nameTextField.text, !name.isEmpty else {
@@ -58,6 +59,20 @@ class TaskDetailViewController: UIViewController {
         }
         priorityControl.selectedSegmentIndex = TaskPriority.allPriorities.index(of: priority)!
         notesTextView.text = task?.notes
+    }
+    
+    /// Style text field
+    func styleText() {
+        nameTextField.font = Appearance.setLibelFont(textStyle: .caption1, size: 20)
+        nameTextField.layer.borderWidth = 1
+        nameTextField.layer.borderColor = Appearance.robinhoodGreen.cgColor
+        nameTextField.layer.cornerRadius = 5
+        
+        
+        notesTextView.font = Appearance.setLibelFont(textStyle: .caption1, size: 20)
+        notesTextView.layer.borderWidth = 1
+        notesTextView.layer.borderColor = Appearance.robinhoodGreen.cgColor
+        notesTextView.layer.cornerRadius = 5
     }
     
     // MARK: Properties
