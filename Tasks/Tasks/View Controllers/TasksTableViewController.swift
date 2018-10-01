@@ -34,6 +34,8 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         
         let task = fetchedResultsController.object(at: indexPath)
         cell.textLabel?.text = task.name
+        cell.detailTextLabel?.text = task.notes
+        
         Appearence.setCellStyle(for: cell)
         
         return cell
