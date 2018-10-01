@@ -29,7 +29,9 @@ enum Appearance {
         UIBarButtonItem.appearance().tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         
         /// Change Labels text color
+        let font = setLibelFont(textStyle: .callout, size: 20)
         UILabel.appearance().textColor = robinhoodPink
+        UILabel.appearance().font = UIFontMetrics.default.scaledFont(for: font)
         
         /// Change text color
         UITextField.appearance().tintColor = udacityPurple
@@ -41,6 +43,9 @@ enum Appearance {
         /// Change Segmented Controls color
         UISegmentedControl.appearance().tintColor = robinhoodGreen
     }
+    
+    
+    // MARK: - Set Font
     
     static func setLibelFont(textStyle: UIFontTextStyle, size: CGFloat) -> UIFont {
         guard let libelFont = UIFont(name: "Libel Suit", size: size) else {
@@ -54,6 +59,28 @@ enum Appearance {
             fatalError("Check the font name. There isn't any font named JeanSunHo")
         }
         return jeanSunFont
+    }
+    
+    // MARK: - Set Particular UIViews Style
+    
+    static func styleTextField(textField: UITextField) {
+        let font = Appearance.setLibelFont(textStyle: .caption1, size: 20)
+        
+        textField.font = UIFontMetrics.default.scaledFont(for: font)
+        textField.adjustsFontForContentSizeCategory = true
+        textField.layer.borderWidth = 1
+        textField.layer.borderColor = Appearance.robinhoodGreen.cgColor
+        textField.layer.cornerRadius = 5
+    }
+    
+    static func styleTextView(textView: UITextView) {
+        let font = Appearance.setLibelFont(textStyle: .caption1, size: 20)
+        
+        textView.font = UIFontMetrics.default.scaledFont(for: font)
+        textView.adjustsFontForContentSizeCategory = true
+        textView.layer.borderWidth = 1
+        textView.layer.borderColor = Appearance.robinhoodGreen.cgColor
+        textView.layer.cornerRadius = 5
     }
 }
 

@@ -19,6 +19,12 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         }
     }
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        //styleBarButton()
+        styleTableView()
+    }
+    
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -40,7 +46,9 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         guard let sectionInfo = fetchedResultsController.sections?[section] else { return nil }
-        return sectionInfo.name.capitalized
+        let sectionTitle = sectionInfo.name.capitalized
+        
+        return  sectionTitle
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
@@ -69,13 +77,24 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
     
     /// Style cell
     func styleCell(cell: UITableViewCell) {
-        cell.textLabel?.font = Appearance.setLibelFont(textStyle: .footnote, size: 20)
+        let font = Appearance.setLibelFont(textStyle: .footnote, size: 20)
+        cell.textLabel?.font = UIFontMetrics.default.scaledFont(for: font)
         cell.textLabel?.adjustsFontForContentSizeCategory = true
     }
     
     /// Style bra button
     func styleBarButton(){
-        navigationItem.rightBarButtonItem?.tintColor
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 25, height: 25))
+        button.backgroundColor = Appearance.robinhoodPink
+        button.layer.cornerRadius = button.frame.height/2
+        button.layer.masksToBounds = true
+        let rightBButton = UIBarButtonItem(customView: button)
+        navigationItem.rightBarButtonItem = rightBButton
+    }
+    
+    /// Style tableViewHeaderFooter
+    func styleTableView() {
+        tableView.tableHeaderView?.backgroundColor = Appearance.udacityBlue
     }
     
     
