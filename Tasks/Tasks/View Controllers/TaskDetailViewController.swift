@@ -13,6 +13,7 @@ class TaskDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setTheme()
         updateViews()
     }
 
@@ -45,6 +46,17 @@ class TaskDetailViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func updatePriority(_ sender: Any) {
+        let priorityIndex = priorityControl.selectedSegmentIndex
+        let priority = TaskPriority.allPriorities[priorityIndex]
+        switch priority {
+        case .critical: styleAccents(with: Appearance.criticalPriorityColor)
+        case .high: styleAccents(with: Appearance.highPriorityColor)
+        case .normal: styleAccents(with: Appearance.normalPriorityColor)
+        case .low: styleAccents(with: Appearance.lowPriorityColor)
+        }
+    }
+    
     private func updateViews() {
         guard isViewLoaded else { return }
         
@@ -56,8 +68,33 @@ class TaskDetailViewController: UIViewController {
         } else {
             priority = .normal
         }
+        switch priority {
+        case .critical: styleAccents(with: Appearance.criticalPriorityColor)
+        case .high: styleAccents(with: Appearance.highPriorityColor)
+        case .normal: styleAccents(with: Appearance.normalPriorityColor)
+        case .low: styleAccents(with: Appearance.lowPriorityColor)
+        }
         priorityControl.selectedSegmentIndex = TaskPriority.allPriorities.index(of: priority)!
         notesTextView.text = task?.notes
+    }
+    
+    private func setTheme() {
+        view.backgroundColor = Appearance.darkBackground
+        notesTextView.keyboardAppearance = .dark
+        notesTextView.layer.cornerRadius = 6
+        notesTextView.font = Appearance.applicationFont(with: .caption1, at: 14)
+        notesTextView.adjustsFontForContentSizeCategory = true
+        nameTextField.font = Appearance.applicationFont(with: .body, at: 16)
+        nameTextField.adjustsFontForContentSizeCategory = true
+
+    }
+    
+    private func styleAccents(with color: UIColor) {
+        nameTextField.tintColor = color
+        priorityControl.tintColor = color
+        notesTextView.tintColor = color
+        navigationController?.navigationBar.largeTitleTextAttributes = [.foregroundColor: color, .font: Appearance.applicationFont(with: .title1, at: 30)]
+        navigationController?.navigationItem.backBarButtonItem?.tintColor = color
     }
     
     // MARK: Properties
