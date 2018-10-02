@@ -108,6 +108,7 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         view.backgroundColor = Appearance.scottOrange
         tableView.backgroundColor = Appearance.scottOrange
         tableView.tableHeaderView?.backgroundColor = Appearance.scottDarkBlue
+        tableView.separatorColor = .gray
         
         
     }
