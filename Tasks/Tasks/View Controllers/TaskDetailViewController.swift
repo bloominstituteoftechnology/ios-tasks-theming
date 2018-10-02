@@ -13,6 +13,7 @@ class TaskDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setTheme()
         updateViews()
     }
 
@@ -60,6 +61,35 @@ class TaskDetailViewController: UIViewController {
         notesTextView.text = task?.notes
     }
     
+    func setTheme() {
+        
+//        let gradientLayer = CAGradientLayer()
+//        gradientLayer.colors = [Appearance.lightBlue, Appearance.pastelGreen]
+//        gradientLayer.locations = [0.0, 1.0]
+//        gradientLayer.frame = view.bounds
+//
+//        view.layer.insertSublayer(gradientLayer, at: 0)
+        view.backgroundColor = Appearance.coolGray
+        
+        if priorityControl.selectedSegmentIndex == 0 {
+            priorityControl.tintColor = Appearance.pastelRed
+        } else if priorityControl.selectedSegmentIndex == 1 {
+            priorityControl.tintColor = Appearance.pastelOrange
+        } else if priorityControl.selectedSegmentIndex == 2 {
+            priorityControl.tintColor = Appearance.paleYellow
+        } else {
+            priorityControl.tintColor = Appearance.paleGreen
+        }
+//        let gradient = CAGradientLayer()
+//        gradient.colors = [ Appearance.lightBlue, Appearance.pastelGreen]
+//        gradient.locations = [ 0.0, 1.0]
+//
+//        let backgroundLayer = gradient
+//        backgroundLayer.frame = view.frame
+//        view.layer.insertSublayer(backgroundLayer, at: 0)
+        
+    }
+    
     // MARK: Properties
     
     var task: Task? {
@@ -71,6 +101,12 @@ class TaskDetailViewController: UIViewController {
     var taskController: TaskController!
 
     @IBOutlet var nameTextField: UITextField!
-    @IBOutlet var priorityControl: UISegmentedControl!
+    @IBOutlet var priorityControl: UISegmentedControl! {
+        didSet {
+            if isViewLoaded {
+                setTheme()
+            }
+        }
+    }
     @IBOutlet var notesTextView: UITextView!
 }
