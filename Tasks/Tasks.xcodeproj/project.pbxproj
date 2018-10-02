@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11102FF62162B33900617C7F /* AppearanceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11102FF52162B33900617C7F /* AppearanceHelper.swift */; };
+		11102FFB2162C20100617C7F /* coolvetica_rg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11102FFA2162C20100617C7F /* coolvetica_rg.ttf */; };
 		9D4408C7211FF431005E2116 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4408C6211FF431005E2116 /* AppDelegate.swift */; };
 		9D4408CC211FF431005E2116 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D4408CA211FF431005E2116 /* Main.storyboard */; };
 		9D4408CE211FF434005E2116 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D4408CD211FF434005E2116 /* Assets.xcassets */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11102FF52162B33900617C7F /* AppearanceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceHelper.swift; sourceTree = "<group>"; };
+		11102FFA2162C20100617C7F /* coolvetica_rg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = coolvetica_rg.ttf; path = ../../../../../../../../Downloads/coolvetica/coolvetica_rg.ttf; sourceTree = "<group>"; };
 		9D4408C3211FF431005E2116 /* Tasks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tasks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D4408C6211FF431005E2116 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D4408CB211FF431005E2116 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -49,6 +53,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11102FF72162B33E00617C7F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				11102FF52162B33900617C7F /* AppearanceHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		9D4408BA211FF430005E2116 = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +84,7 @@
 				9D4408D9211FF4EA005E2116 /* Model */,
 				9D4408E6211FF988005E2116 /* Model Controllers */,
 				9D4408DA211FF50D005E2116 /* View Controllers */,
+				11102FF72162B33E00617C7F /* Helpers */,
 				9D4408D8211FF4BA005E2116 /* Resources */,
 			);
 			path = Tasks;
@@ -84,6 +97,7 @@
 				9D4408CD211FF434005E2116 /* Assets.xcassets */,
 				9D4408CF211FF434005E2116 /* LaunchScreen.storyboard */,
 				9D4408D2211FF434005E2116 /* Info.plist */,
+				11102FFA2162C20100617C7F /* coolvetica_rg.ttf */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -177,6 +191,7 @@
 				9D4408D1211FF434005E2116 /* LaunchScreen.storyboard in Resources */,
 				9D4408CE211FF434005E2116 /* Assets.xcassets in Resources */,
 				9D4408CC211FF431005E2116 /* Main.storyboard in Resources */,
+				11102FFB2162C20100617C7F /* coolvetica_rg.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +204,7 @@
 			files = (
 				9D70DFF921248F8E006D4DF5 /* TaskController.swift in Sources */,
 				9D70DFFC21249442006D4DF5 /* TaskRepresentation.swift in Sources */,
+				11102FF62162B33900617C7F /* AppearanceHelper.swift in Sources */,
 				9D4408E5211FF7CC005E2116 /* TaskDetailViewController.swift in Sources */,
 				9D4408DD211FF51C005E2116 /* Tasks.xcdatamodeld in Sources */,
 				9D4408E3211FF752005E2116 /* TasksTableViewController.swift in Sources */,
