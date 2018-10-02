@@ -14,6 +14,17 @@ class TaskDetailViewController: UIViewController {
         super.viewDidLoad()
 
         updateViews()
+        setTheme()
+    }
+    
+    private func setTheme() {
+        view.backgroundColor = Appearance.scottOrange
+        nameTextField.backgroundColor = Appearance.scottBlue
+        nameTextField.font = Appearance.applicationFont(with: .caption1, pointSize: 17)
+        notesTextView.backgroundColor = Appearance.scottBlue
+        notesTextView.font = Appearance.applicationFont(with: .caption1, pointSize: 17)
+        priorityControl.tintColor = Appearance.scottBlue
+    
     }
 
     @IBAction func save(_ sender: Any) {
