@@ -18,6 +18,11 @@
 		9D4408E5211FF7CC005E2116 /* TaskDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4408E4211FF7CC005E2116 /* TaskDetailViewController.swift */; };
 		9D70DFF921248F8E006D4DF5 /* TaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D70DFF821248F8E006D4DF5 /* TaskController.swift */; };
 		9D70DFFC21249442006D4DF5 /* TaskRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D70DFFB21249442006D4DF5 /* TaskRepresentation.swift */; };
+		F134C3722162AA6F0032B08E /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = F134C3712162AA6F0032B08E /* Appearance.swift */; };
+		F134C3742162AE550032B08E /* Quikhand.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F134C3732162AE550032B08E /* Quikhand.ttf */; };
+		F134C3762162BD990032B08E /* dotty.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F134C3752162BD990032B08E /* dotty.ttf */; };
+		F134C3782162BDB80032B08E /* JeanSunHo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F134C3772162BDB80032B08E /* JeanSunHo.ttf */; };
+		F134C37A2162BDCF0032B08E /* JeanSunHoBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F134C3792162BDCF0032B08E /* JeanSunHoBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +41,11 @@
 		9D70DFF821248F8E006D4DF5 /* TaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskController.swift; sourceTree = "<group>"; };
 		9D70DFFA21249145006D4DF5 /* Tasks 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Tasks 3.xcdatamodel"; sourceTree = "<group>"; };
 		9D70DFFB21249442006D4DF5 /* TaskRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRepresentation.swift; sourceTree = "<group>"; };
+		F134C3712162AA6F0032B08E /* Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
+		F134C3732162AE550032B08E /* Quikhand.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Quikhand.ttf; sourceTree = "<group>"; };
+		F134C3752162BD990032B08E /* dotty.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = dotty.ttf; sourceTree = "<group>"; };
+		F134C3772162BDB80032B08E /* JeanSunHo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = JeanSunHo.ttf; sourceTree = "<group>"; };
+		F134C3792162BDCF0032B08E /* JeanSunHoBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = JeanSunHoBold.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,9 +78,9 @@
 		9D4408C5211FF431005E2116 /* Tasks */ = {
 			isa = PBXGroup;
 			children = (
-				9D4408C6211FF431005E2116 /* AppDelegate.swift */,
 				9D4408D9211FF4EA005E2116 /* Model */,
 				9D4408E6211FF988005E2116 /* Model Controllers */,
+				F134C3702162AA350032B08E /* Helpers */,
 				9D4408DA211FF50D005E2116 /* View Controllers */,
 				9D4408D8211FF4BA005E2116 /* Resources */,
 			);
@@ -80,10 +90,15 @@
 		9D4408D8211FF4BA005E2116 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9D4408C6211FF431005E2116 /* AppDelegate.swift */,
 				9D4408CA211FF431005E2116 /* Main.storyboard */,
 				9D4408CD211FF434005E2116 /* Assets.xcassets */,
 				9D4408CF211FF434005E2116 /* LaunchScreen.storyboard */,
 				9D4408D2211FF434005E2116 /* Info.plist */,
+				F134C3732162AE550032B08E /* Quikhand.ttf */,
+				F134C3752162BD990032B08E /* dotty.ttf */,
+				F134C3772162BDB80032B08E /* JeanSunHo.ttf */,
+				F134C3792162BDCF0032B08E /* JeanSunHoBold.ttf */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -114,6 +129,14 @@
 				9D70DFF821248F8E006D4DF5 /* TaskController.swift */,
 			);
 			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		F134C3702162AA350032B08E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F134C3712162AA6F0032B08E /* Appearance.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +171,7 @@
 				TargetAttributes = {
 					9D4408C2211FF431005E2116 = {
 						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -174,8 +198,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F134C3782162BDB80032B08E /* JeanSunHo.ttf in Resources */,
 				9D4408D1211FF434005E2116 /* LaunchScreen.storyboard in Resources */,
+				F134C3762162BD990032B08E /* dotty.ttf in Resources */,
+				F134C3742162AE550032B08E /* Quikhand.ttf in Resources */,
 				9D4408CE211FF434005E2116 /* Assets.xcassets in Resources */,
+				F134C37A2162BDCF0032B08E /* JeanSunHoBold.ttf in Resources */,
 				9D4408CC211FF431005E2116 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -188,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D70DFF921248F8E006D4DF5 /* TaskController.swift in Sources */,
+				F134C3722162AA6F0032B08E /* Appearance.swift in Sources */,
 				9D70DFFC21249442006D4DF5 /* TaskRepresentation.swift in Sources */,
 				9D4408E5211FF7CC005E2116 /* TaskDetailViewController.swift in Sources */,
 				9D4408DD211FF51C005E2116 /* Tasks.xcdatamodeld in Sources */,
@@ -339,7 +368,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VXUQXR6S56;
+				DEVELOPMENT_TEAM = 5KBWP959TD;
 				INFOPLIST_FILE = "$(SRCROOT)/Tasks/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -347,7 +376,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lambdaschool.Tasks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -357,7 +386,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VXUQXR6S56;
+				DEVELOPMENT_TEAM = 5KBWP959TD;
 				INFOPLIST_FILE = "$(SRCROOT)/Tasks/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -365,7 +394,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lambdaschool.Tasks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

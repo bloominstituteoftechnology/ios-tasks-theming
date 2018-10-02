@@ -11,6 +11,16 @@ import CoreData
 
 class TasksTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        imageView.contentMode = .scaleAspectFit
+        let image = UIImage(named: "Lambda Icon")
+        imageView.image = image
+        navigationItem.titleView = imageView
+    }
+    
     @IBAction func refresh(_ sender: Any) {
         taskController.fetchTasksFromServer { _ in
             DispatchQueue.main.async {
@@ -18,12 +28,26 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
             }
         }
     }
+
     
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return fetchedResultsController.sections?.count ?? 1
     }
+    
+//    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: tableView.bounds.size.height))
+//        let headerLabel = UILabel(frame: CGRect(x: 5, y: 5, width: tableView.bounds.size.width, height: tableView.bounds.size.height))
+//            headerView.backgroundColor = Appearance.scottDarkOrange
+//            headerLabel.font = UIFont(name: "Quikhand", size: 17)
+//            headerLabel.textColor = Appearance.scottOrange
+//            headerLabel.text = self.tableView(self.tableView, titleForHeaderInSection: section)
+//            headerLabel.sizeToFit()
+//            headerView.addSubview(headerLabel)
+//
+//        return headerView
+//    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return fetchedResultsController.sections?[section].numberOfObjects ?? 0
@@ -35,6 +59,9 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         let task = fetchedResultsController.object(at: indexPath)
         cell.textLabel?.text = task.name
         
+        style(cell: cell)
+        setTheme()
+        
         return cell
     }
     
@@ -43,7 +70,7 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         return sectionInfo.name.capitalized
     }
     
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let task = fetchedResultsController.object(at: indexPath)
             
@@ -66,6 +93,23 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
                 }
             }
         }
+    }
+    
+    // MARK: - Appearance Style
+    
+    private func style(cell: UITableViewCell) {
+        cell.backgroundColor = Appearance.scottOrange
+        cell.textLabel?.font = Appearance.applicationFont(with: .caption1, pointSize: 17)
+        cell.textLabel?.adjustsFontForContentSizeCategory = true
+        cell.textLabel?.textColor = .white
+    }
+    
+    private func setTheme() {
+        view.backgroundColor = Appearance.scottOrange
+        tableView.backgroundColor = Appearance.scottOrange
+        tableView.tableHeaderView?.backgroundColor = Appearance.scottDarkBlue
+        
+        
     }
     
     // MARK: - NSFetchedResultsControllerDelegate
