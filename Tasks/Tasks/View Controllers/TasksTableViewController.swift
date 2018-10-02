@@ -51,8 +51,9 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
     
     /// Style tableViewHeaderFooter
     func styleTableView() {
-        tableView.tableHeaderView?.backgroundColor = Appearance.udacityBlue
-        view.backgroundColor = Appearance.udacityBlue
+        let newView = UIView()
+        newView.backgroundColor = Appearance.redColor
+        tableView.tableHeaderView?.backgroundColor = Appearance.redColor
     }
     
     // MARK: - Table view data source
@@ -72,7 +73,28 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         cell.textLabel?.text = task.name
         cell.detailTextLabel?.text = task.notes
         
-        styleCell(cell: cell)
+        switch task.priority {
+        case "critical":
+            cell.backgroundColor = Appearance.redColor
+            cell.textLabel?.textColor = UIColor.white
+            cell.detailTextLabel?.textColor = UIColor.white
+        case "high":
+            cell.backgroundColor = Appearance.purpleColor
+            cell.textLabel?.textColor = UIColor.white
+            cell.detailTextLabel?.textColor = UIColor.white
+        case "normal":
+            cell.backgroundColor = Appearance.blueColor
+            cell.textLabel?.textColor = UIColor.white
+            cell.detailTextLabel?.textColor = UIColor.white
+        case "low":
+            cell.backgroundColor = Appearance.greenColor
+            cell.textLabel?.textColor = UIColor.white
+            cell.detailTextLabel?.textColor = UIColor.white
+        default:
+            break
+        }
+        
+        //styleCell(cell: cell)
         
         return cell
     }

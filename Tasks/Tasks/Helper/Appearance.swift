@@ -47,10 +47,6 @@ enum Appearance {
         
         /// Change Segmented Controls color
         UISegmentedControl.appearance().tintColor = robinhoodGreen
-        
-        let newView = UIView()
-        newView.backgroundColor = udacityPurple
-        UITableViewHeaderFooterView.appearance().backgroundView = newView
     }
     
     
