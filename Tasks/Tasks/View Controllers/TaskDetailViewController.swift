@@ -14,6 +14,10 @@ class TaskDetailViewController: UIViewController {
         super.viewDidLoad()
 
         updateViews()
+        
+        let background = CAGradientLayer().gradientColor()
+        background.frame = self.view.bounds
+        self.view.layer.insertSublayer(background, at: 0)
     }
 
     @IBAction func save(_ sender: Any) {
