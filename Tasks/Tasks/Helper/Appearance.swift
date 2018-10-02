@@ -12,6 +12,11 @@ enum Appearance {
     
     /// Colors
     
+    static var redColor = UIColor(red:0.75, green:0.17, blue:0.15, alpha:1.0)
+    static var purpleColor = UIColor(red:0.41, green:0.06, blue:0.65, alpha:1.0)
+    static var blueColor = UIColor(red:0.31, green:0.50, blue:0.94, alpha:1.0)
+    static var greenColor = UIColor(red:0.60, green:0.94, blue:0.55, alpha:1.0)
+    
     static var robinhoodGreen = UIColor(red:0.38, green:0.79, blue:0.61, alpha:1.0)
     static var robinhoodPink = UIColor(red:0.72, green:0.27, blue:0.73, alpha:1.0)
     static var udacityBlue = UIColor(red:0.30, green:0.67, blue:0.80, alpha:1.0)

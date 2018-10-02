@@ -25,6 +25,36 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         Appearance.setLogo(navigationItem: self.navigationItem)
     }
     
+    
+    /// Style cell
+    func styleCell(cell: UITableViewCell) {
+        let font = Appearance.setLibelFont(textStyle: .footnote, size: 20)
+        cell.textLabel?.font = UIFontMetrics.default.scaledFont(for: font)
+        cell.textLabel?.textColor = Appearance.udacityPurple
+        cell.textLabel?.adjustsFontForContentSizeCategory = true
+        
+        let subFont = Appearance.setLibelFont(textStyle: .footnote, size: 15)
+        cell.detailTextLabel?.font = UIFontMetrics.default.scaledFont(for: subFont)
+        cell.detailTextLabel?.textColor = Appearance.udacityPurple
+        cell.detailTextLabel?.adjustsFontForContentSizeCategory = true
+    }
+    
+    /// Style bar button
+    func styleBarButton(){
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 25, height: 25))
+        button.backgroundColor = Appearance.robinhoodPink
+        button.layer.cornerRadius = button.frame.height/2
+        button.layer.masksToBounds = true
+        let rightBButton = UIBarButtonItem(customView: button)
+        navigationItem.rightBarButtonItem = rightBButton
+    }
+    
+    /// Style tableViewHeaderFooter
+    func styleTableView() {
+        tableView.tableHeaderView?.backgroundColor = Appearance.udacityBlue
+        view.backgroundColor = Appearance.udacityBlue
+    }
+    
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -41,7 +71,9 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         let task = fetchedResultsController.object(at: indexPath)
         cell.textLabel?.text = task.name
         cell.detailTextLabel?.text = task.notes
+        
         styleCell(cell: cell)
+        
         return cell
     }
     
@@ -74,35 +106,6 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
                 }
             }
         }
-    }
-    
-    /// Style cell
-    func styleCell(cell: UITableViewCell) {
-        let font = Appearance.setLibelFont(textStyle: .footnote, size: 20)
-        cell.textLabel?.font = UIFontMetrics.default.scaledFont(for: font)
-        cell.textLabel?.textColor = Appearance.udacityPurple
-        cell.textLabel?.adjustsFontForContentSizeCategory = true
-        
-        let subFont = Appearance.setLibelFont(textStyle: .footnote, size: 15)
-        cell.detailTextLabel?.font = UIFontMetrics.default.scaledFont(for: subFont)
-        cell.detailTextLabel?.textColor = Appearance.udacityPurple
-        cell.detailTextLabel?.adjustsFontForContentSizeCategory = true
-    }
-    
-    /// Style bar button
-    func styleBarButton(){
-        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 25, height: 25))
-        button.backgroundColor = Appearance.robinhoodPink
-        button.layer.cornerRadius = button.frame.height/2
-        button.layer.masksToBounds = true
-        let rightBButton = UIBarButtonItem(customView: button)
-        navigationItem.rightBarButtonItem = rightBButton
-    }
-    
-    /// Style tableViewHeaderFooter
-    func styleTableView() {
-        tableView.tableHeaderView?.backgroundColor = Appearance.udacityBlue
-        view.backgroundColor = Appearance.udacityBlue
     }
     
     
