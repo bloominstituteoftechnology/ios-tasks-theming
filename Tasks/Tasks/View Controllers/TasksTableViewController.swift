@@ -19,10 +19,10 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         }
     }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        //styleBarButton()
+    override func viewDidLoad() {
+        super.viewDidLoad()
         styleTableView()
+        Appearance.setLogo(navigationItem: self.navigationItem)
     }
     
     // MARK: - Table view data source
@@ -80,6 +80,7 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
     func styleCell(cell: UITableViewCell) {
         let font = Appearance.setLibelFont(textStyle: .footnote, size: 20)
         cell.textLabel?.font = UIFontMetrics.default.scaledFont(for: font)
+        cell.textLabel?.textColor = Appearance.udacityPurple
         cell.textLabel?.adjustsFontForContentSizeCategory = true
         
         let subFont = Appearance.setLibelFont(textStyle: .footnote, size: 15)
@@ -88,7 +89,7 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         cell.detailTextLabel?.adjustsFontForContentSizeCategory = true
     }
     
-    /// Style bra button
+    /// Style bar button
     func styleBarButton(){
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 25, height: 25))
         button.backgroundColor = Appearance.robinhoodPink
@@ -101,6 +102,7 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
     /// Style tableViewHeaderFooter
     func styleTableView() {
         tableView.tableHeaderView?.backgroundColor = Appearance.udacityBlue
+        view.backgroundColor = Appearance.udacityBlue
     }
     
     

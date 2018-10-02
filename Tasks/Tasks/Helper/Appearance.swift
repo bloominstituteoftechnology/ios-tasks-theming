@@ -28,8 +28,6 @@ enum Appearance {
         /// Change Bar Buttons tint color
         UIBarButtonItem.appearance().tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         
-        UINavigationBar.appearance()
-        
         /// Change Labels text color
         let font = setLibelFont(textStyle: .callout, size: 20)
         UILabel.appearance().textColor = robinhoodPink
@@ -87,6 +85,17 @@ enum Appearance {
         textView.layer.borderWidth = 1
         textView.layer.borderColor = Appearance.robinhoodGreen.cgColor
         textView.layer.cornerRadius = 5
+    }
+    
+    /// Set logo
+    static func setLogo(navigationItem: UINavigationItem) {
+        let logoContainer = UIView(frame: CGRect(x: 0, y: 0, width: 270, height: 30))
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 270, height: 30))
+        imageView.contentMode = .scaleAspectFit
+        let image = UIImage(named: "tasks-logo")
+        imageView.image = image
+        logoContainer.addSubview(imageView)
+        navigationItem.titleView = logoContainer
     }
 }
 

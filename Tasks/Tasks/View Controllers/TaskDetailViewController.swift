@@ -14,9 +14,9 @@ class TaskDetailViewController: UIViewController {
         super.viewDidLoad()
         Appearance.styleTextField(textField: nameTextField)
         Appearance.styleTextView(textView: notesTextView)
+        Appearance.setLogo(navigationItem: self.navigationItem)
         updateViews()
     }
-
 
     @IBAction func save(_ sender: Any) {
         guard let name = nameTextField.text, !name.isEmpty else {
