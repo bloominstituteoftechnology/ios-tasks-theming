@@ -11,6 +11,12 @@ import CoreData
 
 class TasksTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setTheme()
+    }
+    
     @IBAction func refresh(_ sender: Any) {
         taskController.fetchTasksFromServer { _ in
             DispatchQueue.main.async {
@@ -35,12 +41,46 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         let task = fetchedResultsController.object(at: indexPath)
         cell.textLabel?.text = task.name
         
+        let alphaValue = 1.0/Double(indexPath.row)
+        
+        if task.priority == TaskPriority.critical.rawValue {
+            let color = Appearance.pastelRed
+            cell.backgroundColor = color
+        } else if task.priority == TaskPriority.high.rawValue {
+            cell.backgroundColor = Appearance.pastelOrange
+        } else if task.priority == TaskPriority.normal.rawValue {
+            cell.backgroundColor = Appearance.paleYellow
+        } else {
+            cell.backgroundColor = Appearance.paleGreen
+        }
+        
+        //Adjust font.
+        cell.textLabel?.textColor = .white
+        
+        //Helps change the size of the font while app is open and settings are changed.
+        cell.textLabel?.adjustsFontForContentSizeCategory = true
+        cell.detailTextLabel?.adjustsFontForContentSizeCategory = true
+        
         return cell
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         guard let sectionInfo = fetchedResultsController.sections?[section] else { return nil }
         return sectionInfo.name.capitalized
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let returnedView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 30))
+        returnedView.backgroundColor = .lightGray
+        
+        let label = UILabel(frame: CGRect(x: 20, y: 0, width: view.frame.size.width, height: 30))
+        guard let sectionInfo = fetchedResultsController.sections?[section] else { return nil }
+        label.font = Appearance.setTitleFont(with: .title2, pointSize: 20)
+        label.text = sectionInfo.name.capitalized
+        label.textColor = .white
+        returnedView.addSubview(label)
+        
+        return returnedView
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
@@ -66,6 +106,13 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
                 }
             }
         }
+    }
+    
+    func setTheme() {
+        
+        view.backgroundColor = Appearance.coolGray
+        tableView.backgroundColor = Appearance.coolGray
+
     }
     
     // MARK: - NSFetchedResultsControllerDelegate
