@@ -19,6 +19,43 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         }
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        styleTableView()
+        Appearance.setLogo(navigationItem: self.navigationItem)
+    }
+    
+    
+    /// Style cell
+    func styleCell(cell: UITableViewCell) {
+        let font = Appearance.setLibelFont(textStyle: .footnote, size: 20)
+        cell.textLabel?.font = UIFontMetrics.default.scaledFont(for: font)
+        cell.textLabel?.textColor = Appearance.udacityPurple
+        cell.textLabel?.adjustsFontForContentSizeCategory = true
+        
+        let subFont = Appearance.setLibelFont(textStyle: .footnote, size: 15)
+        cell.detailTextLabel?.font = UIFontMetrics.default.scaledFont(for: subFont)
+        cell.detailTextLabel?.textColor = Appearance.udacityPurple
+        cell.detailTextLabel?.adjustsFontForContentSizeCategory = true
+    }
+    
+    /// Style bar button
+    func styleBarButton(){
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 25, height: 25))
+        button.backgroundColor = Appearance.robinhoodPink
+        button.layer.cornerRadius = button.frame.height/2
+        button.layer.masksToBounds = true
+        let rightBButton = UIBarButtonItem(customView: button)
+        navigationItem.rightBarButtonItem = rightBButton
+    }
+    
+    /// Style tableViewHeaderFooter
+    func styleTableView() {
+        let newView = UIView()
+        newView.backgroundColor = Appearance.redColor
+        tableView.tableHeaderView?.backgroundColor = Appearance.redColor
+    }
+    
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -34,26 +71,51 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         
         let task = fetchedResultsController.object(at: indexPath)
         cell.textLabel?.text = task.name
+        cell.detailTextLabel?.text = task.notes
+        
+        switch task.priority {
+        case "critical":
+            cell.backgroundColor = Appearance.redColor
+            cell.textLabel?.textColor = UIColor.white
+            cell.detailTextLabel?.textColor = UIColor.white
+        case "high":
+            cell.backgroundColor = Appearance.purpleColor
+            cell.textLabel?.textColor = UIColor.white
+            cell.detailTextLabel?.textColor = UIColor.white
+        case "normal":
+            cell.backgroundColor = Appearance.blueColor
+            cell.textLabel?.textColor = UIColor.white
+            cell.detailTextLabel?.textColor = UIColor.white
+        case "low":
+            cell.backgroundColor = Appearance.greenColor
+            cell.textLabel?.textColor = UIColor.white
+            cell.detailTextLabel?.textColor = UIColor.white
+        default:
+            break
+        }
+        
+        //styleCell(cell: cell)
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         guard let sectionInfo = fetchedResultsController.sections?[section] else { return nil }
-        return sectionInfo.name.capitalized
+        let sectionTitle = sectionInfo.name.capitalized
+        
+        return  sectionTitle
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let task = fetchedResultsController.object(at: indexPath)
             
-            
             taskController.deleteTaskFromServer(task) { (error) in
                 if let error = error {
-                    NSLog("Error deleting task from server: \(error)")
+                    NSLog("Error deleting task from server: \(error.localizedDescription)")
                     return
                 }
-                
+            
                 DispatchQueue.main.async {
                     let moc = CoreDataStack.shared.mainContext
                     moc.delete(task)
@@ -61,15 +123,15 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
                         try moc.save()
                     } catch {
                         moc.reset()
-                        NSLog("Error saving managed object context: \(error)")
+                        NSLog("Error saving managed object context: \(error.localizedDescription)")
                     }
                 }
             }
         }
     }
     
-    // MARK: - NSFetchedResultsControllerDelegate
     
+    // MARK: - NSFetchedResultsControllerDelegate
     
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tableView.beginUpdates()

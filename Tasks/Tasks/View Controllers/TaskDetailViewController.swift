@@ -12,7 +12,9 @@ class TaskDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        Appearance.styleTextField(textField: nameTextField)
+        Appearance.styleTextView(textView: notesTextView)
+        Appearance.setLogo(navigationItem: self.navigationItem)
         updateViews()
     }
 
@@ -58,6 +60,19 @@ class TaskDetailViewController: UIViewController {
         }
         priorityControl.selectedSegmentIndex = TaskPriority.allPriorities.index(of: priority)!
         notesTextView.text = task?.notes
+        
+        switch priorityControl.selectedSegmentIndex {
+        case 3:
+            priorityControl.tintColor = Appearance.redColor
+        case 2:
+            priorityControl.tintColor = Appearance.purpleColor
+        case 1:
+            priorityControl.tintColor = Appearance.blueColor
+        case 0:
+            priorityControl.tintColor = Appearance.greenColor
+        default:
+            break
+        }
     }
     
     // MARK: Properties
