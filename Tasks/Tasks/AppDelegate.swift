@@ -15,7 +15,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+//        UITableViewCell.appearance().layer.cornerRadius = 20
+//        UITableViewCell.appearance().layer.masksToBounds = true
+        UITableViewCell.appearance().backgroundColor = #colorLiteral(red: 0.370555222, green: 0.3705646992, blue: 0.3705595732, alpha: 1)
+        
+        UITableView.appearance().backgroundColor = #colorLiteral(red: 0.6642242074, green: 0.6642400622, blue: 0.6642315388, alpha: 1)
+        
+        UINavigationBar.appearance().backgroundColor = #colorLiteral(red: 0.6642242074, green: 0.6642400622, blue: 0.6642315388, alpha: 1)
+        UIBarButtonItem.appearance().tintColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)
+        
         return true
     }
 

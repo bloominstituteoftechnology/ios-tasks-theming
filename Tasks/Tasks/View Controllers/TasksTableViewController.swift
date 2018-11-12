@@ -34,6 +34,9 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         
         let task = fetchedResultsController.object(at: indexPath)
         cell.textLabel?.text = task.name
+        cell.textLabel?.textColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)
+        cell.layer.cornerRadius = 20
+        cell.layer.masksToBounds = true
         
         return cell
     }
