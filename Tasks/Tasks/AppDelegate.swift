@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  Tasks
+//  Tasks theme
 //
 //  Created by Andrew R Madsen on 8/11/18.
 //  Copyright © 2018 Andrew R Madsen. All rights reserved.
