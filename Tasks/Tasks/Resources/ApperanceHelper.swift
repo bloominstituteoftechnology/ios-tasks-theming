@@ -20,20 +20,22 @@ static var lightpink = UIColor(red:1.00, green:0.71, blue:0.76, alpha:1.0)
      UINavigationBar.appearance().barTintColor = turquiose
         UIBarButtonItem.appearance().tintColor = lightpink
         UISegmentedControl.appearance().tintColor = yellow
-        
+        UISegmentedControl.appearance().backgroundColor = UIColor.blue
         UILabel.appearance().textColor = .green
         let textAttributes = [NSAttributedStringKey.foregroundColor: UIColor.orange]
         UINavigationBar.appearance().titleTextAttributes = textAttributes
         UINavigationBar.appearance().largeTitleTextAttributes = textAttributes
-        
+       
+       // UIView.appearance().backgroundColor = UIColor.magenta
         UITableViewCell.appearance().backgroundColor = UIColor.yellow
-     //UIView.appearance().backgroundColor = UIColor.magenta
       UIView.appearance(whenContainedInInstancesOf: [UITableView.self]).backgroundColor = UIColor.orange
         
     //UITableViewHeaderFooterView.appearance().backgroundColor = UIColor.orange
         UITextField.appearance().keyboardAppearance = .dark
         UITextField.appearance().tintColor = UIColor.green
         UITextView.appearance().tintColor = UIColor.green
+       // UITableView.appearance().backgroundColor = #colorLiteral(red: 0.6642242074, green: 0.6642400622, blue: 0.6642315388, alpha: 1)
+       // UITextField.appearance().
         //UIView.appearance()
     }
    

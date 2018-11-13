@@ -57,7 +57,8 @@ tableView.backgroundColor = Apperance.lightpink
     private func style(cell: UITableViewCell) {
 
         cell.textLabel?.font = Apperance.applicationFont(pointSize: 30)
-    
+        cell.layer.cornerRadius = 15
+        cell.layer.masksToBounds = true
     }
   
     private func styleNewMessageButton() {
