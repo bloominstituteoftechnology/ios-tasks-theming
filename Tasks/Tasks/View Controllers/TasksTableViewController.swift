@@ -10,6 +10,15 @@ import UIKit
 import CoreData
 
 class TasksTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        styleNewMessageButton()
+        //tableView.tableHeaderView?.backgroundColor = Apperance.lightpink
+tableView.backgroundColor = Apperance.lightpink
+    }
+    
+    
+    
     
     @IBAction func refresh(_ sender: Any) {
         taskController.fetchTasksFromServer { _ in
@@ -18,6 +27,10 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
             }
         }
     }
+    
+
+    
+    
     
     // MARK: - Table view data source
     
@@ -35,8 +48,24 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         let task = fetchedResultsController.object(at: indexPath)
         cell.textLabel?.text = task.name
         
+        style(cell: cell)
+        
         return cell
     }
+    
+    
+    private func style(cell: UITableViewCell) {
+
+        cell.textLabel?.font = Apperance.applicationFont(pointSize: 30)
+        cell.layer.cornerRadius = 15
+        cell.layer.masksToBounds = true
+    }
+  
+    private func styleNewMessageButton() {
+        add.tintColor = Apperance.yellow
+        
+    }
+    
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         guard let sectionInfo = fetchedResultsController.sections?[section] else { return nil }
@@ -148,4 +177,8 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         try! frc.performFetch()
         return frc
     }()
+
+
+    @IBOutlet weak var add: UIBarButtonItem!
+    
 }
