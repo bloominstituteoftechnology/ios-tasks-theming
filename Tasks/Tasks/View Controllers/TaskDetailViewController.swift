@@ -12,10 +12,32 @@ class TaskDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        view.backgroundColor = Appearance.michiganAsh
+        self.notesTextView.keyboardAppearance = UIKeyboardAppearance.dark
         updateViews()
+        customTextView()
+        customTextField()
+        customSegmentedBar()
     }
 
+    private func customTextView() {
+        notesTextView.backgroundColor = Appearance.michiganBlue
+        notesTextView.textColor = .white
+        let cornerRadiusTextView = max(notesTextView.frame.width, notesTextView.frame.height) / 32.0
+        notesTextView.layer.cornerRadius = cornerRadiusTextView
+        
+    }
+    
+    private func customTextField() {
+         nameTextField.backgroundColor = Appearance.michiganBlue
+         nameTextField.textColor = .white
+    }
+    
+    private func customSegmentedBar() {
+        priorityControl.tintColor = Appearance.michiganMaize
+        priorityControl.backgroundColor = Appearance.michiganBlue
+    }
+    
     @IBAction func save(_ sender: Any) {
         guard let name = nameTextField.text, !name.isEmpty else {
             return

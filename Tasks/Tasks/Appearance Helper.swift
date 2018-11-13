@@ -40,9 +40,9 @@ enum Appearance {
     UITableView.appearance().backgroundColor = michiganAsh
     UITableView.appearance().sectionIndexColor = michiganTan
     
-    UITableViewCell.appearance().tintColor = 
+   // UITableViewCell.appearance().tintColor =
     
-    
+    UITextField.appearance().keyboardAppearance = .dark
     }
     
     
