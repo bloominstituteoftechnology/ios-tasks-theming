@@ -11,12 +11,25 @@ import CoreData
 
 class TasksTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.separatorColor = Appearance.michiganCoolBlue
+       
+        
+    }
+    
     @IBAction func refresh(_ sender: Any) {
         taskController.fetchTasksFromServer { _ in
             DispatchQueue.main.async {
                 self.refreshControl?.endRefreshing()
             }
         }
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        view.tintColor = Appearance.michiganCoolBlue
+        let header = view as! UITableViewHeaderFooterView
+        header.textLabel?.textColor = Appearance.michiganMaize
     }
     
     // MARK: - Table view data source
@@ -43,7 +56,7 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         return sectionInfo.name.capitalized
     }
     
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let task = fetchedResultsController.object(at: indexPath)
             
