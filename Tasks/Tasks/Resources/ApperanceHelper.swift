@@ -39,9 +39,11 @@ static var lightpink = UIColor(red:1.00, green:0.71, blue:0.76, alpha:1.0)
         //UIView.appearance()
     }
    
-    static func applicationFont(pointSize: CGFloat) -> UIFont {
+    static func applicationFont(pointSize: CGFloat, style:UIFontTextStyle = .caption1) -> UIFont {
+       // style:UIFontTextStyle = .caption1)-> UIFont
         let result = UIFont(name:"Pacifico", size: pointSize)!
-    return result
+       // let titleAttributes = [NSAttributedString.Key.font: result]
+        return UIFontMetrics(forTextStyle: style).scaledFont(for:result)
     }
     
 }
