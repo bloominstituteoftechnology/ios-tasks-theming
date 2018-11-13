@@ -12,7 +12,6 @@ class TaskDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         updateViews()
     }
 

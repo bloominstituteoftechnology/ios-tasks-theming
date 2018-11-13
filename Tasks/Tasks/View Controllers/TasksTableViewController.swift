@@ -19,6 +19,15 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         }
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+//        for family in UIFont.familyNames.sorted() {
+//    let names = UIFont.fontNames(forFamilyName: family)
+//    print("Family: \(family) Font names: \(names)")
+//}
+        
+    }
+    
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -34,6 +43,7 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         
         let task = fetchedResultsController.object(at: indexPath)
         cell.textLabel?.text = task.name
+        //cell.textLabel?.font = UIFont(name: "Godfather", size: 17)
         
         return cell
     }
@@ -43,7 +53,7 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         return sectionInfo.name.capitalized
     }
     
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let task = fetchedResultsController.object(at: indexPath)
             

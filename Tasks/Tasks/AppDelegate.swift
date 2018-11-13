@@ -14,8 +14,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        
+//        let navigation = UINavigationBar.appearance()
+//        
+//        let navigationFont = UIFont(name: "TheGodfather-v2", size: 20)
+//        let navigationLargeFont = UIFont(name: "TheGodfather-v2", size: 34) //34 is Large Title size by default
+//        
+//        navigation.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: navigationFont!]
+//        
+//        if #available(iOS 11, *){
+//            navigation.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: navigationLargeFont!]
+//        }
+        
+        Appearance.setNewAppearance()
+        UIApplication.shared.statusBarStyle = .lightContent
         return true
     }
 
