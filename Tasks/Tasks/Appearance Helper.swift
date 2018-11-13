@@ -19,7 +19,7 @@ enum Appearance {
     static var michiganAsh = #colorLiteral(red: 0.6532951593, green: 0.6172346473, blue: 0.5882748365, alpha: 1)
     static var michiganOrange = #colorLiteral(red: 0.8103260398, green: 0.7535114884, blue: 0.5882748365, alpha: 1)
     static var michiganCoolBlue = #colorLiteral(red: 0.3447138667, green: 0.4786932468, blue: 0.7356921434, alpha: 1)
-    static var michiganImage = UIImage(named: "Michigan Logo")
+    static var michiganImage = UIImage(named: "MichiganLogo")
     static var salmonColor = #colorLiteral(red: 1, green: 0.4932718873, blue: 0.4739984274, alpha: 1)
     
 //    static var michiganBlue = UIColor.init(argb: 0x00274c)
@@ -28,7 +28,10 @@ enum Appearance {
    static func customAppearance(){
     
     UINavigationBar.appearance().barTintColor = michiganBlue
-    //UINavigationBar.appearance().setBackgroundImage(michiganImage, for: .default)
+    UINavigationBar.appearance().backgroundColor = michiganBlue
+    UINavigationBar.appearance().setBackgroundImage(michiganImage, for: .default)
+    
+    
     
     UIBarButtonItem.appearance().tintColor = michiganMaize
     
@@ -43,11 +46,18 @@ enum Appearance {
    // UITableViewCell.appearance().tintColor =
     
     UITextField.appearance().keyboardAppearance = .dark
+    
+    //UILabel = michiganMaize
+    
     }
     
-    
-    
+    static func  applicationFont(pointSize: CGFloat) -> UIFont {
+        let result = UIFont(name: "attack of the cucumbers", size: pointSize)!
+        return result
+    }
+   
 }
+
 
 extension UIColor {
     

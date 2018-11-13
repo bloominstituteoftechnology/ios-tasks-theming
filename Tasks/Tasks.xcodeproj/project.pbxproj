@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4728DBCF219B2CF400BC3898 /* attack of the cucumbers.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4728DBCE219B2CF400BC3898 /* attack of the cucumbers.ttf */; };
 		47E61357219A6FAE005263B2 /* Appearance Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E61356219A6FAE005263B2 /* Appearance Helper.swift */; };
 		9D4408C7211FF431005E2116 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4408C6211FF431005E2116 /* AppDelegate.swift */; };
 		9D4408CC211FF431005E2116 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D4408CA211FF431005E2116 /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4728DBCE219B2CF400BC3898 /* attack of the cucumbers.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "attack of the cucumbers.ttf"; sourceTree = "<group>"; };
 		47E61356219A6FAE005263B2 /* Appearance Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Appearance Helper.swift"; path = "Tasks/Appearance Helper.swift"; sourceTree = SOURCE_ROOT; };
 		9D4408C3211FF431005E2116 /* Tasks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tasks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D4408C6211FF431005E2116 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				9D4408CD211FF434005E2116 /* Assets.xcassets */,
 				9D4408CF211FF434005E2116 /* LaunchScreen.storyboard */,
 				9D4408D2211FF434005E2116 /* Info.plist */,
+				4728DBCE219B2CF400BC3898 /* attack of the cucumbers.ttf */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 			files = (
 				9D4408D1211FF434005E2116 /* LaunchScreen.storyboard in Resources */,
 				9D4408CE211FF434005E2116 /* Assets.xcassets in Resources */,
+				4728DBCF219B2CF400BC3898 /* attack of the cucumbers.ttf in Resources */,
 				9D4408CC211FF431005E2116 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

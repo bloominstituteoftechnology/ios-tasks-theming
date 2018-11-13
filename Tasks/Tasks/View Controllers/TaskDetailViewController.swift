@@ -18,11 +18,14 @@ class TaskDetailViewController: UIViewController {
         customTextView()
         customTextField()
         customSegmentedBar()
+        
+        
     }
 
     private func customTextView() {
         notesTextView.backgroundColor = Appearance.michiganBlue
         notesTextView.textColor = .white
+        notesTextView.font = Appearance.applicationFont(pointSize: 14)
         let cornerRadiusTextView = max(notesTextView.frame.width, notesTextView.frame.height) / 32.0
         notesTextView.layer.cornerRadius = cornerRadiusTextView
         
