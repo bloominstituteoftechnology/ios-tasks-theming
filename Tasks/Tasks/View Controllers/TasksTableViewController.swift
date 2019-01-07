@@ -11,12 +11,20 @@ import CoreData
 
 class TasksTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
+   
     @IBAction func refresh(_ sender: Any) {
         taskController.fetchTasksFromServer { _ in
             DispatchQueue.main.async {
                 self.refreshControl?.endRefreshing()
+    
             }
         }
+    }
+    
+    override func viewDidLoad() {
+        super .viewDidLoad()
+        tableView.backgroundColor = AppearanceHelper.backgroundGray
+        
     }
     
     // MARK: - Table view data source
@@ -31,15 +39,16 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TaskCell", for: indexPath)
-        
+        cell.backgroundColor = AppearanceHelper.backgroundGray
         let task = fetchedResultsController.object(at: indexPath)
         cell.textLabel?.text = task.name
-        
+        cell.textLabel?.font = AppearanceHelper.typerighterFont(with: .body, pointSize: 40)
         return cell
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         guard let sectionInfo = fetchedResultsController.sections?[section] else { return nil }
+        
         return sectionInfo.name.capitalized
     }
     
