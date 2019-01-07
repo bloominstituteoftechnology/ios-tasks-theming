@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		48BCB46621E3FC3D00DD2142 /* AppearanceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BCB46521E3FC3D00DD2142 /* AppearanceHelper.swift */; };
 		48BCB46821E4073800DD2142 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48BCB46721E4073800DD2142 /* Colors.xcassets */; };
+		48BCB46B21E40AA900DD2142 /* BebasNeue.otf in Resources */ = {isa = PBXBuildFile; fileRef = 48BCB46921E40AA900DD2142 /* BebasNeue.otf */; };
+		48BCB46C21E40AA900DD2142 /* OpenSans-CondLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 48BCB46A21E40AA900DD2142 /* OpenSans-CondLight.ttf */; };
 		9D4408C7211FF431005E2116 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4408C6211FF431005E2116 /* AppDelegate.swift */; };
 		9D4408CC211FF431005E2116 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D4408CA211FF431005E2116 /* Main.storyboard */; };
 		9D4408CE211FF434005E2116 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D4408CD211FF434005E2116 /* Assets.xcassets */; };
@@ -25,6 +27,8 @@
 /* Begin PBXFileReference section */
 		48BCB46521E3FC3D00DD2142 /* AppearanceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceHelper.swift; sourceTree = "<group>"; };
 		48BCB46721E4073800DD2142 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		48BCB46921E40AA900DD2142 /* BebasNeue.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BebasNeue.otf; sourceTree = "<group>"; };
+		48BCB46A21E40AA900DD2142 /* OpenSans-CondLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-CondLight.ttf"; sourceTree = "<group>"; };
 		9D4408C3211FF431005E2116 /* Tasks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tasks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D4408C6211FF431005E2116 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D4408CB211FF431005E2116 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -53,12 +57,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		48BCB46421E3FC1D00DD2142 /* New Group */ = {
+		48BCB46421E3FC1D00DD2142 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				48BCB46521E3FC3D00DD2142 /* AppearanceHelper.swift */,
 			);
-			path = "New Group";
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		9D4408BA211FF430005E2116 = {
@@ -82,7 +86,7 @@
 			children = (
 				9D4408C6211FF431005E2116 /* AppDelegate.swift */,
 				9D4408D9211FF4EA005E2116 /* Model */,
-				48BCB46421E3FC1D00DD2142 /* New Group */,
+				48BCB46421E3FC1D00DD2142 /* Helpers */,
 				9D4408E6211FF988005E2116 /* Model Controllers */,
 				9D4408DA211FF50D005E2116 /* View Controllers */,
 				9D4408D8211FF4BA005E2116 /* Resources */,
@@ -98,6 +102,8 @@
 				48BCB46721E4073800DD2142 /* Colors.xcassets */,
 				9D4408CF211FF434005E2116 /* LaunchScreen.storyboard */,
 				9D4408D2211FF434005E2116 /* Info.plist */,
+				48BCB46921E40AA900DD2142 /* BebasNeue.otf */,
+				48BCB46A21E40AA900DD2142 /* OpenSans-CondLight.ttf */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -190,7 +196,9 @@
 			files = (
 				9D4408D1211FF434005E2116 /* LaunchScreen.storyboard in Resources */,
 				48BCB46821E4073800DD2142 /* Colors.xcassets in Resources */,
+				48BCB46C21E40AA900DD2142 /* OpenSans-CondLight.ttf in Resources */,
 				9D4408CE211FF434005E2116 /* Assets.xcassets in Resources */,
+				48BCB46B21E40AA900DD2142 /* BebasNeue.otf in Resources */,
 				9D4408CC211FF431005E2116 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
