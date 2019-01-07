@@ -19,6 +19,16 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         }
     }
     
+    @IBAction func hapticHit(_ sender: Any) {
+        let selection = UISelectionFeedbackGenerator()
+        selection.selectionChanged()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.separatorStyle = .none
+    }
+    
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -43,7 +53,16 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         return sectionInfo.name.capitalized
     }
     
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        guard let header = view as? UITableViewHeaderFooterView else { return }
+        header.textLabel?.textColor = AppearanceHelper.lambdaRed
+        guard let mainTextFont = AppearanceHelper.mainTextFont else {fatalError("could not get main text font")}
+        header.textLabel?.font = AppearanceHelper.scaledTextFont(with: mainTextFont, textStyle: .title1, size: 30)
+        header.textLabel?.frame = header.frame
+        header.textLabel?.textAlignment = .center
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let task = fetchedResultsController.object(at: indexPath)
             
@@ -120,6 +139,8 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let impact = UIImpactFeedbackGenerator()
+        impact.impactOccurred()
         if segue.identifier == "ShowTaskDetail" {
             let detailVC = segue.destination as! TaskDetailViewController
             if let indexPath = tableView.indexPathForSelectedRow {
