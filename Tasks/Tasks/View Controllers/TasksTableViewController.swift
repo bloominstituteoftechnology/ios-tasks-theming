@@ -16,7 +16,7 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         taskController.fetchTasksFromServer { _ in
             DispatchQueue.main.async {
                 self.refreshControl?.endRefreshing()
-    
+                
             }
         }
     }
@@ -25,6 +25,9 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         super .viewDidLoad()
         tableView.backgroundColor = AppearanceHelper.backgroundGray
         tableView.reloadData()
+        self.navigationController!.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.font: AppearanceHelper.typerighterFont(with: .largeTitle, pointSize: 40)]
+        UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
     }
     
     // MARK: - Table view data source
