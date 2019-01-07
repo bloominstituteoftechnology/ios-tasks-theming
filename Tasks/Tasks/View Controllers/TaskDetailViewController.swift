@@ -12,7 +12,18 @@ class TaskDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "green_with_white_leaf_background")!)
+        notesTextView.backgroundColor = .darkGray
+        notesTextView.textColor = .white
+        notesTextView.font = UIFontMetrics(forTextStyle: .callout).scaledFont(for: UIFont(name: "JeanSunHo", size: 35)!)
+        
+        nameTextField.backgroundColor = .darkGray
+        nameTextField.textColor = .white
+        nameTextField.font = UIFontMetrics(forTextStyle: .callout).scaledFont(for: UIFont(name: "JeanSunHo", size: 35)!)
+        
+        priorityControl.tintColor = .red
+        priorityControl.backgroundColor = .white
+        
         updateViews()
     }
 

@@ -15,7 +15,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        UITableViewCell.appearance().backgroundColor = .darkGray
+        UITableView.appearance().backgroundColor = .darkGray
+        UINavigationBar.appearance().backgroundColor = AppearanceHelper.navBarColor()
+        UITextField.appearance().backgroundColor = .darkGray
+        UILabel.appearance().font = UIFontMetrics(forTextStyle: .callout).scaledFont(for: UIFont(name: "JeanSunHo", size: 35)!)
+
+    
+        
         return true
     }
 

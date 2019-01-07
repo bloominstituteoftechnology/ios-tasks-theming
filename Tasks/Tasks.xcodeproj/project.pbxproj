@@ -18,6 +18,8 @@
 		9D4408E5211FF7CC005E2116 /* TaskDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4408E4211FF7CC005E2116 /* TaskDetailViewController.swift */; };
 		9D70DFF921248F8E006D4DF5 /* TaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D70DFF821248F8E006D4DF5 /* TaskController.swift */; };
 		9D70DFFC21249442006D4DF5 /* TaskRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D70DFFB21249442006D4DF5 /* TaskRepresentation.swift */; };
+		A2FA841A21E3FEDE003A61FB /* AppearanceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FA841921E3FEDE003A61FB /* AppearanceHelper.swift */; };
+		A2FA841D21E403A9003A61FB /* JeanSunHoBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A2FA841B21E403A9003A61FB /* JeanSunHoBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		9D70DFF821248F8E006D4DF5 /* TaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskController.swift; sourceTree = "<group>"; };
 		9D70DFFA21249145006D4DF5 /* Tasks 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Tasks 3.xcdatamodel"; sourceTree = "<group>"; };
 		9D70DFFB21249442006D4DF5 /* TaskRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRepresentation.swift; sourceTree = "<group>"; };
+		A2FA841921E3FEDE003A61FB /* AppearanceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceHelper.swift; sourceTree = "<group>"; };
+		A2FA841B21E403A9003A61FB /* JeanSunHoBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = JeanSunHoBold.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,7 @@
 		9D4408D8211FF4BA005E2116 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A2FA841B21E403A9003A61FB /* JeanSunHoBold.ttf */,
 				9D4408CA211FF431005E2116 /* Main.storyboard */,
 				9D4408CD211FF434005E2116 /* Assets.xcassets */,
 				9D4408CF211FF434005E2116 /* LaunchScreen.storyboard */,
@@ -91,6 +96,7 @@
 		9D4408D9211FF4EA005E2116 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A2FA841921E3FEDE003A61FB /* AppearanceHelper.swift */,
 				9D4408DB211FF51C005E2116 /* Tasks.xcdatamodeld */,
 				9D4408E0211FF6A0005E2116 /* CoreDataStack.swift */,
 				9D4408DE211FF67E005E2116 /* Task+Convenience.swift */,
@@ -175,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D4408D1211FF434005E2116 /* LaunchScreen.storyboard in Resources */,
+				A2FA841D21E403A9003A61FB /* JeanSunHoBold.ttf in Resources */,
 				9D4408CE211FF434005E2116 /* Assets.xcassets in Resources */,
 				9D4408CC211FF431005E2116 /* Main.storyboard in Resources */,
 			);
@@ -189,6 +196,7 @@
 			files = (
 				9D70DFF921248F8E006D4DF5 /* TaskController.swift in Sources */,
 				9D70DFFC21249442006D4DF5 /* TaskRepresentation.swift in Sources */,
+				A2FA841A21E3FEDE003A61FB /* AppearanceHelper.swift in Sources */,
 				9D4408E5211FF7CC005E2116 /* TaskDetailViewController.swift in Sources */,
 				9D4408DD211FF51C005E2116 /* Tasks.xcdatamodeld in Sources */,
 				9D4408E3211FF752005E2116 /* TasksTableViewController.swift in Sources */,
