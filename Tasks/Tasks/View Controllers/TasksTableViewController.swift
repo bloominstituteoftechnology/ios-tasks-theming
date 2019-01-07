@@ -24,7 +24,7 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
     override func viewDidLoad() {
         super .viewDidLoad()
         tableView.backgroundColor = AppearanceHelper.backgroundGray
-        
+        tableView.reloadData()
     }
     
     // MARK: - Table view data source
@@ -42,14 +42,25 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         cell.backgroundColor = AppearanceHelper.backgroundGray
         let task = fetchedResultsController.object(at: indexPath)
         cell.textLabel?.text = task.name
-        cell.textLabel?.font = AppearanceHelper.typerighterFont(with: .body, pointSize: 40)
+        cell.textLabel?.font = AppearanceHelper.typerighterFont(with: .body, pointSize: 20)
         return cell
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         guard let sectionInfo = fetchedResultsController.sections?[section] else { return nil }
         
+        
+        
+        
         return sectionInfo.name.capitalized
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        guard let header = view as? UITableViewHeaderFooterView else { return }
+        header.textLabel?.textColor = .white
+        header.textLabel?.font = AppearanceHelper.newFont(with: .body, pointSize: 25)
+        header.textLabel?.frame = header.frame
+        header.textLabel?.textAlignment = .center
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
