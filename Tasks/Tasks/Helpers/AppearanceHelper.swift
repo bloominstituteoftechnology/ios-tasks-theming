@@ -15,4 +15,21 @@ enum AppearanceHelper {
         guard let font = UIFont(name: "Open Sans", size: pointSize) else { fatalError("Font is nil. Check the name of the font.") }
         return UIFontMetrics(forTextStyle: .callout).scaledFont(for: font)
     }
+    
+    static func setDarkAppearance() {
+        UINavigationBar.appearance().barTintColor = backgroundBlue
+        UISegmentedControl.appearance().tintColor = vibrantGreen
+        UIBarButtonItem.appearance().tintColor = vibrantGreen
+        UILabel.appearance().textColor = .white
+        
+        let textAttributes = [NSAttributedStringKey.foregroundColor: vibrantGreen]
+        
+        UINavigationBar.appearance().largeTitleTextAttributes = textAttributes
+        UINavigationBar.appearance().titleTextAttributes = textAttributes
+        
+        UITextField.appearance().tintColor = vibrantGreen
+        UITextView.appearance().tintColor = vibrantGreen
+        
+        UITextField.appearance().keyboardAppearance = .dark
+    }
 }
