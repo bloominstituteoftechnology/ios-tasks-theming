@@ -44,7 +44,7 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>BebasNeue.otf</string>
-		<string></string>
+		<string>OpenSans-CondLight.ttf</string>
 	</array>
 </dict>
 </plist>
