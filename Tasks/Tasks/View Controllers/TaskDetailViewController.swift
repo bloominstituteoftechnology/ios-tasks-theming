@@ -14,6 +14,9 @@ class TaskDetailViewController: UIViewController {
         super.viewDidLoad()
 
         updateViews()
+        view.backgroundColor = AppearanceHelper.paperWhite
+        nameTextField.backgroundColor = AppearanceHelper.paperWhite
+        notesTextView.backgroundColor = AppearanceHelper.paperWhite
     }
 
     @IBAction func save(_ sender: Any) {
