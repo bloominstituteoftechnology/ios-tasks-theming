@@ -20,7 +20,7 @@ enum AppearanceHelper {
         UINavigationBar.appearance().barTintColor = backgroundBlue
         UISegmentedControl.appearance().tintColor = vibrantGreen
         UIBarButtonItem.appearance().tintColor = vibrantGreen
-        UILabel.appearance().textColor = .white
+        UILabel.appearance().textColor = vibrantGreen
         
         let textAttributes = [NSAttributedStringKey.foregroundColor: vibrantGreen]
         
