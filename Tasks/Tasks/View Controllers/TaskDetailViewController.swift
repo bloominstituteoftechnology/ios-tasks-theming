@@ -12,6 +12,8 @@ class TaskDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "green_with_white_leaf_background")!)
+        notesTextView.backgroundColor = .darkGray
 
         updateViews()
     }
