@@ -25,7 +25,7 @@ enum AppearanceHelper {
         UIBarButtonItem.appearance().tintColor = peachy
         UILabel.appearance().textColor = textBlack
         
-        let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.init(red:0.96, green:0.80, blue:0.65, alpha:1.0)]
+        let textAttributes = [NSAttributedString.Key.foregroundColor: peachy]
         
         UINavigationBar.appearance().largeTitleTextAttributes = textAttributes
         UINavigationBar.appearance().titleTextAttributes = textAttributes
