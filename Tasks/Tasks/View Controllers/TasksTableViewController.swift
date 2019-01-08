@@ -11,6 +11,15 @@ import CoreData
 
 class TasksTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        view.backgroundColor = AppearanceHelper.backgroundGray
+        tableView.backgroundColor = AppearanceHelper.backgroundGray
+
+    }
+    
+    
     @IBAction func refresh(_ sender: Any) {
         taskController.fetchTasksFromServer { _ in
             DispatchQueue.main.async {

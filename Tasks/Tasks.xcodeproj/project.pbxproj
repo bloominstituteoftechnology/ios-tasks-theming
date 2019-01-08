@@ -73,9 +73,9 @@
 			isa = PBXGroup;
 			children = (
 				F83BD14421E44702006148A4 /* Helpers */,
+				9D4408DA211FF50D005E2116 /* View Controllers */,
 				9D4408D9211FF4EA005E2116 /* Model */,
 				9D4408E6211FF988005E2116 /* Model Controllers */,
-				9D4408DA211FF50D005E2116 /* View Controllers */,
 				9D4408D8211FF4BA005E2116 /* Resources */,
 			);
 			path = Tasks;
