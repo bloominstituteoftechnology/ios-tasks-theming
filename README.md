@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Today's project is to take the Tasks app we've previously worked on an apply a theme to it using the concepts you learned today.
+Today's project is to take the Tasks app we've previously worked on an apply a theme to it using the concepts you learned today.  
 
 This project is more open ended than most afternoon projects. You're allowed to come up with your own theme. 
 

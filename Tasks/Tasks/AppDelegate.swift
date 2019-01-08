@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  Tasks
+//  Tasks theme
 //
 //  Created by Andrew R Madsen on 8/11/18.
 //  Copyright © 2018 Andrew R Madsen. All rights reserved.
@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        Theme.applyTheme()
         return true
     }
 
