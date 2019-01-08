@@ -15,6 +15,7 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         super.viewDidLoad()
         
         self.tableView.backgroundColor = AppearanceHelper.backgroundTone
+        
     }
     
     @IBAction func refresh(_ sender: Any) {

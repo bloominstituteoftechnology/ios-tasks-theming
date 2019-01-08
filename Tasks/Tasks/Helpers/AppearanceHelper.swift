@@ -17,14 +17,26 @@ struct AppearanceHelper {
     static let lowPriorityGreen = UIColor(red: 0.62, green: 0.72, blue: 0.50, alpha: 1.0)
     
     
+    // Fonts for application
+    static let mainTextFont = UIFont(name: "MostlyMono", size: 50)
+    
+    // Scalable Font that can be used if user needs to scale font size
+    static func scaledMainTextFont(with textStyle: UIFontTextStyle, size: CGFloat) -> UIFont {
+        guard let font = mainTextFont else { fatalError() }
+        
+        return UIFontMetrics(forTextStyle: textStyle).scaledFont(for: font)
+    }
+
+    
     static func setLightAppearance() {
         
         // Navigation bar: color
         UINavigationBar.appearance().barTintColor = backgroundTone
         
-        // Navigation titles: color
-        let textAttributes = [NSAttributedStringKey.foregroundColor: AppearanceHelper.lightBrown]
+        // Navigation titles: color & font
+        let textAttributes = [NSAttributedStringKey.foregroundColor: AppearanceHelper.lightBrown, NSAttributedStringKey.font: mainTextFont]
         UINavigationBar.appearance().largeTitleTextAttributes = textAttributes
+
         
         // Segmented control: color
         UISegmentedControl.appearance().tintColor = lightBlueTints
@@ -32,6 +44,9 @@ struct AppearanceHelper {
         
         // Bar button: color & shape
         UIBarButtonItem.appearance().tintColor = darkBrown
+        
+        // All buttons
+        UIButton.appearance().layer.cornerRadius = 16
         
         // Labels: text color & background color
         // Barbutton text = darkBrown
@@ -47,5 +62,6 @@ struct AppearanceHelper {
         UITextView.appearance().tintColor = lightBlueTints
         UITextView.appearance().textColor = darkBrown
     }
+
     
 }
