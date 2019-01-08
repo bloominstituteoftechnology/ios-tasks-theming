@@ -19,6 +19,7 @@ enum AppearanceHelper {
     static func setDarkAppearance() {
         UINavigationBar.appearance().barTintColor = backgroundBlue
         UISegmentedControl.appearance().tintColor = vibrantGreen
+        //UISegmentedControl.appearance().textInputMode = 
         UIBarButtonItem.appearance().tintColor = vibrantGreen
         UILabel.appearance().textColor = vibrantGreen
         
@@ -31,5 +32,14 @@ enum AppearanceHelper {
         UITextView.appearance().tintColor = vibrantGreen
         
         UITextField.appearance().keyboardAppearance = .dark
+        UILabel.appearance().font = UIFont(name: "Bebas Neue", size: 20
+    
+        )
     }
+    
+//    static func style(button: UISegmentedControl) {
+//        let segmentedControl = UISegmentedControl()
+//        segmentedControl.setTitleTextAttributes([NSAttributedStringKey.font : UIFont(name: "Open Sans", size: 15), for: font, for: <#UIControlState#>
+//
+//    }
 }

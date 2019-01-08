@@ -18,7 +18,28 @@ class TaskDetailViewController: UIViewController {
     }
     
     func setTheme() {
+        
+        priorityControl.layer.borderWidth = 0.05
+
+        nameTextField.backgroundColor = AppearanceHelper.backgroundBlue
+        nameTextField.textColor = .white
+        nameTextField.layer.borderColor = AppearanceHelper.vibrantGreen?.cgColor
+        nameTextField.layer.borderWidth = 0.75
+        nameTextField.layer.cornerRadius = 4
+        nameTextField.font = AppearanceHelper.openSansFont(with: .body, pointSize: 20)
+        nameTextField.keyboardAppearance = .dark
+        
+        notesTextView.backgroundColor = AppearanceHelper.backgroundBlue
+        notesTextView.layer.borderColor = AppearanceHelper.vibrantGreen?.cgColor
+        notesTextView.textColor = .white
+        notesTextView.font = AppearanceHelper.openSansFont(with: .body, pointSize: 20
+        )
+        notesTextView.layer.borderWidth = 0.75
+        notesTextView.layer.cornerRadius = 4
+        
+        
         view.backgroundColor = AppearanceHelper.backgroundBlue
+
     }
 
     @IBAction func save(_ sender: Any) {

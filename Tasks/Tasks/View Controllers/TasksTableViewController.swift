@@ -18,6 +18,8 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
     
     func setTheme() {
         view.backgroundColor = AppearanceHelper.backgroundBlue
+        tableView.backgroundColor = AppearanceHelper.backgroundBlue
+        tableView.tableHeaderView?.backgroundColor = AppearanceHelper.backgroundBlue
     }
     
     @IBAction func refresh(_ sender: Any) {
@@ -45,6 +47,14 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         cell.textLabel?.text = task.name
         
         return cell
+    }
+    
+    func style(cell: UITableViewCell) {
+        cell.textLabel?.font = AppearanceHelper.openSansFont(with: .caption1, pointSize: 20)
+        cell.textLabel?.adjustsFontForContentSizeCategory = true
+        cell.textLabel?.backgroundColor = AppearanceHelper.backgroundBlue
+        cell.textLabel?.textColor = AppearanceHelper.vibrantGreen
+        cell.backgroundColor = AppearanceHelper.backgroundBlue
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
