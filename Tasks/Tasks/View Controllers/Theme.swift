@@ -7,8 +7,12 @@
 //
 
 import Foundation
+import UIKit
 
 struct Theme {
     
-    
+    static func applyTheme() {
+        
+        UINavigationBar.appearance().backgroundColor = UIColor.red
+    }
 }
