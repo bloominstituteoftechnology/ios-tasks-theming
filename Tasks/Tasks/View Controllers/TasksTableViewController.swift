@@ -34,6 +34,9 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         
         let task = fetchedResultsController.object(at: indexPath)
         cell.textLabel?.text = task.name
+        cell.backgroundColor = AppearanceHelper.paperWhite
+        tableView.backgroundColor = AppearanceHelper.paperWhite
+        
         
         return cell
     }
@@ -43,7 +46,15 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         return sectionInfo.name.capitalized
     }
     
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        
+        guard let HeaderView = view as? UITableViewHeaderFooterView else { return }
+        
+        HeaderView.contentView.backgroundColor = AppearanceHelper.backgroundTeal
+        HeaderView.textLabel?.textColor = AppearanceHelper.peachy
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let task = fetchedResultsController.object(at: indexPath)
             
