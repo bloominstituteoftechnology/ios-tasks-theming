@@ -8,9 +8,10 @@
 
 import UIKit
 
-enum AppearanceHelper {
+struct AppearanceHelper {
     
     static var lambdaRed = UIColor(red: 212.0/255.0, green: 87.0/255.0, blue: 80.0/255.0, alpha: 1.0)
+    static var lambdaRedOpaque = UIColor(red: 212.0/255.0, green: 87.0/255.0, blue: 80.0/255.0, alpha: 0.42)
     static var backgroundGray = UIColor(red: 45.0/255.0, green: 45.0/255.0, blue: 45.0/255.0, alpha: 1.0)
 
     static func typerighterFont(with textStyle: UIFont.TextStyle, pointSize: CGFloat) -> UIFont {
@@ -34,8 +35,12 @@ enum AppearanceHelper {
         UINavigationBar.appearance().titleTextAttributes = textAttributes
         
         UITextField.appearance().tintColor = lambdaRed
+        UITextView.appearance().textColor = backgroundGray
         UITextView.appearance().tintColor = lambdaRed
-    
+        UITextView.appearance().backgroundColor = lambdaRedOpaque
+        UILabel.appearance(whenContainedInInstancesOf: [TaskDetailViewController.self]).textColor = lambdaRed
+        //UILabel.appearance().textColor = lambdaRed
+        UILabel.appearance(whenContainedInInstancesOf: [UITextView.self]).textColor = backgroundGray
         UITextField.appearance().keyboardAppearance = .dark
     }
     
