@@ -19,7 +19,6 @@ enum AppearanceHelper {
     static func setDarkAppearance() {
         UINavigationBar.appearance().barTintColor = backgroundBlue
         UISegmentedControl.appearance().tintColor = vibrantGreen
-        //UISegmentedControl.appearance().textInputMode = 
         UIBarButtonItem.appearance().tintColor = vibrantGreen
         UILabel.appearance().textColor = vibrantGreen
         
@@ -27,19 +26,23 @@ enum AppearanceHelper {
         
         UINavigationBar.appearance().largeTitleTextAttributes = textAttributes
         UINavigationBar.appearance().titleTextAttributes = textAttributes
-        
         UITextField.appearance().tintColor = vibrantGreen
         UITextView.appearance().tintColor = vibrantGreen
-        
         UITextField.appearance().keyboardAppearance = .dark
-        UILabel.appearance().font = UIFont(name: "Bebas Neue", size: 20
-    
-        )
+        UILabel.appearance().font = UIFont(name: "Bebas Neue", size: 20)
+        UITableViewCell.appearance().backgroundColor = backgroundBlue
     }
     
-//    static func style(button: UISegmentedControl) {
-//        let segmentedControl = UISegmentedControl()
-//        segmentedControl.setTitleTextAttributes([NSAttributedStringKey.font : UIFont(name: "Open Sans", size: 15), for: font, for: <#UIControlState#>
-//
-//    }
+    static func style(button: UISegmentedControl) {
+        let segmentedControl = UISegmentedControl()
+        segmentedControl.setTitleTextAttributes([
+            NSAttributedStringKey.font : UIFont(name: "Bebas Neue", size: 18)!,
+            NSAttributedStringKey.foregroundColor: AppearanceHelper.vibrantGreen as Any
+            ], for: .normal)
+        
+        segmentedControl.setTitleTextAttributes([
+            NSAttributedStringKey.font : UIFont(name: "Bebas Neue", size: 18)!,
+            NSAttributedStringKey.foregroundColor: AppearanceHelper.backgroundBlue as Any
+            ], for: .selected)
+    }
 }
