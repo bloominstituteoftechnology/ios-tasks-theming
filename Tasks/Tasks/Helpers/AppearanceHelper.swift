@@ -18,12 +18,17 @@ struct AppearanceHelper {
     
     
     // Fonts for application
-    static let mainTextFont = UIFont(name: "MostlyMono", size: 50)
+    static let mainTextFontTitles = UIFont(name: "MostlyMono", size: 50)
+    static let mainTextFontLabels = UIFont(name: "MostlyMono", size: 20)
+    
+    //guard let mainTextFontLabels = UIFont(name: "MostlyMono", size: 20) else { return }
+    
+    //let scaledFont = UIFontMetrics(forTextStyle: .body).scaledFont(for: mainTextFontLabels)
     
     // Scalable Font that can be used if user needs to scale font size
     static func scaledMainTextFont(with textStyle: UIFontTextStyle, size: CGFloat) -> UIFont {
-        guard let font = mainTextFont else { fatalError() }
-        
+        guard let font = mainTextFontLabels else { fatalError() }
+
         return UIFontMetrics(forTextStyle: textStyle).scaledFont(for: font)
     }
 
@@ -34,10 +39,9 @@ struct AppearanceHelper {
         UINavigationBar.appearance().barTintColor = backgroundTone
         
         // Navigation titles: color & font
-        let textAttributes = [NSAttributedStringKey.foregroundColor: AppearanceHelper.lightBrown, NSAttributedStringKey.font: mainTextFont]
+        let textAttributes = [NSAttributedStringKey.foregroundColor: AppearanceHelper.lightBrown, NSAttributedStringKey.font: mainTextFontTitles]
         UINavigationBar.appearance().largeTitleTextAttributes = textAttributes
 
-        
         // Segmented control: color
         UISegmentedControl.appearance().tintColor = lightBlueTints
         UISegmentedControl.appearance().backgroundColor = .white
@@ -49,8 +53,6 @@ struct AppearanceHelper {
         UIButton.appearance().layer.cornerRadius = 16
         
         // Labels: text color & background color
-        // Barbutton text = darkBrown
-        // Labels = black
         UILabel.appearance().textColor = .black
         UILabel.appearance(whenContainedInInstancesOf: [TasksTableViewController.self]).textColor = .white
         
