@@ -20,6 +20,9 @@ class TaskDetailViewController: UIViewController {
         guard let name = nameTextField.text, !name.isEmpty else {
             return
         }
+        let selection = UISelectionFeedbackGenerator()
+        selection.selectionChanged()
+        
         let priorityIndex = priorityControl.selectedSegmentIndex
         let priority = TaskPriority.allPriorities[priorityIndex]
         let notes = notesTextView.text
