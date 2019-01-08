@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2CCA348F21E4037C00A43AB1 /* AppearanceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCA348E21E4037C00A43AB1 /* AppearanceHelper.swift */; };
+		2CCA349521E44D5F00A43AB1 /* blackHand_TRIAL.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CCA349421E44D5F00A43AB1 /* blackHand_TRIAL.ttf */; };
+		2CCA349721E44EC700A43AB1 /* rm_typerighter_medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CCA349621E44EC700A43AB1 /* rm_typerighter_medium.ttf */; };
 		9D4408C7211FF431005E2116 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4408C6211FF431005E2116 /* AppDelegate.swift */; };
 		9D4408CC211FF431005E2116 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D4408CA211FF431005E2116 /* Main.storyboard */; };
 		9D4408CE211FF434005E2116 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D4408CD211FF434005E2116 /* Assets.xcassets */; };
@@ -22,9 +24,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2CCA348C21E4029800A43AB1 /* rm_typerighter_medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = rm_typerighter_medium.ttf; sourceTree = "<group>"; };
 		2CCA348E21E4037C00A43AB1 /* AppearanceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceHelper.swift; sourceTree = "<group>"; };
-		2CCA349321E412A200A43AB1 /* blackHand_TRIAL.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = blackHand_TRIAL.ttf; sourceTree = "<group>"; };
+		2CCA349421E44D5F00A43AB1 /* blackHand_TRIAL.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = blackHand_TRIAL.ttf; sourceTree = "<group>"; };
+		2CCA349621E44EC700A43AB1 /* rm_typerighter_medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = rm_typerighter_medium.ttf; sourceTree = "<group>"; };
 		9D4408C3211FF431005E2116 /* Tasks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tasks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D4408C6211FF431005E2116 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D4408CB211FF431005E2116 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -105,8 +107,8 @@
 				9D4408C6211FF431005E2116 /* AppDelegate.swift */,
 				9D4408CD211FF434005E2116 /* Assets.xcassets */,
 				9D4408D2211FF434005E2116 /* Info.plist */,
-				2CCA349321E412A200A43AB1 /* blackHand_TRIAL.ttf */,
-				2CCA348C21E4029800A43AB1 /* rm_typerighter_medium.ttf */,
+				2CCA349421E44D5F00A43AB1 /* blackHand_TRIAL.ttf */,
+				2CCA349621E44EC700A43AB1 /* rm_typerighter_medium.ttf */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -199,6 +201,8 @@
 			files = (
 				9D4408D1211FF434005E2116 /* LaunchScreen.storyboard in Resources */,
 				9D4408CE211FF434005E2116 /* Assets.xcassets in Resources */,
+				2CCA349721E44EC700A43AB1 /* rm_typerighter_medium.ttf in Resources */,
+				2CCA349521E44D5F00A43AB1 /* blackHand_TRIAL.ttf in Resources */,
 				9D4408CC211FF431005E2116 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
