@@ -19,13 +19,13 @@ enum AppearanceHelper {
     static func setDarkAppearance() {
         UINavigationBar.appearance().barTintColor = backgroundBlue
         UISegmentedControl.appearance().tintColor = vibrantGreen
-        UIBarButtonItem.appearance().tintColor = vibrantGreen
+        UIBarButtonItem.appearance().tintColor = UIColor.white
         UILabel.appearance().textColor = vibrantGreen
         
-        let textAttributes = [NSAttributedStringKey.foregroundColor: vibrantGreen]
+        let textAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white, NSAttributedStringKey.font: UIFont(name: "Open Sans", size: 45)!]
         
-        UINavigationBar.appearance().largeTitleTextAttributes = textAttributes
-        UINavigationBar.appearance().titleTextAttributes = textAttributes
+        UINavigationBar.appearance().largeTitleTextAttributes = textAttributes as [NSAttributedStringKey : Any]
+        UINavigationBar.appearance().titleTextAttributes = textAttributes as [NSAttributedStringKey : Any]
         UITextField.appearance().tintColor = vibrantGreen
         UITextView.appearance().tintColor = vibrantGreen
         UITextField.appearance().keyboardAppearance = .dark

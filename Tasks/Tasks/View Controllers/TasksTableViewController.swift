@@ -20,6 +20,7 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         view.backgroundColor = AppearanceHelper.backgroundBlue
         tableView.backgroundColor = AppearanceHelper.backgroundBlue
         tableView.tableHeaderView?.backgroundColor = AppearanceHelper.backgroundBlue
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.none
     }
     
     @IBAction func refresh(_ sender: Any) {
