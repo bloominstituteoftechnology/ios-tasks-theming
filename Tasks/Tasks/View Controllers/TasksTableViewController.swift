@@ -43,6 +43,7 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         
         let task = fetchedResultsController.object(at: indexPath)
         cell.textLabel?.text = task.name
+        cell.backgroundColor = AppearanceHelper.backgroundGray
         
         return cell
     }
