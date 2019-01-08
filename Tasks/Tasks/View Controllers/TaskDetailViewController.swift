@@ -12,6 +12,9 @@ class TaskDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        view.backgroundColor = AppearanceHelper.backgroundTone
+        notesTextView.backgroundColor = AppearanceHelper.backgroundTone
 
         updateViews()
     }

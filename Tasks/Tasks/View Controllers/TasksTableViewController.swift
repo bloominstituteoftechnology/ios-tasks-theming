@@ -11,6 +11,13 @@ import CoreData
 
 class TasksTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.tableView.backgroundColor = AppearanceHelper.backgroundTone
+        
+    }
+    
     @IBAction func refresh(_ sender: Any) {
         taskController.fetchTasksFromServer { _ in
             DispatchQueue.main.async {
@@ -29,11 +36,17 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         return fetchedResultsController.sections?[section].numberOfObjects ?? 0
     }
     
+    // Cell contents
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TaskCell", for: indexPath)
         
         let task = fetchedResultsController.object(at: indexPath)
         cell.textLabel?.text = task.name
+        
+        // Cell design
+        cell.textLabel?.backgroundColor = AppearanceHelper.backgroundTone
+        cell.textLabel?.textColor = AppearanceHelper.darkBrown
+        cell.contentView.backgroundColor = AppearanceHelper.backgroundTone
         
         return cell
     }
@@ -41,6 +54,24 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         guard let sectionInfo = fetchedResultsController.sections?[section] else { return nil }
         return sectionInfo.name.capitalized
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    
+        let headerImage = UIImage(named: "blue watercolor")!
+        let headerView = UIImageView(image: headerImage)
+        return headerView
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        
+        guard let header = view as? UITableViewHeaderFooterView else { return }
+        header.textLabel?.font = AppearanceHelper.scaledMainTextFont(with: .headline, size: 25)
+        header.textLabel?.adjustsFontForContentSizeCategory = true
+        view.tintColor = AppearanceHelper.lightBlueTints
+        
+        
+
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
