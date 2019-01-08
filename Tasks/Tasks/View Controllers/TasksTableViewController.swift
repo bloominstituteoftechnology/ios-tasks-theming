@@ -56,12 +56,12 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         return sectionInfo.name.capitalized
     }
     
-//    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        
-//        let headerImage = UIImage(named: "blue watercolor")!
-//        let headerView = UIImageView(image: headerImage)
-//        return headerView
-//    }
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    
+        let headerImage = UIImage(named: "blue watercolor")!
+        let headerView = UIImageView(image: headerImage)
+        return headerView
+    }
     
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         
@@ -69,6 +69,7 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         header.textLabel?.font = AppearanceHelper.scaledMainTextFont(with: .headline, size: 25)
         header.textLabel?.adjustsFontForContentSizeCategory = true
         view.tintColor = AppearanceHelper.lightBlueTints
+        
         
 
     }

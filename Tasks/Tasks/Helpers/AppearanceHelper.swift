@@ -21,10 +21,6 @@ struct AppearanceHelper {
     static let mainTextFontTitles = UIFont(name: "MostlyMono", size: 50)
     static let mainTextFontLabels = UIFont(name: "MostlyMono", size: 20)
     
-    //guard let mainTextFontLabels = UIFont(name: "MostlyMono", size: 20) else { return }
-    
-    //let scaledFont = UIFontMetrics(forTextStyle: .body).scaledFont(for: mainTextFontLabels)
-    
     // Scalable Font that can be used if user needs to scale font size
     static func scaledMainTextFont(with textStyle: UIFontTextStyle, size: CGFloat) -> UIFont {
         guard let font = mainTextFontLabels else { fatalError() }
@@ -55,6 +51,8 @@ struct AppearanceHelper {
         // Labels: text color & background color
         UILabel.appearance().textColor = .black
         UILabel.appearance(whenContainedInInstancesOf: [TasksTableViewController.self]).textColor = .white
+        UILabel.appearance(whenContainedInInstancesOf: [TaskDetailViewController.self]).font = scaledMainTextFont(with: .headline, size: 25)
+        UILabel.appearance(whenContainedInInstancesOf: [TaskDetailViewController.self]).adjustsFontForContentSizeCategory = true
         
         // Text Fields
         UITextField.appearance().tintColor = lightBlueTints
