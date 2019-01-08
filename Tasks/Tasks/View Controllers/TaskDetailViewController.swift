@@ -21,23 +21,23 @@ class TaskDetailViewController: UIViewController {
         
         priorityControl.layer.borderWidth = 0.05
 
-        nameTextField.backgroundColor = AppearanceHelper.backgroundBlue
+        nameTextField.backgroundColor = UIColor.white.withAlphaComponent(0.05)
         nameTextField.textColor = .white
-        nameTextField.layer.borderColor = AppearanceHelper.vibrantGreen?.cgColor
-        nameTextField.layer.borderWidth = 0.75
+        //nameTextField.layer.borderColor = AppearanceHelper.vibrantGreen?.cgColor
+        //nameTextField.layer.borderWidth = 0.75
         nameTextField.layer.cornerRadius = 4
-        nameTextField.font = AppearanceHelper.openSansFont(with: .body, pointSize: 20)
+        nameTextField.font = AppearanceHelper.openSansFont(with: .body, pointSize: 18)
         nameTextField.keyboardAppearance = .dark
         
-        notesTextView.backgroundColor = AppearanceHelper.backgroundBlue
-        notesTextView.layer.borderColor = AppearanceHelper.vibrantGreen?.cgColor
+        notesTextView.backgroundColor = UIColor.white.withAlphaComponent(0.05)
+        //notesTextView.layer.borderColor = AppearanceHelper.vibrantGreen?.cgColor
         notesTextView.textColor = .white
-        notesTextView.font = AppearanceHelper.openSansFont(with: .body, pointSize: 20
+        notesTextView.font = AppearanceHelper.openSansFont(with: .body, pointSize: 18
         )
-        notesTextView.layer.borderWidth = 0.75
+        //notesTextView.layer.borderWidth = 0.75
         notesTextView.layer.cornerRadius = 4
         
-        
+        AppearanceHelper.style(button: priorityControl)
         view.backgroundColor = AppearanceHelper.backgroundBlue
 
     }

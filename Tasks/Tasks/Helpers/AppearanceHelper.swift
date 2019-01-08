@@ -17,7 +17,7 @@ enum AppearanceHelper {
     }
     
     static func setDarkAppearance() {
-        UINavigationBar.appearance().barTintColor = backgroundBlue
+        UINavigationBar.appearance().barTintColor = vibrantGreen
         UISegmentedControl.appearance().tintColor = vibrantGreen
         UIBarButtonItem.appearance().tintColor = UIColor.white
         UILabel.appearance().textColor = vibrantGreen
@@ -26,23 +26,25 @@ enum AppearanceHelper {
         
         UINavigationBar.appearance().largeTitleTextAttributes = textAttributes as [NSAttributedStringKey : Any]
         UINavigationBar.appearance().titleTextAttributes = textAttributes as [NSAttributedStringKey : Any]
-        UITextField.appearance().tintColor = vibrantGreen
-        UITextView.appearance().tintColor = vibrantGreen
+        
+//        UITextField.appearance().tintColor = .white
+//        UITextView.appearance().tintColor = vibrantGreen
         UITextField.appearance().keyboardAppearance = .dark
         UILabel.appearance().font = UIFont(name: "Bebas Neue", size: 20)
         UITableViewCell.appearance().backgroundColor = backgroundBlue
+        
+        UIBarButtonItem.appearance().setTitleTextAttributes(
+            [
+                NSAttributedStringKey.font : UIFont(name: "Open Sans", size: 18)!,
+                NSAttributedStringKey.foregroundColor : UIColor.white,
+                ], for: .normal)
+        
     }
     
     static func style(button: UISegmentedControl) {
         let segmentedControl = UISegmentedControl()
-        segmentedControl.setTitleTextAttributes([
-            NSAttributedStringKey.font : UIFont(name: "Bebas Neue", size: 18)!,
-            NSAttributedStringKey.foregroundColor: AppearanceHelper.vibrantGreen as Any
-            ], for: .normal)
-        
-        segmentedControl.setTitleTextAttributes([
-            NSAttributedStringKey.font : UIFont(name: "Bebas Neue", size: 18)!,
-            NSAttributedStringKey.foregroundColor: AppearanceHelper.backgroundBlue as Any
-            ], for: .selected)
+        let titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white, NSAttributedStringKey.font: UIFont(name: "Open Sans", size: 15)]
+        segmentedControl.setTitleTextAttributes(titleTextAttributes as [AnyHashable : Any], for: .normal)
+        segmentedControl.setTitleTextAttributes(titleTextAttributes as [AnyHashable : Any], for: .selected)
     }
 }
