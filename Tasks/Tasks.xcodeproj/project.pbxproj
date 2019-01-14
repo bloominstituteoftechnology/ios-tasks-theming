@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		48F80DB621ED2D5B0022BF9D /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F80DB521ED2D5B0022BF9D /* Appearance.swift */; };
 		48F80DB821ED2FF20022BF9D /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F80DB721ED2FF20022BF9D /* UIColor.swift */; };
+		48F80DBA21ED37330022BF9D /* Kwixter Sketch_D.otf in Resources */ = {isa = PBXBuildFile; fileRef = 48F80DB921ED37330022BF9D /* Kwixter Sketch_D.otf */; };
 		9D4408C7211FF431005E2116 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4408C6211FF431005E2116 /* AppDelegate.swift */; };
 		9D4408CC211FF431005E2116 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D4408CA211FF431005E2116 /* Main.storyboard */; };
 		9D4408CE211FF434005E2116 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D4408CD211FF434005E2116 /* Assets.xcassets */; };
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		48F80DB521ED2D5B0022BF9D /* Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
 		48F80DB721ED2FF20022BF9D /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		48F80DB921ED37330022BF9D /* Kwixter Sketch_D.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kwixter Sketch_D.otf"; sourceTree = "<group>"; };
+		48F80DBB21ED37520022BF9D /* BarlowCondensed-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BarlowCondensed-Light.ttf"; sourceTree = "<group>"; };
 		9D4408C3211FF431005E2116 /* Tasks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tasks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D4408C6211FF431005E2116 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D4408CB211FF431005E2116 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -86,6 +89,8 @@
 		9D4408D8211FF4BA005E2116 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				48F80DBB21ED37520022BF9D /* BarlowCondensed-Light.ttf */,
+				48F80DB921ED37330022BF9D /* Kwixter Sketch_D.otf */,
 				9D4408CA211FF431005E2116 /* Main.storyboard */,
 				9D4408CD211FF434005E2116 /* Assets.xcassets */,
 				9D4408CF211FF434005E2116 /* LaunchScreen.storyboard */,
@@ -182,6 +187,7 @@
 			files = (
 				9D4408D1211FF434005E2116 /* LaunchScreen.storyboard in Resources */,
 				9D4408CE211FF434005E2116 /* Assets.xcassets in Resources */,
+				48F80DBA21ED37330022BF9D /* Kwixter Sketch_D.otf in Resources */,
 				9D4408CC211FF431005E2116 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
