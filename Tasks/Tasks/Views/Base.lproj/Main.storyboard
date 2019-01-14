@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Taskagram-->
+        <!--Tasks-->
         <scene sceneID="5la-8G-DbN">
             <objects>
                 <tableViewController id="NEY-So-hQF" customClass="TasksTableViewController" customModule="Tasks" customModuleProvider="target" sceneMemberID="viewController">
@@ -46,8 +46,8 @@
                             <outlet property="delegate" destination="NEY-So-hQF" id="jW8-61-piG"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Taskagram" id="FUm-j1-Dc8">
-                        <barButtonItem key="rightBarButtonItem" image="icons8-positive-filled-30" id="aIU-0T-di6">
+                    <navigationItem key="navigationItem" title="Tasks" id="FUm-j1-Dc8">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="aIU-0T-di6">
                             <connections>
                                 <segue destination="WI2-wJ-dAU" kind="show" identifier="ShowCreateTask" id="37B-hs-oKJ"/>
                             </connections>
@@ -138,7 +138,7 @@
                         <viewLayoutGuide key="safeArea" id="PG6-rD-Oga"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="z9b-u2-D5W">
-                        <barButtonItem key="rightBarButtonItem" image="icons8-save-filled-30" id="FS3-p2-Jxo">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="FS3-p2-Jxo">
                             <connections>
                                 <action selector="save:" destination="WI2-wJ-dAU" id="YSR-ec-hWY"/>
                             </connections>
@@ -171,10 +171,6 @@
             <point key="canvasLocation" x="-278" y="153"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="icons8-positive-filled-30" width="45" height="45"/>
-        <image name="icons8-save-filled-30" width="45" height="45"/>
-    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="37B-hs-oKJ"/>
     </inferredMetricsTieBreakers>

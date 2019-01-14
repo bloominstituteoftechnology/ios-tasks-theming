@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2CCA348F21E4037C00A43AB1 /* AppearanceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCA348E21E4037C00A43AB1 /* AppearanceHelper.swift */; };
-		2CCA349521E44D5F00A43AB1 /* blackHand_TRIAL.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CCA349421E44D5F00A43AB1 /* blackHand_TRIAL.ttf */; };
-		2CCA349721E44EC700A43AB1 /* rm_typerighter_medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CCA349621E44EC700A43AB1 /* rm_typerighter_medium.ttf */; };
+		2C0570B321ED23E4001850F9 /* AppearanceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0570B221ED23E4001850F9 /* AppearanceHelper.swift */; };
 		9D4408C7211FF431005E2116 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4408C6211FF431005E2116 /* AppDelegate.swift */; };
 		9D4408CC211FF431005E2116 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D4408CA211FF431005E2116 /* Main.storyboard */; };
 		9D4408CE211FF434005E2116 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D4408CD211FF434005E2116 /* Assets.xcassets */; };
@@ -24,9 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2CCA348E21E4037C00A43AB1 /* AppearanceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceHelper.swift; sourceTree = "<group>"; };
-		2CCA349421E44D5F00A43AB1 /* blackHand_TRIAL.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = blackHand_TRIAL.ttf; sourceTree = "<group>"; };
-		2CCA349621E44EC700A43AB1 /* rm_typerighter_medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = rm_typerighter_medium.ttf; sourceTree = "<group>"; };
+		2C0570B221ED23E4001850F9 /* AppearanceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceHelper.swift; sourceTree = "<group>"; };
 		9D4408C3211FF431005E2116 /* Tasks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tasks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D4408C6211FF431005E2116 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D4408CB211FF431005E2116 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -58,7 +54,7 @@
 		2CCA348D21E4033B00A43AB1 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				2CCA348E21E4037C00A43AB1 /* AppearanceHelper.swift */,
+				2C0570B221ED23E4001850F9 /* AppearanceHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -107,8 +103,6 @@
 				9D4408C6211FF431005E2116 /* AppDelegate.swift */,
 				9D4408CD211FF434005E2116 /* Assets.xcassets */,
 				9D4408D2211FF434005E2116 /* Info.plist */,
-				2CCA349421E44D5F00A43AB1 /* blackHand_TRIAL.ttf */,
-				2CCA349621E44EC700A43AB1 /* rm_typerighter_medium.ttf */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -201,8 +195,6 @@
 			files = (
 				9D4408D1211FF434005E2116 /* LaunchScreen.storyboard in Resources */,
 				9D4408CE211FF434005E2116 /* Assets.xcassets in Resources */,
-				2CCA349721E44EC700A43AB1 /* rm_typerighter_medium.ttf in Resources */,
-				2CCA349521E44D5F00A43AB1 /* blackHand_TRIAL.ttf in Resources */,
 				9D4408CC211FF431005E2116 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,7 +208,7 @@
 			files = (
 				9D70DFF921248F8E006D4DF5 /* TaskController.swift in Sources */,
 				9D70DFFC21249442006D4DF5 /* TaskRepresentation.swift in Sources */,
-				2CCA348F21E4037C00A43AB1 /* AppearanceHelper.swift in Sources */,
+				2C0570B321ED23E4001850F9 /* AppearanceHelper.swift in Sources */,
 				9D4408E5211FF7CC005E2116 /* TaskDetailViewController.swift in Sources */,
 				9D4408DD211FF51C005E2116 /* Tasks.xcdatamodeld in Sources */,
 				9D4408E3211FF752005E2116 /* TasksTableViewController.swift in Sources */,
@@ -366,8 +358,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VXUQXR6S56;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/Tasks/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -375,6 +368,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.IvanCaldwell.Tasks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -384,8 +378,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VXUQXR6S56;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/Tasks/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -393,6 +388,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.IvanCaldwell.Tasks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
