@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-let baseURL = URL(string: "https://tasks-b6a43.firebaseio.com/")!
+let baseURL = URL(string: "https://task-project-2019-01-07.firebaseio.com/")!
 
 class TaskController {
     
