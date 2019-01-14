@@ -18,7 +18,16 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
             }
         }
     }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupNavImage()
+    }
     
+    func setupNavImage()  {
+        let image = UIImage(named: "tasks")
+        let imageView = UIImageView(image: image)
+        navigationItem.titleView = imageView
+    }
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -43,7 +52,7 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         return sectionInfo.name.capitalized
     }
     
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let task = fetchedResultsController.object(at: indexPath)
             

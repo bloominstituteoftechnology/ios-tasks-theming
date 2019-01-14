@@ -12,8 +12,8 @@ class TaskDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         updateViews()
+        setTheme()
     }
 
     @IBAction func save(_ sender: Any) {
@@ -67,6 +67,22 @@ class TaskDetailViewController: UIViewController {
             updateViews()
         }
     }
+    
+    func setTheme() {
+        notesTextView.backgroundColor = UIColor.mandang
+        notesTextView.textColor = .black
+        notesTextView.layer.cornerRadius = 10
+        notesTextView.font = AppearanceHelper.vladFont(with: .body, pointSize: 15)
+        nameTextField.backgroundColor = UIColor.mandang
+        nameTextField.textColor = UIColor.black
+        nameTextField.layer.cornerRadius = 10
+        nameTextField.font = AppearanceHelper.vladFont(with: .headline, pointSize: 15)
+//        notesTextView.layer.shadowColor = UIColor.black.cgColor
+//        notesTextView.layer.shadowOffset = CGSize.zero
+//        notesTextView.layer.shadowOpacity = 1
+//        notesTextView.layer.shadowRadius = 40
+    }
+    
     
     var taskController: TaskController!
 

@@ -14,8 +14,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        UISegmentedControl.appearance().tintColor = .summerGreen
+        let attribute: [NSAttributedString.Key : Any]  = [.font: UIFont(name: "Vladivostok", size: 16.0)!, .foregroundColor: UIColor.black]
+        UISegmentedControl.appearance().setTitleTextAttributes(attribute as [NSAttributedString.Key : Any], for: .normal)
+        
+        AppearanceHelper.setGreenAppearance()
         return true
     }
 
