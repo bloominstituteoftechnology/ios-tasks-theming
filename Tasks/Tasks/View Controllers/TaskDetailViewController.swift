@@ -1,45 +1,11 @@
-//
-//  TaskDetailViewController.swift
-//  Tasks
-//
-//  Created by Andrew R Madsen on 8/11/18.
-//  Copyright © 2018 Andrew R Madsen. All rights reserved.
-//
-
 import UIKit
 
 class TaskDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setTheme()
+
         updateViews()
-    }
-    
-    func setTheme() {
-        
-        priorityControl.layer.borderWidth = 0.05
-
-        nameTextField.backgroundColor = UIColor.white.withAlphaComponent(0.05)
-        nameTextField.textColor = .white
-        //nameTextField.layer.borderColor = AppearanceHelper.vibrantGreen?.cgColor
-        //nameTextField.layer.borderWidth = 0.75
-        nameTextField.layer.cornerRadius = 4
-        nameTextField.font = AppearanceHelper.openSansFont(with: .body, pointSize: 18)
-        nameTextField.keyboardAppearance = .dark
-        
-        notesTextView.backgroundColor = UIColor.white.withAlphaComponent(0.05)
-        //notesTextView.layer.borderColor = AppearanceHelper.vibrantGreen?.cgColor
-        notesTextView.textColor = .white
-        notesTextView.font = AppearanceHelper.openSansFont(with: .body, pointSize: 18
-        )
-        //notesTextView.layer.borderWidth = 0.75
-        notesTextView.layer.cornerRadius = 4
-        
-        AppearanceHelper.style(button: priorityControl)
-        view.backgroundColor = AppearanceHelper.backgroundBlue
-
     }
 
     @IBAction func save(_ sender: Any) {

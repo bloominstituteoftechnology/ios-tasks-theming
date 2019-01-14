@@ -41,10 +41,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>UIAppFonts</key>
-	<array>
-		<string>BebasNeue.otf</string>
-		<string>OpenSans-CondLight.ttf</string>
-	</array>
 </dict>
 </plist>
