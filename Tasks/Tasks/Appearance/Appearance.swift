@@ -16,7 +16,9 @@ struct Appearance {
         UINavigationBar.appearance().tintColor = .white
 
         UISegmentedControl.appearance().tintColor = customColor
+        
         UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "ethnocentric", size: 25.0) as Any]
         
         UITextField.appearance().tintColor = customColor
         UITextField.appearance().textColor = customColor
