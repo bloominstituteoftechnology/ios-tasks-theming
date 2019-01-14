@@ -18,6 +18,7 @@
 		9D4408E5211FF7CC005E2116 /* TaskDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4408E4211FF7CC005E2116 /* TaskDetailViewController.swift */; };
 		9D70DFF921248F8E006D4DF5 /* TaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D70DFF821248F8E006D4DF5 /* TaskController.swift */; };
 		9D70DFFC21249442006D4DF5 /* TaskRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D70DFFB21249442006D4DF5 /* TaskRepresentation.swift */; };
+		A513CC9E21ED485A00857436 /* Task.png in Resources */ = {isa = PBXBuildFile; fileRef = A513CC9D21ED485A00857436 /* Task.png */; };
 		A5B540DA21ED2B1300286EDC /* AppearanceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B540D921ED2B1300286EDC /* AppearanceHelper.swift */; };
 		A5B540DC21ED337200286EDC /* neuropol x rg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A5B540DB21ED337200286EDC /* neuropol x rg.ttf */; };
 		A5B540DE21ED347100286EDC /* minya nouvelle bd.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A5B540DD21ED347100286EDC /* minya nouvelle bd.ttf */; };
@@ -39,6 +40,7 @@
 		9D70DFF821248F8E006D4DF5 /* TaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskController.swift; sourceTree = "<group>"; };
 		9D70DFFA21249145006D4DF5 /* Tasks 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Tasks 3.xcdatamodel"; sourceTree = "<group>"; };
 		9D70DFFB21249442006D4DF5 /* TaskRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRepresentation.swift; sourceTree = "<group>"; };
+		A513CC9D21ED485A00857436 /* Task.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Task.png; sourceTree = "<group>"; };
 		A5B540D921ED2B1300286EDC /* AppearanceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceHelper.swift; sourceTree = "<group>"; };
 		A5B540DB21ED337200286EDC /* neuropol x rg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "neuropol x rg.ttf"; sourceTree = "<group>"; };
 		A5B540DD21ED347100286EDC /* minya nouvelle bd.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "minya nouvelle bd.ttf"; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			children = (
 				9D4408CA211FF431005E2116 /* Main.storyboard */,
 				9D4408CD211FF434005E2116 /* Assets.xcassets */,
+				A513CC9D21ED485A00857436 /* Task.png */,
 				9D4408CF211FF434005E2116 /* LaunchScreen.storyboard */,
 				9D4408D2211FF434005E2116 /* Info.plist */,
 				A5B540DB21ED337200286EDC /* neuropol x rg.ttf */,
@@ -184,6 +187,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A513CC9E21ED485A00857436 /* Task.png in Resources */,
 				A5B540DE21ED347100286EDC /* minya nouvelle bd.ttf in Resources */,
 				9D4408D1211FF434005E2116 /* LaunchScreen.storyboard in Resources */,
 				9D4408CE211FF434005E2116 /* Assets.xcassets in Resources */,
