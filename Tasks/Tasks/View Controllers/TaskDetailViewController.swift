@@ -62,7 +62,7 @@ class TaskDetailViewController: UIViewController {
         notesTextView.tintColor = .white
         notesTextView.textColor = .white
         notesTextView.keyboardAppearance = .dark
-        notesTextView.font = AppearanceHelper.typerighterFont(with: .body, pointSize: 25)
+        notesTextView.font = AppearanceHelper.newFont(with: .body, pointSize: 25)
         notesTextView.backgroundColor = AppearanceHelper.backgroundLightGray
        // AppearanceHelper.style(button: saveButton)
     }
