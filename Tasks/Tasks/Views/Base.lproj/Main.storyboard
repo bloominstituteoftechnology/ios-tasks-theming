@@ -47,7 +47,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Tasks" id="FUm-j1-Dc8">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="aIU-0T-di6">
+                        <barButtonItem key="rightBarButtonItem" title="New" id="aIU-0T-di6">
                             <connections>
                                 <segue destination="WI2-wJ-dAU" kind="show" identifier="ShowCreateTask" id="37B-hs-oKJ"/>
                             </connections>
@@ -79,7 +79,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="qRz-8F-sRH">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="26.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Ee-Sa-gkn">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Ee-Sa-gkn">
                                                 <rect key="frame" x="0.0" y="0.0" width="65.5" height="26.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                                 <nil key="textColor"/>
@@ -138,7 +138,7 @@
                         <viewLayoutGuide key="safeArea" id="PG6-rD-Oga"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="z9b-u2-D5W">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="FS3-p2-Jxo">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="FS3-p2-Jxo">
                             <connections>
                                 <action selector="save:" destination="WI2-wJ-dAU" id="YSR-ec-hWY"/>
                             </connections>

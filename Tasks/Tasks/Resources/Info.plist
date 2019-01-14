@@ -22,8 +22,8 @@
 	<true/>
 	<key>UIAppFonts</key>
 	<array>
-		<string>rm_typerighter_medium.ttf</string>
-		<string>blackHand_TRIAL.ttf</string>
+		<string>octin_stencil_rg.ttf</string>
+		<string>rm_typerighter_medium.tff</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
