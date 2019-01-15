@@ -15,12 +15,12 @@ enum Appearance {
     
     static func setDarkAppearance() {
         //navigationbar
-        UINavigationBar.appearance().barTintColor = .dullGreen
-        UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.paleYellow, NSAttributedStringKey.font: UIFont(name: "Kwixter", size: 30)!]
+        UINavigationBar.appearance().barTintColor = .black
+        UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white, NSAttributedStringKey.font: UIFont(name: "Kwixter", size: 30)!]
         
         //bar button item
-        UIBarButtonItem.appearance().tintColor = .paleYellow
-        UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font : UIFont(name: "Kwixter", size: 14)!, NSAttributedStringKey.foregroundColor : UIColor.paleYellow], for: .normal)
+        UIBarButtonItem.appearance().tintColor = .white
+        UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font : UIFont(name: "Kwixter", size: 14)!, NSAttributedStringKey.foregroundColor : UIColor.white], for: .normal)
        
         //labels
         UILabel.appearance().textColor = .white

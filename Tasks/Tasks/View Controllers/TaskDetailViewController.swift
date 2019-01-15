@@ -14,13 +14,19 @@ class TaskDetailViewController: UIViewController {
     }
     
     func setTheme() {
-
+        //textfield
         nameTextField.textColor = .white
-        nameTextField.font = Appearance.openSansFont(with: .body, pointSize: 18)
+        nameTextField.font = Appearance.openSansFont(with: .body, pointSize: 20)
+        nameTextField.layer.cornerRadius = 10
+        nameTextField.backgroundColor = UIColor.pink.withAlphaComponent(0.15)
         
-        notesTextView.layer.cornerRadius = 14
+        //textview
+        notesTextView.layer.cornerRadius = 10
+        notesTextView.textColor = .white
+        notesTextView.backgroundColor = UIColor.pink.withAlphaComponent(0.15)
+        notesTextView.font = Appearance.openSansFont(with: .body, pointSize: 20)
         
-        view.backgroundColor = .paleYellow
+        view.backgroundColor = .violet
     }
 
     @IBAction func save(_ sender: Any) {
