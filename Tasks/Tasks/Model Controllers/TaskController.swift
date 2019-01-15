@@ -46,7 +46,7 @@ class TaskController {
                 completion(error)
                 return
             }
-            }.resume()
+        }.resume()
     }
     
     func put(task: Task, completion: @escaping CompletionHandler = { _ in }) {
