@@ -5,9 +5,10 @@ class TaskDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        let image = UIImage(named: "dabbing-unicorn")
-//        let imageView = UIImageView(image: image)
-//        navigationItem.titleView = imageView
+        let image = UIImage(named: "dabbing-unicorn")
+        let imageView = UIImageView(image: image)
+        imageView.contentMode = .scaleAspectFit
+        navigationItem.titleView = imageView
         
         setTheme()
         updateViews()

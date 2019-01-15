@@ -6,17 +6,18 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        let image = UIImage(named: "dabbing-unicorn")
-//        let imageView = UIImageView(image: image)
-//        navigationItem.titleView = imageView
+        let image = UIImage(named: "dabbing-unicorn")
+        let imageView = UIImageView(image: image)
+        imageView.contentMode = .scaleAspectFit
+        navigationItem.titleView = imageView
         
         setTheme()
 
     }
     
     func setTheme() {
-        view.backgroundColor = .paleYellow
-        tableView.separatorColor = .dullGreen
+        view.backgroundColor = .dullGreen
+        tableView.separatorColor = .white
 
     }
     
@@ -50,8 +51,8 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
     func style(cell: UITableViewCell) {
         cell.textLabel?.font = Appearance.openSansFont(with: .caption1, pointSize: 20)
         cell.textLabel?.adjustsFontForContentSizeCategory = true
-        cell.backgroundColor = .paleYellow
-        cell.textLabel?.textColor = .dullGreen
+        cell.backgroundColor = UIColor.paleYellow//.withAlphaComponent(0.25)
+        cell.textLabel?.textColor = .gray
     }
     
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
