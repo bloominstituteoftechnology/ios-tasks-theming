@@ -41,5 +41,10 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>minya nouvelle bd.ttf</string>
+		<string>neuropol x rg.ttf</string>
+	</array>
 </dict>
 </plist>

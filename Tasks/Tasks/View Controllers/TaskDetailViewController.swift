@@ -12,7 +12,7 @@ class TaskDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        view.backgroundColor = AppearanceHelper.backgroundGray
         updateViews()
     }
 
@@ -57,7 +57,14 @@ class TaskDetailViewController: UIViewController {
             priority = .normal
         }
         priorityControl.selectedSegmentIndex = TaskPriority.allPriorities.index(of: priority)!
+        priorityControl.backgroundColor = AppearanceHelper.backgroundLightGray
         notesTextView.text = task?.notes
+        notesTextView.tintColor = .white
+        notesTextView.textColor = .white
+        notesTextView.keyboardAppearance = .dark
+        notesTextView.font = AppearanceHelper.newFont(with: .body, pointSize: 25)
+        notesTextView.backgroundColor = AppearanceHelper.backgroundLightGray
+       // AppearanceHelper.style(button: saveButton)
     }
     
     // MARK: Properties
@@ -71,6 +78,7 @@ class TaskDetailViewController: UIViewController {
     var taskController: TaskController!
 
     @IBOutlet var nameTextField: UITextField!
+    @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet var priorityControl: UISegmentedControl!
     @IBOutlet var notesTextView: UITextView!
 }
