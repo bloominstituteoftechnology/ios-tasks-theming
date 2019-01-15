@@ -4,8 +4,23 @@ class TaskDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+//        let image = UIImage(named: "dabbing-unicorn")
+//        let imageView = UIImageView(image: image)
+//        navigationItem.titleView = imageView
+        
+        setTheme()
         updateViews()
+    }
+    
+    func setTheme() {
+
+        nameTextField.textColor = .white
+        nameTextField.font = Appearance.openSansFont(with: .body, pointSize: 18)
+        
+        notesTextView.layer.cornerRadius = 14
+        
+        view.backgroundColor = .paleYellow
     }
 
     @IBAction func save(_ sender: Any) {

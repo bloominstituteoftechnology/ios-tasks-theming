@@ -44,7 +44,7 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>Kwixter Sketch_D.otf</string>
-		<string>BarlowCondensed-Light.ttf</string>
+		<string>OpenSans-CondLight.ttf</string>
 	</array>
 </dict>
 </plist>

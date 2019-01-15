@@ -9,7 +9,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Appearance.setDarkAppearance()
         
         
-        
         return true
     }
 }
