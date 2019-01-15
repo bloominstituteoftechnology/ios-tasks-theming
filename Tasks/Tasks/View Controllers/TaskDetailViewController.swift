@@ -15,9 +15,14 @@ class TaskDetailViewController: UIViewController {
         view.backgroundColor = AppearanceHelper.backgroundGray
         updateViews()
         
+        // Add logo to navigation bar
         let logoImageFile = UIImage(named: "App Logo.png")
         let logoImage = UIImageView(image:logoImageFile)
         self.navigationItem.titleView = logoImage
+        
+        // Change UITextField Background and Text Color
+        nameTextField.backgroundColor = .black
+        nameTextField.textColor = .white
     }
 
     @IBAction func save(_ sender: Any) {
