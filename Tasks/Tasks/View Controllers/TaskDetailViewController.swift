@@ -14,6 +14,10 @@ class TaskDetailViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = AppearanceHelper.backgroundGray
         updateViews()
+        
+        let logoImageFile = UIImage(named: "App Logo.png")
+        let logoImage = UIImageView(image:logoImageFile)
+        self.navigationItem.titleView = logoImage
     }
 
     @IBAction func save(_ sender: Any) {

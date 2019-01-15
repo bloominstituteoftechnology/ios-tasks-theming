@@ -21,6 +21,7 @@
 		F83BD14121E444DE006148A4 /* dotty.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F83BD14021E444DD006148A4 /* dotty.ttf */; };
 		F83BD14321E446F6006148A4 /* AppearanceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83BD14221E446F6006148A4 /* AppearanceHelper.swift */; };
 		F85C7F0921EDDEB900BFD3B5 /* AppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F85C7F0821EDDEB900BFD3B5 /* AppIcon.png */; };
+		F85C7F0B21EDE12800BFD3B5 /* App Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = F85C7F0A21EDE12700BFD3B5 /* App Logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		F83BD14021E444DD006148A4 /* dotty.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = dotty.ttf; sourceTree = "<group>"; };
 		F83BD14221E446F6006148A4 /* AppearanceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceHelper.swift; sourceTree = "<group>"; };
 		F85C7F0821EDDEB900BFD3B5 /* AppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon.png; sourceTree = "<group>"; };
+		F85C7F0A21EDE12700BFD3B5 /* App Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "App Logo.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				9D4408CF211FF434005E2116 /* LaunchScreen.storyboard */,
 				F83BD14021E444DD006148A4 /* dotty.ttf */,
 				9D4408D2211FF434005E2116 /* Info.plist */,
+				F85C7F0A21EDE12700BFD3B5 /* App Logo.png */,
 				F85C7F0821EDDEB900BFD3B5 /* AppIcon.png */,
 			);
 			path = Resources;
@@ -193,6 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F85C7F0921EDDEB900BFD3B5 /* AppIcon.png in Resources */,
+				F85C7F0B21EDE12800BFD3B5 /* App Logo.png in Resources */,
 				9D4408D1211FF434005E2116 /* LaunchScreen.storyboard in Resources */,
 				F83BD14121E444DE006148A4 /* dotty.ttf in Resources */,
 				9D4408CE211FF434005E2116 /* Assets.xcassets in Resources */,

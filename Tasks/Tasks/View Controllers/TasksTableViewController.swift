@@ -19,6 +19,10 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         
         view.backgroundColor = AppearanceHelper.backgroundGray
         tableView.backgroundColor = AppearanceHelper.backgroundGray
+        
+        let logoImageFile = UIImage(named: "App Logo.png")
+        let logoImage = UIImageView(image:logoImageFile)
+        self.navigationItem.titleView = logoImage
 
     }
     
