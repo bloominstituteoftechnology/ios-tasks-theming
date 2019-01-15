@@ -12,7 +12,7 @@ class TaskDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        view.backgroundColor = AppearanceHelper.backgroundGray
         updateViews()
     }
 
