@@ -35,6 +35,10 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         let task = fetchedResultsController.object(at: indexPath)
         cell.textLabel?.text = task.name
         
+        guard let font = UIFont(name: "ethnocentric", size: 25.0) else { return cell }
+        let scaledFont = UIFontMetrics(forTextStyle: .title1).scaledFont(for: font)
+        cell.textLabel?.font = scaledFont
+        
         return cell
     }
     
@@ -43,7 +47,7 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         return sectionInfo.name.capitalized
     }
     
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let task = fetchedResultsController.object(at: indexPath)
             
