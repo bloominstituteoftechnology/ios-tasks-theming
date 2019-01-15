@@ -1,15 +1,25 @@
-//
-//  TasksTableViewController.swift
-//  Tasks
-//
-//  Created by Andrew R Madsen on 8/11/18.
-//  Copyright © 2018 Andrew R Madsen. All rights reserved.
-//
-
 import UIKit
 import CoreData
 
 class TasksTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let image = UIImage(named: "dabbing-unicorn")
+        let imageView = UIImageView(image: image)
+        imageView.contentMode = .scaleAspectFit
+        navigationItem.titleView = imageView
+        
+        setTheme()
+
+    }
+    
+    func setTheme() {
+        view.backgroundColor = .dullGreen
+        tableView.separatorColor = .white
+
+    }
     
     @IBAction func refresh(_ sender: Any) {
         taskController.fetchTasksFromServer { _ in
@@ -34,8 +44,27 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         
         let task = fetchedResultsController.object(at: indexPath)
         cell.textLabel?.text = task.name
-        
+        style(cell: cell)
         return cell
+    }
+    
+    func style(cell: UITableViewCell) {
+        cell.textLabel?.font = Appearance.openSansFont(with: .caption1, pointSize: 20)
+        cell.textLabel?.adjustsFontForContentSizeCategory = true
+        cell.backgroundColor = UIColor.paleYellow//.withAlphaComponent(0.25)
+        cell.textLabel?.textColor = .gray
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        let view = view as! UITableViewHeaderFooterView
+        let colorView = UIView(frame: view.frame)
+        colorView.backgroundColor = .dullGreen
+//        switch section {
+//        case 0: colorView.backgroundColor = .red
+//
+//        }
+        
+        view.backgroundView = colorView
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {

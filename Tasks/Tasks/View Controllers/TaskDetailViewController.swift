@@ -1,19 +1,33 @@
-//
-//  TaskDetailViewController.swift
-//  Tasks
-//
-//  Created by Andrew R Madsen on 8/11/18.
-//  Copyright © 2018 Andrew R Madsen. All rights reserved.
-//
-
 import UIKit
 
 class TaskDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        let image = UIImage(named: "dabbing-unicorn")
+        let imageView = UIImageView(image: image)
+        imageView.contentMode = .scaleAspectFit
+        navigationItem.titleView = imageView
+        
+        setTheme()
         updateViews()
+    }
+    
+    func setTheme() {
+        //textfield
+        nameTextField.textColor = .white
+        nameTextField.font = Appearance.openSansFont(with: .body, pointSize: 20)
+        nameTextField.layer.cornerRadius = 10
+        nameTextField.backgroundColor = UIColor.pink.withAlphaComponent(0.15)
+        
+        //textview
+        notesTextView.layer.cornerRadius = 10
+        notesTextView.textColor = .white
+        notesTextView.backgroundColor = UIColor.pink.withAlphaComponent(0.15)
+        notesTextView.font = Appearance.openSansFont(with: .body, pointSize: 20)
+        
+        view.backgroundColor = .violet
     }
 
     @IBAction func save(_ sender: Any) {

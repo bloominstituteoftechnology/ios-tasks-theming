@@ -41,5 +41,10 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Kwixter Sketch_D.otf</string>
+		<string>OpenSans-CondLight.ttf</string>
+	</array>
 </dict>
 </plist>
