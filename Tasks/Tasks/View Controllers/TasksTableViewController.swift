@@ -35,6 +35,10 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         let task = fetchedResultsController.object(at: indexPath)
         cell.textLabel?.text = task.name
         
+        guard let font = UIFont(name: "ethnocentric", size: 25.0) else { return cell }
+        let scaledFont = UIFontMetrics(forTextStyle: .title1).scaledFont(for: font)
+        cell.textLabel?.font = scaledFont
+        
         return cell
     }
     

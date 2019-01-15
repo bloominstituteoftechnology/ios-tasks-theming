@@ -14,6 +14,8 @@ struct Appearance {
     static func setUp() {
         UINavigationBar.appearance().barTintColor = customColor
         UINavigationBar.appearance().tintColor = .white
+        
+//        UIBarButtonItem.appearance().image = UIImage(named: "AppIcon")
 
         UISegmentedControl.appearance().tintColor = customColor
         
@@ -24,7 +26,5 @@ struct Appearance {
         UITextField.appearance().textColor = customColor
         
         UILabel.appearance().textColor = customColor
-        
-        
     }
 }
