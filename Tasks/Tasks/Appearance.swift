@@ -27,8 +27,8 @@ enum Appearance {
         UILabel.appearance().font = UIFont(name: "Kwixter", size: 16)
         
         //segment control
-        UISegmentedControl.appearance().tintColor = .violet
-        let attr: [NSAttributedString.Key : Any] = [.font: UIFont(name: "Open Sans", size: 13.0)!, .foregroundColor: UIColor.dullGreen]
+        UISegmentedControl.appearance().tintColor = UIColor.violet.withAlphaComponent(0.65)
+        let attr: [NSAttributedString.Key : Any] = [.font: UIFont(name: "Open Sans", size: 17.0)!, .foregroundColor: UIColor.white]
         UISegmentedControl.appearance().setTitleTextAttributes(attr as [NSAttributedString.Key : Any], for: .normal)
         
     }
