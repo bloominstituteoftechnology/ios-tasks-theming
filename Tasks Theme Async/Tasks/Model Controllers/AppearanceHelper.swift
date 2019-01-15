@@ -26,12 +26,13 @@ enum AppearanceHelper {
     }
     
     static func setDarkAppearance() {
-        
+
+        let attr: [NSAttributedString.Key : Any] = [.font: UIFont(name: "HelveticaNeue-Bold", size: 16.0)!, .foregroundColor: lambdaBrown]
+        UISegmentedControl.appearance().setTitleTextAttributes(attr as [NSAttributedString.Key : Any] , for: .normal)
         UISegmentedControl.appearance().tintColor = lambdaBrown
         UINavigationBar.appearance().barTintColor = backgroundBrown
         UIBarButtonItem.appearance().tintColor = lambdaBrown
         UILabel.appearance().textColor = lambdaBrown
-        
         UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: lambdaTextBrown]
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: lambdaTextBrown]
         UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedString.Key.font: AppearanceHelper.typerighterFont(with: .body, pointSize: 40)]
@@ -41,11 +42,8 @@ enum AppearanceHelper {
         UITextField.appearance().backgroundColor = lambdaTextBrown
         UITextView.appearance().tintColor = lambdaBrown
         UITextView.appearance().textColor = lambdaBrown
-       // UITextView.appearance().keyboardAppearance = .dark
         UITextView.appearance().backgroundColor = lambdaTextBrown
-       // UIView.appearance().backgroundColor = backgroundLightBrown
-        
-        
+       
     }
     
     static func style(button: UIButton) {

@@ -12,6 +12,7 @@ class TaskDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.titleView = image
         view.backgroundColor = AppearanceHelper.backgroundLightBrown
         updateViews()
     }
@@ -69,7 +70,7 @@ class TaskDetailViewController: UIViewController {
     }
     
     var taskController: TaskController!
-
+    let image = UIImageView(image: UIImage(named: "Task"))
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var priorityControl: UISegmentedControl!
     @IBOutlet var notesTextView: UITextView!

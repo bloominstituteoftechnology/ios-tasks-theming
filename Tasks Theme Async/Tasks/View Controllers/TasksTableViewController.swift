@@ -18,13 +18,14 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
             }
         }
     }
+            let image = UIImageView(image: UIImage(named: "Task"))
     
     override func viewDidLoad() {
     super .viewDidLoad()
     tableView.backgroundColor = AppearanceHelper.backgroundBrown
     tableView.reloadData()
         self.navigationController!.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.font: AppearanceHelper.typerighterFont(with: .largeTitle, pointSize: 40)]
-        
+        navigationItem.titleView = image
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: AppearanceHelper.lambdaTextBrown]
 }
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
