@@ -1,15 +1,18 @@
-//
-//  TasksTableViewController.swift
-//  Tasks
-//
-//  Created by Andrew R Madsen on 8/11/18.
-//  Copyright © 2018 Andrew R Madsen. All rights reserved.
-//
-
 import UIKit
 import CoreData
 
 class TasksTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setTheme()
+    }
+    
+    func setTheme() {
+        view.backgroundColor = .mediumGray
+        tableView.separatorColor = .charcoal
+    }
     
     @IBAction func refresh(_ sender: Any) {
         taskController.fetchTasksFromServer { _ in
