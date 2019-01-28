@@ -12,7 +12,7 @@ class TaskDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setUpAppearance()
         updateViews()
     }
 
@@ -60,6 +60,27 @@ class TaskDetailViewController: UIViewController {
         notesTextView.text = task?.notes
     }
     
+    private func setUpAppearance() {
+        nameLabel.font = AppearanceHelper.ottoFont(with: .title1, pointSize: 50)
+        priorityLabel.font = AppearanceHelper.ottoFont(with: .title1, pointSize: 50)
+        notesLabel.font = AppearanceHelper.ottoFont(with: .title1, pointSize: 50)
+        
+        nameLabel.textColor = AppearanceHelper.darkBlue
+        priorityLabel.textColor = AppearanceHelper.darkBlue
+        notesLabel.textColor = AppearanceHelper.darkBlue
+        
+        nameTextField.layer.borderColor = AppearanceHelper.greenBlue.cgColor
+        nameTextField.layer.borderWidth = 0.5
+        nameTextField.layer.cornerRadius = 10
+        
+        notesTextView.layer.borderColor = AppearanceHelper.greenBlue.cgColor
+        notesTextView.layer.borderWidth = 0.5
+        notesTextView.layer.cornerRadius = 10
+        
+        nameTextField.font = AppearanceHelper.ottoFont(with: .body, pointSize: 40)
+        notesTextView.font = AppearanceHelper.ottoFont(with: .body, pointSize: 40)
+    }
+    
     // MARK: Properties
     
     var task: Task? {
@@ -73,4 +94,14 @@ class TaskDetailViewController: UIViewController {
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var priorityControl: UISegmentedControl!
     @IBOutlet var notesTextView: UITextView!
+    
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    
+    @IBOutlet weak var priorityLabel: UILabel!
+    
+    
+    @IBOutlet weak var notesLabel: UILabel!
+    
 }

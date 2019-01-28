@@ -21,6 +21,14 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
     
     // MARK: - Table view data source
     
+   
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+       
+    }
+  
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return fetchedResultsController.sections?.count ?? 1
     }
@@ -34,6 +42,11 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         
         let task = fetchedResultsController.object(at: indexPath)
         cell.textLabel?.text = task.name
+        
+        cell.textLabel?.font = AppearanceHelper.ottoFont(with: .title1, pointSize: 60)
+        cell.textLabel?.textColor = AppearanceHelper.darkBlue
+        
+        
         
         return cell
     }
