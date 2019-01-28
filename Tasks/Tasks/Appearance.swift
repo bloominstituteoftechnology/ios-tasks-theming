@@ -22,6 +22,8 @@ enum Appearance {
         UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font: UIFont(name: "Street Cred", size: 16)!, NSAttributedStringKey.foregroundColor: UIColor.charcoal], for: .normal)
         
         //labels
+        UILabel.appearance().textColor = .charcoal
+        UILabel.appearance().font = UIFont(name: "Street Cred", size: 14)
         
         
         //segment control
