@@ -12,8 +12,19 @@ class TaskDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setThemes()
         updateViews()
+    }
+    
+    func setThemes() {
+        //text field
+        nameTextField.backgroundColor = UIColor.mediumGray
+        nameTextField.textColor = .gold
+        nameTextField.layer.cornerRadius = 4
+        nameTextField.font = Appearance.zagFont(with: .body, pointSize: 20)
+        nameTextField.keyboardAppearance = .dark
+        
+        view.backgroundColor = .charcoal
     }
 
     @IBAction func save(_ sender: Any) {
