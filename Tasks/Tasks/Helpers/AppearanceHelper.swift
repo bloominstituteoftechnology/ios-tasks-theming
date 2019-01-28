@@ -33,6 +33,9 @@ enum AppearanceHelper {
         
        UITextField.appearance().keyboardAppearance = .dark
         
+        //MARK: - section header font
+        UILabel.appearance(whenContainedInInstancesOf: [UITableViewHeaderFooterView.self]).font = applicationFont(with: .callout, pointSize: 20)
+        
     }
     
     static func applicationFont(with textStyle: UIFontTextStyle, pointSize: CGFloat) -> UIFont {

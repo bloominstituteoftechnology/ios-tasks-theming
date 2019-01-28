@@ -62,12 +62,13 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         cell.backgroundColor = AppearanceHelper.veryLightBlueColor
         
         cell.selectionStyle = .none
+        
     }
     
     private func setupAppearances() {
       
         tableView.backgroundColor = AppearanceHelper.veryLightBlueColor
-      
+        
     }
     
     
