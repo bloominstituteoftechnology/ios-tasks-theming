@@ -14,6 +14,7 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setAppearance()
+        tableView.reloadData()
     }
 
     @IBAction func refresh(_ sender: Any) {
