@@ -20,6 +20,25 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
     }
     
     // MARK: - Table view data source
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        // 1
+        let nav = self.navigationController?.navigationBar
+        
+        // 3
+        let imageView = UIImageView(frame: CGRect(x: -4, y: 0, width: 40, height: 40))
+        imageView.contentMode = .scaleAspectFit
+        
+        // 4
+        let image = UIImage(named: "headerIcon")
+        imageView.image = image
+
+        // 5
+        navigationItem.titleView = imageView
+        
+    }
+  
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return fetchedResultsController.sections?.count ?? 1
@@ -34,6 +53,11 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         
         let task = fetchedResultsController.object(at: indexPath)
         cell.textLabel?.text = task.name
+        
+        cell.textLabel?.font = AppearanceHelper.ottoFont(with: .title1, pointSize: 60)
+        cell.textLabel?.textColor = AppearanceHelper.darkBlue
+        
+        
         
         return cell
     }
