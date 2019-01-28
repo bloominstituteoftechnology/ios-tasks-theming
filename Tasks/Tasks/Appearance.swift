@@ -15,19 +15,19 @@ enum Appearance {
     static func setDarkAppearance() {
         //navigationbar
         UINavigationBar.appearance().barTintColor = .charcoal
-        UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.charcoal, NSAttributedStringKey.font: UIFont(name: "Street Cred", size: 50)!]
+        UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.gold, NSAttributedStringKey.font: UIFont(name: "Street Cred", size: 40)!]
         
         //bar button item
-        UIBarButtonItem.appearance().tintColor = .charcoal
-        UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font: UIFont(name: "Street Cred", size: 16)!, NSAttributedStringKey.foregroundColor: UIColor.charcoal], for: .normal)
+        UIBarButtonItem.appearance().tintColor = .gray
+        UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font: UIFont(name: "Street Cred", size: 16)!, NSAttributedStringKey.foregroundColor: UIColor.gray], for: .normal)
         
         //labels
         UILabel.appearance().textColor = .gray
         UILabel.appearance().font = UIFont(name: "Street Cred", size: 14)
         
         //segment control
-        UISegmentedControl.appearance().tintColor = UIColor.charcoal
-        let attr: [NSAttributedStringKey: Any] = [.font: UIFont(name: "Street Cred", size: 13.0)!, .foregroundColor: UIColor.mediumGray]
+        UISegmentedControl.appearance().tintColor = UIColor.gold
+        let attr: [NSAttributedStringKey: Any] = [.font: UIFont(name: "Street Cred", size: 13.0)!, .foregroundColor: UIColor.gold]
         UISegmentedControl.appearance().setTitleTextAttributes(attr as [NSAttributedStringKey: Any], for: .normal)
     }
 }

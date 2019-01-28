@@ -18,13 +18,19 @@ class TaskDetailViewController: UIViewController {
     
     func setThemes() {
         //text field
-        nameTextField.backgroundColor = UIColor.mediumGray
+        nameTextField.backgroundColor = UIColor.gold.withAlphaComponent(0.15)
         nameTextField.textColor = .gold
         nameTextField.layer.cornerRadius = 4
         nameTextField.font = Appearance.zagFont(with: .body, pointSize: 20)
         nameTextField.keyboardAppearance = .dark
         
-        view.backgroundColor = .charcoal
+        //notes view
+        notesTextView.backgroundColor = UIColor.gold.withAlphaComponent(0.15)
+        notesTextView.textColor = .gold
+        notesTextView.layer.cornerRadius = 6
+        notesTextView.font = Appearance.zagFont(with: .body, pointSize: 20)
+        
+        view.backgroundColor = .black
     }
 
     @IBAction func save(_ sender: Any) {

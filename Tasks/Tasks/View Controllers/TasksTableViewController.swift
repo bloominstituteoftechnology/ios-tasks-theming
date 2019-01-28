@@ -10,8 +10,8 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
     }
     
     func setTheme() {
-        view.backgroundColor = .mediumGray
-        tableView.separatorColor = .charcoal
+        view.backgroundColor = .black
+        tableView.separatorColor = .mediumGray
     }
     
     @IBAction func refresh(_ sender: Any) {
@@ -46,7 +46,7 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         cell.textLabel?.adjustsFontForContentSizeCategory = true
         cell.textLabel?.textColor = .gold
         //cell.textLabel?.backgroundColor = .charcoal
-        cell.backgroundColor = UIColor.mediumGray
+        cell.backgroundColor = UIColor.mediumGray.withAlphaComponent(0.15)
     }
     
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
