@@ -12,7 +12,7 @@ class TaskDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setTheme()
         updateViews()
     }
 
@@ -43,6 +43,16 @@ class TaskDetailViewController: UIViewController {
         }
         
         navigationController?.popViewController(animated: true)
+    }
+    
+    func setTheme(){
+        view.backgroundColor = AppearanceHelper.CustomColors.lightGray
+        nameTextField.textColor = AppearanceHelper.CustomColors.yellow
+        notesTextView.textColor = AppearanceHelper.CustomColors.yellow
+        nameTextField.font = AppearanceHelper.carbonFont(textStyle: .callout, size: 15)
+        notesTextView.font = AppearanceHelper.carbonFont(textStyle: .callout, size: 15)
+        notesTextView.backgroundColor = AppearanceHelper.CustomColors.lightGray
+        nameTextField.backgroundColor = AppearanceHelper.CustomColors.lightGray
     }
     
     private func updateViews() {

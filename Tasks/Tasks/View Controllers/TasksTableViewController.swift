@@ -20,7 +20,21 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
     }
     
     // MARK: - Table view data source
-    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setTheme()
+        
+    }
+    func setTheme(){
+        view.backgroundColor = AppearanceHelper.CustomColors.lightGray
+        tableView.backgroundColor = AppearanceHelper.CustomColors.lightGray
+        UILabel.appearance().font = AppearanceHelper.carbonFont(textStyle: .callout, size: 15)
+        UILabel.appearance().textColor = AppearanceHelper.CustomColors.yellow
+    }
+    func setCellAppearance(for cell: UITableViewCell){
+        cell.backgroundColor = AppearanceHelper.CustomColors.lightGray
+        cell.textLabel?.textColor = AppearanceHelper.CustomColors.yellow
+    }
     override func numberOfSections(in tableView: UITableView) -> Int {
         return fetchedResultsController.sections?.count ?? 1
     }
@@ -31,7 +45,7 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TaskCell", for: indexPath)
-        
+        setCellAppearance(for: cell)
         let task = fetchedResultsController.object(at: indexPath)
         cell.textLabel?.text = task.name
         
