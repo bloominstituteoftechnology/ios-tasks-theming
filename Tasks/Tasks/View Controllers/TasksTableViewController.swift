@@ -19,6 +19,14 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         }
     }
     
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setupAppearances()
+    }
+    
+    
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -42,10 +50,17 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         cell.textLabel?.font = AppearanceHelper.applicationFont(with: .caption1, pointSize: 30)
         cell.textLabel?.backgroundColor = .clear
         
-        cell.textLabel?.textColor = .lightGray
+        cell.textLabel?.textColor = .darkGray
         
         cell.backgroundColor = AppearanceHelper.veryLightBlueColor
     }
+    
+    private func setupAppearances() {
+      
+        tableView.backgroundColor = AppearanceHelper.veryLightBlueColor
+      
+    }
+    
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         guard let sectionInfo = fetchedResultsController.sections?[section] else { return nil }
