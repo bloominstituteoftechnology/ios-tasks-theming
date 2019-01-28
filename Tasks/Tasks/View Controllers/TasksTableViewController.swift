@@ -24,6 +24,10 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         super.viewDidLoad()
         
         setupAppearances()
+        
+        tableView.separatorStyle = .none
+        
+        
     }
     
     
@@ -42,6 +46,7 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         
         let task = fetchedResultsController.object(at: indexPath)
         cell.textLabel?.text = task.name
+        cell.detailTextLabel?.text = task.notes
         style(cell: cell)
         return cell
     }
@@ -49,10 +54,14 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
     private func style(cell: UITableViewCell) {
         cell.textLabel?.font = AppearanceHelper.applicationFont(with: .caption1, pointSize: 30)
         cell.textLabel?.backgroundColor = .clear
-        
         cell.textLabel?.textColor = .darkGray
         
+        cell.detailTextLabel?.font = AppearanceHelper.applicationFont(with: .body, pointSize: 20)
+        cell.detailTextLabel?.textColor = .lightGray
+      
         cell.backgroundColor = AppearanceHelper.veryLightBlueColor
+        
+        cell.selectionStyle = .none
     }
     
     private func setupAppearances() {
@@ -60,6 +69,8 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         tableView.backgroundColor = AppearanceHelper.veryLightBlueColor
       
     }
+    
+    
     
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {

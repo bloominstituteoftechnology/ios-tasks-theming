@@ -32,7 +32,6 @@ enum AppearanceHelper {
         //MARK: - keyboard appearance.
         
        UITextField.appearance().keyboardAppearance = .dark
-    
         
     }
     
