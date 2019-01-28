@@ -9,11 +9,18 @@
 import UIKit
 
 class TaskDetailViewController: UIViewController {
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var priorityLabel: UILabel!
+    @IBOutlet weak var notesLabel: UILabel!
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         updateViews()
+        setupAppearance()
     }
 
     @IBAction func save(_ sender: Any) {
@@ -59,6 +66,22 @@ class TaskDetailViewController: UIViewController {
         priorityControl.selectedSegmentIndex = TaskPriority.allPriorities.index(of: priority)!
         notesTextView.text = task?.notes
     }
+    
+    private func setupAppearance() {
+        view.backgroundColor = AppearanceHelper.veryLightBlueColor
+        let labelFonts = AppearanceHelper.applicationFont(with: .caption1, pointSize: 30)
+        nameTextField.font = labelFonts
+        nameLabel.font = labelFonts
+        priorityLabel.font = labelFonts
+        notesLabel.font = labelFonts
+        notesTextView.font = AppearanceHelper.applicationFont(with: .body, pointSize: 20)
+        
+        notesTextView.keyboardAppearance = .dark
+       
+      
+    }
+    
+   
     
     // MARK: Properties
     

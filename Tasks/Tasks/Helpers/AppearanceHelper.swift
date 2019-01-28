@@ -24,8 +24,15 @@ enum AppearanceHelper {
         //set nav bar button color
         UIBarButtonItem.appearance().tintColor = .white
         
+     
+        //MARK: - segmented controll appearance
+        UISegmentedControl.appearance().tintColor = lightBlueColor
+        UISegmentedControl.appearance().setTitleTextAttributes([NSAttributedStringKey.font : applicationFont(with: .body, pointSize: 15)], for: .normal)
         
+        //MARK: - keyboard appearance.
         
+       UITextField.appearance().keyboardAppearance = .dark
+    
         
     }
     
