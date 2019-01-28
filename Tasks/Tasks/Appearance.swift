@@ -25,8 +25,9 @@ enum Appearance {
         UILabel.appearance().textColor = .charcoal
         UILabel.appearance().font = UIFont(name: "Street Cred", size: 14)
         
-        
         //segment control
-        
+        UISegmentedControl.appearance().tintColor = UIColor.charcoal
+        let attr: [NSAttributedStringKey: Any] = [.font: UIFont(name: "Street Cred", size: 13.0)!, .foregroundColor: UIColor.mediumGray]
+        UISegmentedControl.appearance().setTitleTextAttributes(attr as [NSAttributedStringKey: Any], for: .normal)
     }
 }
