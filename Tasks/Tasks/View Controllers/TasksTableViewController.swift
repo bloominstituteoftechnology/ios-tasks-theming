@@ -42,10 +42,19 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
     }
     
     func style(cell: UITableViewCell) {
-        cell.textLabel?.font = Appearance.streetFont(with: .caption1, pointSize: 18)
+        cell.textLabel?.font = Appearance.streetFont(with: .caption1, pointSize: 20)
         cell.textLabel?.adjustsFontForContentSizeCategory = true
-        cell.backgroundColor = UIColor.mediumGray
         cell.textLabel?.textColor = .gold
+        //cell.textLabel?.backgroundColor = .charcoal
+        cell.backgroundColor = UIColor.mediumGray
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        let view = view as! UITableViewHeaderFooterView
+        let colorView = UIView(frame: view.frame)
+        colorView.backgroundColor = .gold
+        view.backgroundView = colorView
+        
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
