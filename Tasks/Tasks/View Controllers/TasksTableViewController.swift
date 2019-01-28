@@ -68,13 +68,6 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         return view
     }
     
-//    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        guard let sectionInfo = fetchedResultsController.sections?[section] else { return nil }
-//        return sectionInfo.name.capitalized
-//
-//
-//    }
-    
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let task = fetchedResultsController.object(at: indexPath)

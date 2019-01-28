@@ -12,8 +12,23 @@ class TaskDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         updateViews()
+        setAppearance()
+    }
+    
+    func setAppearance() {
+        view.backgroundColor = AppearanceHelper.backgroundBlue
+        UILabel.appearance().textColor = AppearanceHelper.fadedBodyFontColor
+        UILabel.appearance().font = AppearanceHelper.setFont(with: .body, pointSize: 20)
+        
+        nameTextField.backgroundColor = AppearanceHelper.textFieldBlue
+        nameTextField.font = AppearanceHelper.setFont(with: .body, pointSize: 20)
+        nameTextField.textColor = AppearanceHelper.headerFontColor
+        
+        notesTextView.backgroundColor = AppearanceHelper.textFieldBlue
+        notesTextView.font = AppearanceHelper.setFont(with: .body, pointSize: 20)
+        notesTextView.textColor = AppearanceHelper.headerFontColor
     }
 
     @IBAction func save(_ sender: Any) {
