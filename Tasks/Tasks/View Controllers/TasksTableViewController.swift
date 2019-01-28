@@ -34,8 +34,17 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         
         let task = fetchedResultsController.object(at: indexPath)
         cell.textLabel?.text = task.name
-        
+        style(cell: cell)
         return cell
+    }
+    
+    private func style(cell: UITableViewCell) {
+        cell.textLabel?.font = AppearanceHelper.applicationFont(with: .caption1, pointSize: 30)
+        cell.textLabel?.backgroundColor = .clear
+        
+        cell.textLabel?.textColor = .lightGray
+        
+        cell.backgroundColor = AppearanceHelper.veryLightBlueColor
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
