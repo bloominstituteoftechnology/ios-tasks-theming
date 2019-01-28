@@ -23,7 +23,6 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
     }
     
     // MARK: - Table view data source
-    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return fetchedResultsController.sections?.count ?? 1
     }
@@ -37,8 +36,16 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         
         let task = fetchedResultsController.object(at: indexPath)
         cell.textLabel?.text = task.name
+        style(cell: cell)
         
         return cell
+    }
+    
+    func style(cell: UITableViewCell) {
+        cell.textLabel?.font = Appearance.streetFont(with: .caption1, pointSize: 18)
+        cell.textLabel?.adjustsFontForContentSizeCategory = true
+        cell.backgroundColor = UIColor.mediumGray
+        cell.textLabel?.textColor = .gold
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
