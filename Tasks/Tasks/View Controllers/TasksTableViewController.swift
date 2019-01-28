@@ -11,11 +11,11 @@ import CoreData
 
 class TasksTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         setAppearance()
     }
-    
+
     @IBAction func refresh(_ sender: Any) {
         taskController.fetchTasksFromServer { _ in
             DispatchQueue.main.async {
@@ -45,9 +45,21 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         
         let task = fetchedResultsController.object(at: indexPath)
         cell.textLabel?.text = task.name
-        cell.textLabel?.font = AppearanceHelper.setFont(with: .body, pointSize: 25)
+        
+        switch task.priority {
+        case "critical":
+            cell.textLabel?.font = AppearanceHelper.setFont(with: .body, pointSize: 30)
+            cell.textLabel?.textColor = AppearanceHelper.redTintColor
+        case "high":
+            cell.textLabel?.font = AppearanceHelper.setFont(with: .body, pointSize: 28)
+            cell.textLabel?.textColor = AppearanceHelper.headerFontColor
+        default:
+            cell.textLabel?.font = AppearanceHelper.setFont(with: .body, pointSize: 22)
+            cell.textLabel?.textColor = AppearanceHelper.bodyFontColor
+        }
+        
         cell.backgroundColor = AppearanceHelper.backgroundBlue
-        cell.textLabel?.textColor = AppearanceHelper.bodyFontColor
+        cell.selectionStyle = .none
         
         return cell
     }
