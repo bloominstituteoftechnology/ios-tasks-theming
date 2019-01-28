@@ -11,6 +11,11 @@ import CoreData
 
 class TasksTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setAppearance()
+    }
+    
     @IBAction func refresh(_ sender: Any) {
         taskController.fetchTasksFromServer { _ in
             DispatchQueue.main.async {
@@ -18,6 +23,12 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
             }
         }
     }
+    
+    // MARK: - Set appearance
+    
+    func setAppearance() {
+        view.backgroundColor = AppearanceHelper.backgroundBlue
+    }    
     
     // MARK: - Table view data source
     
@@ -34,14 +45,35 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         
         let task = fetchedResultsController.object(at: indexPath)
         cell.textLabel?.text = task.name
+        cell.textLabel?.font = AppearanceHelper.setFont(with: .body, pointSize: 25)
+        cell.backgroundColor = AppearanceHelper.backgroundBlue
+        cell.textLabel?.textColor = AppearanceHelper.bodyFontColor
         
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        guard let sectionInfo = fetchedResultsController.sections?[section] else { return nil }
-        return sectionInfo.name.capitalized
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = UIView()
+        view.backgroundColor = AppearanceHelper.backgroundBlue
+        
+        let label = UILabel()
+        label.textColor = AppearanceHelper.fadedBodyFontColor
+        
+        guard let sectionInfo = fetchedResultsController.sections?[section] else { return view }
+        label.text = sectionInfo.name.capitalized
+        label.font = AppearanceHelper.setFont(with: .body, pointSize: 20)
+        label.frame = CGRect(x: 18, y: 4, width: 100, height: 40)
+        view.addSubview(label)
+        
+        return view
     }
+    
+//    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        guard let sectionInfo = fetchedResultsController.sections?[section] else { return nil }
+//        return sectionInfo.name.capitalized
+//
+//
+//    }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {

@@ -18,17 +18,26 @@ enum AppearanceHelper {
     static var redTintColor = UIColor(red: 242/255, green: 136/255, blue: 131/255, alpha: 1.0)
     
     static func setFont(with textStyle: UIFont.TextStyle, pointSize: CGFloat) -> UIFont {
-        let font = UIFont(name: "Expressway Regular", size: pointSize)!
+        let font = UIFont(name: "Expressway", size: pointSize)!
         return UIFontMetrics(forTextStyle: textStyle).scaledFont(for: font)
     }
     
     static func setThemeAppearance() {
         let navBar = UINavigationBar.appearance()
-        let textAttribute = [NSAttributedString.Key.foregroundColor: headerFontColor]
+        let tableView = UITableView.appearance()
+        let textAttributes = [NSAttributedString.Key.foregroundColor: headerFontColor, NSAttributedString.Key.font: setFont(with: .largeTitle, pointSize: 40)]
         
-        navBar.barTintColor = .clear
-        navBar.titleTextAttributes = textAttribute
-        navBar.largeTitleTextAttributes = textAttribute
+        let barButtonAttributes = [NSAttributedString.Key.font: setFont(with: .callout, pointSize: 18)]
+        
+        navBar.barTintColor = backgroundBlue
+        navBar.titleTextAttributes = textAttributes
+        navBar.largeTitleTextAttributes = textAttributes
+        
+        navBar.backItem?.leftBarButtonItem?.setTitleTextAttributes(barButtonAttributes, for: .normal)
+        
+        tableView.sectionIndexColor = fadedBodyFontColor
+        tableView.sectionIndexBackgroundColor = backgroundBlue
+        tableView.separatorColor = backgroundBlue
         
         UISegmentedControl.appearance().tintColor = redTintColor
         UIBarButtonItem.appearance().tintColor = headerFontColor
