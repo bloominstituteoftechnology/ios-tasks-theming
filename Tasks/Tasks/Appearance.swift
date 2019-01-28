@@ -13,6 +13,17 @@ enum Appearance {
     }
     
     static func setDarkAppearance() {
+        //navigationbar
+        UINavigationBar.appearance().barTintColor = .charcoal
+        UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.mediumGray, NSAttributedStringKey.font: UIFont(name: "Street Cred", size: 30)!]
+        
+        //bar button item
+        
+        
+        //labels
+        
+        
+        //segment control
         
     }
 }
