@@ -20,23 +20,12 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
     }
     
     // MARK: - Table view data source
+    
+   
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        // 1
-        let nav = self.navigationController?.navigationBar
-        
-        // 3
-        let imageView = UIImageView(frame: CGRect(x: -4, y: 0, width: 40, height: 40))
-        imageView.contentMode = .scaleAspectFit
-        
-        // 4
-        let image = UIImage(named: "headerIcon")
-        imageView.image = image
-
-        // 5
-        navigationItem.titleView = imageView
-        
+       
     }
   
     
