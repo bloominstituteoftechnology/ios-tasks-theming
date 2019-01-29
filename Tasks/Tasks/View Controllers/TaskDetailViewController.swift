@@ -12,6 +12,7 @@ class TaskDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupAppearance()
 
         updateViews()
     }
@@ -59,6 +60,27 @@ class TaskDetailViewController: UIViewController {
         priorityControl.selectedSegmentIndex = TaskPriority.allPriorities.index(of: priority)!
         notesTextView.text = task?.notes
     }
+    
+    private func setupAppearance() {
+        UILabel.appearance(whenContainedInInstancesOf: [TaskDetailViewController.self]).textColor = AppearanceHelper.gold
+        UILabel.appearance(whenContainedInInstancesOf: [TaskDetailViewController.self]).font = AppearanceHelper.mainFont(with: .title1, pointSize: 21)
+        view.backgroundColor = AppearanceHelper.darkNavy
+        
+        nameTextField.backgroundColor = AppearanceHelper.darkNavy
+        nameTextField.layer.cornerRadius = 8
+        nameTextField.layer.borderWidth = 0.5
+        nameTextField.layer.borderColor = AppearanceHelper.gold.cgColor
+        nameTextField.textColor = AppearanceHelper.paperWhite
+        nameTextField.font = AppearanceHelper.mainFont(with: .body, pointSize: 17)
+        
+        notesTextView.backgroundColor = AppearanceHelper.darkNavy
+        notesTextView.layer.cornerRadius = 8
+        notesTextView.layer.borderWidth = 0.5
+        notesTextView.layer.borderColor = AppearanceHelper.gold.cgColor
+        notesTextView.textColor = AppearanceHelper.paperWhite
+        notesTextView.font = AppearanceHelper.mainFont(with: .body, pointSize: 18)
+    }
+
     
     // MARK: Properties
     
