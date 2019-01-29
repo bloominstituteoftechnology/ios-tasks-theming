@@ -12,8 +12,40 @@ class TaskDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        let image = UIImage(named: "face")
+        let imageView = UIImageView(image: image)
+        imageView.contentMode = .center
+        imageView.contentMode = .scaleAspectFit
+        navigationItem.titleView = imageView
+        
+        setNeedsStatusBarAppearanceUpdate()
+        
+        setThemes()
         updateViews()
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
+    func setThemes() {
+        //text field
+        nameTextField.backgroundColor = UIColor(patternImage: UIImage(named: "blackBackground")!)
+        nameTextField.textColor = .gold
+        nameTextField.layer.cornerRadius = 4
+        nameTextField.font = Appearance.zagFont(with: .body, pointSize: 20)
+        nameTextField.keyboardAppearance = .dark
+        
+        //notes view
+        notesTextView.backgroundColor = UIColor(patternImage: UIImage(named: "blackBackground")!)
+        //notesTextView.backgroundColor = UIColor.gold.withAlphaComponent(0.25)
+        notesTextView.textColor = .gold
+        notesTextView.layer.cornerRadius = 6
+        notesTextView.font = Appearance.zagFont(with: .body, pointSize: 20)
+        
+        view.backgroundColor = .black
+
     }
 
     @IBAction func save(_ sender: Any) {

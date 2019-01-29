@@ -1,15 +1,30 @@
-//
-//  TasksTableViewController.swift
-//  Tasks
-//
-//  Created by Andrew R Madsen on 8/11/18.
-//  Copyright © 2018 Andrew R Madsen. All rights reserved.
-//
-
 import UIKit
 import CoreData
 
 class TasksTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let image = UIImage(named: "face")
+        let imageView = UIImageView(image: image)
+        imageView.contentMode = .center
+        imageView.contentMode = .scaleAspectFit
+        navigationItem.titleView = imageView
+        
+        setNeedsStatusBarAppearanceUpdate()
+        setTheme()
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
+    func setTheme() {
+        //view.backgroundColor = .black
+        view.backgroundColor = UIColor(patternImage: UIImage(named: "blackBackground")!)
+        tableView.separatorColor = .mediumGray
+    }
     
     @IBAction func refresh(_ sender: Any) {
         taskController.fetchTasksFromServer { _ in
@@ -20,7 +35,6 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
     }
     
     // MARK: - Table view data source
-    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return fetchedResultsController.sections?.count ?? 1
     }
@@ -34,8 +48,29 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         
         let task = fetchedResultsController.object(at: indexPath)
         cell.textLabel?.text = task.name
+        style(cell: cell)
         
         return cell
+    }
+    
+    func style(cell: UITableViewCell) {
+        cell.textLabel?.font = Appearance.streetFont(with: .caption1, pointSize: 24)
+        cell.textLabel?.adjustsFontForContentSizeCategory = true
+        cell.textLabel?.textColor = .gold
+        cell.textLabel?.backgroundColor = .clear
+        //cell.backgroundColor = UIColor.black
+        cell.backgroundColor = UIColor(patternImage: UIImage(named: "blackBackground")!)
+        //this makes the white background go away in the back, or cell.selectionStyle = .none
+        cell.selectionStyle = UITableViewCellSelectionStyle.none
+
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        let view = view as! UITableViewHeaderFooterView
+        let colorView = UIView(frame: view.frame)
+        colorView.backgroundColor = .gold
+        view.backgroundView = colorView
+        
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
