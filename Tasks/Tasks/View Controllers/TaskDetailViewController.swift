@@ -63,7 +63,7 @@ class TaskDetailViewController: UIViewController {
     
     private func setupAppearance() {
         UILabel.appearance(whenContainedInInstancesOf: [TaskDetailViewController.self]).textColor = AppearanceHelper.gold
-        UILabel.appearance(whenContainedInInstancesOf: [TaskDetailViewController.self]).font = AppearanceHelper.mainFont(with: .title1, pointSize: 20)
+        UILabel.appearance(whenContainedInInstancesOf: [TaskDetailViewController.self]).font = AppearanceHelper.mainFont(with: .title1, pointSize: 21)
         view.backgroundColor = AppearanceHelper.darkNavy
         
         nameTextField.backgroundColor = AppearanceHelper.darkNavy
@@ -71,7 +71,7 @@ class TaskDetailViewController: UIViewController {
         nameTextField.layer.borderWidth = 0.5
         nameTextField.layer.borderColor = AppearanceHelper.gold.cgColor
         nameTextField.textColor = AppearanceHelper.paperWhite
-        nameTextField.font = AppearanceHelper.mainFont(with: .body, pointSize: 18)
+        nameTextField.font = AppearanceHelper.mainFont(with: .body, pointSize: 17)
         
         notesTextView.backgroundColor = AppearanceHelper.darkNavy
         notesTextView.layer.cornerRadius = 8
@@ -79,8 +79,6 @@ class TaskDetailViewController: UIViewController {
         notesTextView.layer.borderColor = AppearanceHelper.gold.cgColor
         notesTextView.textColor = AppearanceHelper.paperWhite
         notesTextView.font = AppearanceHelper.mainFont(with: .body, pointSize: 18)
-        
-        
     }
 
     

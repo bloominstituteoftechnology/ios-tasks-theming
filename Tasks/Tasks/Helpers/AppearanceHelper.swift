@@ -24,7 +24,7 @@ enum AppearanceHelper {
         return UIFontMetrics(forTextStyle: textStyle).scaledFont(for: font)
     }
     
-    static let titleFont = UIFont(name: "Vogue", size: 45)!
+    static let titleFont = UIFont(name: "Vogue", size: 48)!
     
     //MARK: - Theme Setup
     

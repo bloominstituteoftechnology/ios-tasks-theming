@@ -13,7 +13,6 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.reloadData()
         setupAppearance()
     }
     
@@ -49,7 +48,6 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
     func setupAppearance() {
         view.backgroundColor = AppearanceHelper.gold
         tableView.backgroundColor = AppearanceHelper.darkNavy
-        UILabel.appearance(whenContainedInInstancesOf: [TasksTableViewController.self]).font = AppearanceHelper.mainFont(with: .body, pointSize: 18)
     }
     
     private func style(cell: UITableViewCell) {
@@ -57,14 +55,16 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         cell.textLabel?.backgroundColor = .clear
         cell.textLabel?.textColor = AppearanceHelper.paperWhite
         cell.backgroundColor = AppearanceHelper.darkNavy
+        cell.textLabel?.font = AppearanceHelper.mainFont(with: .body, pointSize: 18)
     }
     
-    override func tableView(_ tableView: UITableView, willDisplayFooterView view: UIView, forSection section: Int) {
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         
-        guard let headerView = view as? UITableViewHeaderFooterView else { return }
+        let header = view as! UITableViewHeaderFooterView
         
-        headerView.textLabel?.textColor = .white
-        headerView.contentView.backgroundColor = AppearanceHelper.gold
+        header.textLabel?.textColor = AppearanceHelper.darkNavy
+        header.contentView.backgroundColor = AppearanceHelper.gold
+        header.textLabel?.font = AppearanceHelper.mainFont(with: .headline, pointSize: 22)
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
