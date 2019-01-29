@@ -11,6 +11,12 @@ import CoreData
 
 class TasksTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setAppearance()
+        tableView.reloadData()
+    }
+
     @IBAction func refresh(_ sender: Any) {
         taskController.fetchTasksFromServer { _ in
             DispatchQueue.main.async {
@@ -18,6 +24,12 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
             }
         }
     }
+    
+    // MARK: - Set appearance
+    
+    func setAppearance() {
+        view.backgroundColor = AppearanceHelper.backgroundBlue
+    }    
     
     // MARK: - Table view data source
     
@@ -35,15 +47,42 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         let task = fetchedResultsController.object(at: indexPath)
         cell.textLabel?.text = task.name
         
+        switch task.priority {
+        case "critical":
+            cell.textLabel?.font = AppearanceHelper.setFont(with: .body, pointSize: 30)
+            cell.textLabel?.textColor = AppearanceHelper.redTintColor
+        case "high":
+            cell.textLabel?.font = AppearanceHelper.setFont(with: .body, pointSize: 28)
+            cell.textLabel?.textColor = AppearanceHelper.headerFontColor
+        default:
+            cell.textLabel?.font = AppearanceHelper.setFont(with: .body, pointSize: 22)
+            cell.textLabel?.textColor = AppearanceHelper.bodyFontColor
+        }
+        
+        cell.backgroundColor = AppearanceHelper.backgroundBlue
+        cell.selectionStyle = .none
+        
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        guard let sectionInfo = fetchedResultsController.sections?[section] else { return nil }
-        return sectionInfo.name.capitalized
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = UIView()
+        view.backgroundColor = AppearanceHelper.backgroundBlue
+        
+        let label = UILabel()
+        label.textColor = AppearanceHelper.fadedBodyFontColor
+        
+        guard let sectionInfo = fetchedResultsController.sections?[section] else { return view }
+        label.text = sectionInfo.name.capitalized
+        label.font = AppearanceHelper.setFont(with: .body, pointSize: 20)
+        label.sizeToFit()
+        label.frame.origin = CGPoint(x: 16, y: 10)
+        view.addSubview(label)
+        
+        return view
     }
     
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let task = fetchedResultsController.object(at: indexPath)
             
