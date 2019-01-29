@@ -12,7 +12,7 @@ class TaskDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupAppearance()
         updateViews()
     }
 
@@ -44,7 +44,15 @@ class TaskDetailViewController: UIViewController {
         
         navigationController?.popViewController(animated: true)
     }
-    
+    private func setupAppearance() {
+        nameTextField.layer.cornerRadius = 10
+        nameTextField.layer.borderColor = UIColor.fountainBlue.cgColor
+        nameTextField.layer.borderWidth = 0.5
+        
+        notesTextView.layer.cornerRadius = 10
+        notesTextView.layer.borderWidth = 0.5
+        notesTextView.layer.borderColor = UIColor.fountainBlue.cgColor
+    }
     private func updateViews() {
         guard isViewLoaded else { return }
         
