@@ -75,7 +75,8 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         guard let sectionInfo = fetchedResultsController.sections?[section] else { return view }
         label.text = sectionInfo.name.capitalized
         label.font = AppearanceHelper.setFont(with: .body, pointSize: 20)
-        label.frame = CGRect(x: 18, y: 4, width: 100, height: 40)
+        label.sizeToFit()
+        label.frame.origin = CGPoint(x: 16, y: 10)
         view.addSubview(label)
         
         return view

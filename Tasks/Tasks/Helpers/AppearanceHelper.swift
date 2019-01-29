@@ -32,6 +32,8 @@ enum AppearanceHelper {
         navBar.barTintColor = backgroundBlue
         navBar.titleTextAttributes = textAttributes
         navBar.largeTitleTextAttributes = textAttributes
+        
+        
         UIBarButtonItem.appearance().setTitleTextAttributes(barButtonAttributes, for: .normal)
         
         UISegmentedControl.appearance().setTitleTextAttributes(barButtonAttributes, for: .normal)
