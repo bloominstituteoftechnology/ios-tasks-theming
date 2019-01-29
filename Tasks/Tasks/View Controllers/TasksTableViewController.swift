@@ -60,6 +60,7 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         cell.textLabel?.backgroundColor = .clear
         //cell.backgroundColor = UIColor.black
         cell.backgroundColor = UIColor(patternImage: UIImage(named: "blackBackground")!)
+        //this makes the white background go away in the back, or cell.selectionStyle = .none
         cell.selectionStyle = UITableViewCellSelectionStyle.none
 
     }
