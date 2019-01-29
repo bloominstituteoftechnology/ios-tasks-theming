@@ -84,6 +84,7 @@
 				9D4408DA211FF50D005E2116 /* View Controllers */,
 				9D4408D9211FF4EA005E2116 /* Model */,
 				9D4408E6211FF988005E2116 /* Model Controllers */,
+				F834D8FC21FFE29B00D65C06 /* Storyboards */,
 				9D4408D8211FF4BA005E2116 /* Resources */,
 			);
 			path = Tasks;
@@ -93,9 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				9D4408C6211FF431005E2116 /* AppDelegate.swift */,
-				9D4408CA211FF431005E2116 /* Main.storyboard */,
 				9D4408CD211FF434005E2116 /* Assets.xcassets */,
-				9D4408CF211FF434005E2116 /* LaunchScreen.storyboard */,
 				F83BD14021E444DD006148A4 /* dotty.ttf */,
 				9D4408D2211FF434005E2116 /* Info.plist */,
 				F85C7F0A21EDE12700BFD3B5 /* App Logo.png */,
@@ -132,6 +131,15 @@
 				9D70DFF821248F8E006D4DF5 /* TaskController.swift */,
 			);
 			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		F834D8FC21FFE29B00D65C06 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				9D4408CA211FF431005E2116 /* Main.storyboard */,
+				9D4408CF211FF434005E2116 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		F83BD14421E44702006148A4 /* Helpers */ = {
