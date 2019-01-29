@@ -27,7 +27,7 @@ enum AppearanceHelper {
         let tableView = UITableView.appearance()
         let textAttributes = [NSAttributedString.Key.foregroundColor: headerFontColor, NSAttributedString.Key.font: setFont(with: .largeTitle, pointSize: 40)]
         
-        let barButtonAttributes = [NSAttributedString.Key.font: setFont(with: .callout, pointSize: 18)]
+        let barButtonAttributes = [NSAttributedString.Key.font: setFont(with: .callout, pointSize: 16)]
         
         navBar.barTintColor = backgroundBlue
         navBar.titleTextAttributes = textAttributes
