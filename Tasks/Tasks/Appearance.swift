@@ -14,16 +14,16 @@ enum Appearance {
     
     static func setDarkAppearance() {
         //navigationbar
-        UINavigationBar.appearance().barTintColor = .charcoal
+        UINavigationBar.appearance().barTintColor = .black
         UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.gold, NSAttributedStringKey.font: UIFont(name: "Street Cred", size: 40)!]
         
         //bar button item
-        UIBarButtonItem.appearance().tintColor = .gray
-        UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font: UIFont(name: "Street Cred", size: 16)!, NSAttributedStringKey.foregroundColor: UIColor.gray], for: .normal)
+        UIBarButtonItem.appearance().tintColor = .mediumGray
+        UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font: UIFont(name: "Street Cred", size: 16)!, NSAttributedStringKey.foregroundColor: UIColor.mediumGray], for: .normal)
         
         //labels
-        UILabel.appearance().textColor = .gray
-        UILabel.appearance().font = UIFont(name: "Street Cred", size: 14)
+        UILabel.appearance().textColor = .white
+        UILabel.appearance().font = UIFont(name: "Street Cred", size: 16)
         
         //segment control
         UISegmentedControl.appearance().tintColor = UIColor.gold

@@ -11,9 +11,9 @@
 		486CFFCC21FF9BEB00A32DEB /* street cred.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 486CFFCB21FF9BEB00A32DEB /* street cred.ttf */; };
 		486CFFCE21FF9BF500A32DEB /* Zag Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 486CFFCD21FF9BF500A32DEB /* Zag Regular.otf */; };
 		486CFFD021FFA08C00A32DEB /* ColorConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486CFFCF21FFA08C00A32DEB /* ColorConvenience.swift */; };
+		486CFFD221FFD6C000A32DEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 486CFFD121FFD6C000A32DEB /* Assets.xcassets */; };
 		9D4408C7211FF431005E2116 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4408C6211FF431005E2116 /* AppDelegate.swift */; };
 		9D4408CC211FF431005E2116 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D4408CA211FF431005E2116 /* Main.storyboard */; };
-		9D4408CE211FF434005E2116 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D4408CD211FF434005E2116 /* Assets.xcassets */; };
 		9D4408D1211FF434005E2116 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D4408CF211FF434005E2116 /* LaunchScreen.storyboard */; };
 		9D4408DD211FF51C005E2116 /* Tasks.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9D4408DB211FF51C005E2116 /* Tasks.xcdatamodeld */; };
 		9D4408DF211FF67E005E2116 /* Task+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4408DE211FF67E005E2116 /* Task+Convenience.swift */; };
@@ -29,10 +29,10 @@
 		486CFFCB21FF9BEB00A32DEB /* street cred.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "street cred.ttf"; path = "../../../../../../../../Downloads/street_cred/street cred.ttf"; sourceTree = "<group>"; };
 		486CFFCD21FF9BF500A32DEB /* Zag Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Zag Regular.otf"; sourceTree = "<group>"; };
 		486CFFCF21FFA08C00A32DEB /* ColorConvenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConvenience.swift; sourceTree = "<group>"; };
+		486CFFD121FFD6C000A32DEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D4408C3211FF431005E2116 /* Tasks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tasks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D4408C6211FF431005E2116 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D4408CB211FF431005E2116 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9D4408CD211FF434005E2116 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D4408D0211FF434005E2116 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9D4408D2211FF434005E2116 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D4408DC211FF51C005E2116 /* Tasks.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Tasks.xcdatamodel; sourceTree = "<group>"; };
@@ -92,8 +92,8 @@
 			children = (
 				486CFFCD21FF9BF500A32DEB /* Zag Regular.otf */,
 				486CFFCB21FF9BEB00A32DEB /* street cred.ttf */,
+				486CFFD121FFD6C000A32DEB /* Assets.xcassets */,
 				9D4408CA211FF431005E2116 /* Main.storyboard */,
-				9D4408CD211FF434005E2116 /* Assets.xcassets */,
 				9D4408CF211FF434005E2116 /* LaunchScreen.storyboard */,
 				9D4408D2211FF434005E2116 /* Info.plist */,
 			);
@@ -189,8 +189,8 @@
 				486CFFCE21FF9BF500A32DEB /* Zag Regular.otf in Resources */,
 				486CFFCC21FF9BEB00A32DEB /* street cred.ttf in Resources */,
 				9D4408D1211FF434005E2116 /* LaunchScreen.storyboard in Resources */,
-				9D4408CE211FF434005E2116 /* Assets.xcassets in Resources */,
 				9D4408CC211FF431005E2116 /* Main.storyboard in Resources */,
+				486CFFD221FFD6C000A32DEB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
