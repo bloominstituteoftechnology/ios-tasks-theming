@@ -10,11 +10,33 @@ import UIKit
 
 class TaskDetailViewController: UIViewController {
 
+    @IBOutlet weak var save: UIBarButtonItem!
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var priorityLabel: UILabel!
+    @IBOutlet weak var notesLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupAppearance()
+        AppearanceHelper.setTypeAppearance()
         updateViews()
     }
+    
+    func setupAppearance(){
+        save.tintColor = UIColor.FlatColor.ColorHunt.DarkPurple .withAlphaComponent(0.7)
+        
+        self.view.backgroundColor = UIColor.FlatColor.ColorHunt.ClearBlue
+        notesTextView.backgroundColor = UIColor.FlatColor.ColorHunt.DarkPurple .withAlphaComponent(0.33)
+        notesTextView.layer.cornerRadius = 0.2
+        nameTextField.textColor = .white
+        notesTextView.textColor = .white
+        nameTextField.backgroundColor = UIColor.FlatColor.ColorHunt.DarkPurple .withAlphaComponent(0.33)
+        nameLabel.font = UIFont(name: "Vision-Light", size: 16)
+        priorityLabel.font = UIFont(name: "Vision-Light", size: 16)
+        notesLabel.font = UIFont(name: "Vision-Light", size: 16)
+        priorityControl.tintColor = UIColor.FlatColor.ColorHunt.DarkPurple
+    }
+    
 
     @IBAction func save(_ sender: Any) {
         guard let name = nameTextField.text, !name.isEmpty else {

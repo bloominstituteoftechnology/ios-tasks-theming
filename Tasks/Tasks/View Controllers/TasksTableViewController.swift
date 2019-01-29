@@ -11,6 +11,13 @@ import CoreData
 
 class TasksTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
+    @IBOutlet weak var plus: UIBarButtonItem!
+    override func viewDidLoad() {
+        setupAppearances()
+        AppearanceHelper.setTypeAppearance()
+    }
+    
+    
     @IBAction func refresh(_ sender: Any) {
         taskController.fetchTasksFromServer { _ in
             DispatchQueue.main.async {
@@ -25,25 +32,70 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         return fetchedResultsController.sections?.count ?? 1
     }
     
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        
+        
+        (view as! UITableViewHeaderFooterView).textLabel!.font = UIFont(name: "Vision-Bold", size: 18)
+        (view as! UITableViewHeaderFooterView).textLabel!.textColor = UIColor.FlatColor.Gray.WhiteSmoke
+        
+        switch section {
+        case 0:
+            (view as! UITableViewHeaderFooterView).backgroundView?.backgroundColor = UIColor.FlatColor.Red.SasquatchSocks .withAlphaComponent(0.25)
+        case 1:
+            (view as! UITableViewHeaderFooterView).backgroundView?.backgroundColor = UIColor.FlatColor.ColorHunt.DarkPurple .withAlphaComponent(0.25)
+        case 2:
+            (view as! UITableViewHeaderFooterView).backgroundView?.backgroundColor = UIColor.FlatColor.Red.GeorgiaPeach .withAlphaComponent(0.25)
+            
+        default:
+            (view as! UITableViewHeaderFooterView).backgroundView?.backgroundColor = UIColor.FlatColor.Red.GeorgiaPeach .withAlphaComponent(0.1)
+            
+        }
+        
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return fetchedResultsController.sections?[section].numberOfObjects ?? 0
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TaskCell", for: indexPath)
-        
+        style(cell : cell)
         let task = fetchedResultsController.object(at: indexPath)
         cell.textLabel?.text = task.name
-        
         return cell
     }
     
+    private func style(cell: UITableViewCell){
+        cell.textLabel?.font = AppearanceHelper.visionFont(with: .callout, pointSize: 30)
+        cell.detailTextLabel?.font = AppearanceHelper.visionFont(with: .callout, pointSize: 25)
+        
+        cell.textLabel?.backgroundColor = .clear
+        cell.detailTextLabel?.backgroundColor = .clear
+        
+        cell.textLabel?.textColor = UIColor.FlatColor.ColorHunt.DarkPurple
+        cell.detailTextLabel?.textColor = .black
+        
+        cell.backgroundColor = .clear
+    }
+    
+    private func setupAppearances(){
+        navigationController?.navigationBar.barTintColor = UIColor.FlatColor.ColorHunt.DiscoBlue
+        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.FlatColor.ColorHunt.DarkPurple .withAlphaComponent(0.7),
+            NSAttributedString.Key.font: UIFont(name: "Vision-Bold", size: 40)]
+        tableView.separatorColor = UIColor.FlatColor.ColorHunt.DiscoBlue
+        tableView.separatorStyle = .none
+        self.view.backgroundColor = UIColor.FlatColor.ColorHunt.ClearBlue
+        
+        plus.tintColor = UIColor.FlatColor.ColorHunt.DarkPurple .withAlphaComponent(0.7)
+        
+    }
+
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         guard let sectionInfo = fetchedResultsController.sections?[section] else { return nil }
         return sectionInfo.name.capitalized
     }
     
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let task = fetchedResultsController.object(at: indexPath)
             

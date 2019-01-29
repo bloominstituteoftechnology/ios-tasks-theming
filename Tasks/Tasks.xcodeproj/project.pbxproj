@@ -18,6 +18,11 @@
 		9D4408E5211FF7CC005E2116 /* TaskDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4408E4211FF7CC005E2116 /* TaskDetailViewController.swift */; };
 		9D70DFF921248F8E006D4DF5 /* TaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D70DFF821248F8E006D4DF5 /* TaskController.swift */; };
 		9D70DFFC21249442006D4DF5 /* TaskRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D70DFFB21249442006D4DF5 /* TaskRepresentation.swift */; };
+		A20DA53421FFA6B20062A1F9 /* AppearanceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20DA53321FFA6B20062A1F9 /* AppearanceHelper.swift */; };
+		A20DA53621FFBC470062A1F9 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20DA53521FFBC470062A1F9 /* UIColor+Hex.swift */; };
+		A20DA53821FFBC9B0062A1F9 /* UIColor+FlatColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20DA53721FFBC9B0062A1F9 /* UIColor+FlatColors.swift */; };
+		A20DA53A21FFC7210062A1F9 /* Vision-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = A20DA53921FFC7210062A1F9 /* Vision-Light.otf */; };
+		A20DA53C220019BF0062A1F9 /* Vision-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A20DA53B220019BF0062A1F9 /* Vision-Bold.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +41,11 @@
 		9D70DFF821248F8E006D4DF5 /* TaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskController.swift; sourceTree = "<group>"; };
 		9D70DFFA21249145006D4DF5 /* Tasks 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Tasks 3.xcdatamodel"; sourceTree = "<group>"; };
 		9D70DFFB21249442006D4DF5 /* TaskRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRepresentation.swift; sourceTree = "<group>"; };
+		A20DA53321FFA6B20062A1F9 /* AppearanceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceHelper.swift; sourceTree = "<group>"; };
+		A20DA53521FFBC470062A1F9 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
+		A20DA53721FFBC9B0062A1F9 /* UIColor+FlatColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+FlatColors.swift"; sourceTree = "<group>"; };
+		A20DA53921FFC7210062A1F9 /* Vision-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Vision-Light.otf"; sourceTree = "<group>"; };
+		A20DA53B220019BF0062A1F9 /* Vision-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Vision-Bold.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				9D4408C6211FF431005E2116 /* AppDelegate.swift */,
+				A20DA53221FFA6A30062A1F9 /* Helpers */,
 				9D4408D9211FF4EA005E2116 /* Model */,
 				9D4408E6211FF988005E2116 /* Model Controllers */,
 				9D4408DA211FF50D005E2116 /* View Controllers */,
@@ -81,6 +92,8 @@
 			isa = PBXGroup;
 			children = (
 				9D4408CA211FF431005E2116 /* Main.storyboard */,
+				A20DA53B220019BF0062A1F9 /* Vision-Bold.otf */,
+				A20DA53921FFC7210062A1F9 /* Vision-Light.otf */,
 				9D4408CD211FF434005E2116 /* Assets.xcassets */,
 				9D4408CF211FF434005E2116 /* LaunchScreen.storyboard */,
 				9D4408D2211FF434005E2116 /* Info.plist */,
@@ -116,6 +129,16 @@
 			path = "Model Controllers";
 			sourceTree = "<group>";
 		};
+		A20DA53221FFA6A30062A1F9 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A20DA53321FFA6B20062A1F9 /* AppearanceHelper.swift */,
+				A20DA53521FFBC470062A1F9 /* UIColor+Hex.swift */,
+				A20DA53721FFBC9B0062A1F9 /* UIColor+FlatColors.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -148,6 +171,7 @@
 				TargetAttributes = {
 					9D4408C2211FF431005E2116 = {
 						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -174,8 +198,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A20DA53A21FFC7210062A1F9 /* Vision-Light.otf in Resources */,
 				9D4408D1211FF434005E2116 /* LaunchScreen.storyboard in Resources */,
 				9D4408CE211FF434005E2116 /* Assets.xcassets in Resources */,
+				A20DA53C220019BF0062A1F9 /* Vision-Bold.otf in Resources */,
 				9D4408CC211FF431005E2116 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -189,12 +215,15 @@
 			files = (
 				9D70DFF921248F8E006D4DF5 /* TaskController.swift in Sources */,
 				9D70DFFC21249442006D4DF5 /* TaskRepresentation.swift in Sources */,
+				A20DA53421FFA6B20062A1F9 /* AppearanceHelper.swift in Sources */,
 				9D4408E5211FF7CC005E2116 /* TaskDetailViewController.swift in Sources */,
 				9D4408DD211FF51C005E2116 /* Tasks.xcdatamodeld in Sources */,
 				9D4408E3211FF752005E2116 /* TasksTableViewController.swift in Sources */,
 				9D4408C7211FF431005E2116 /* AppDelegate.swift in Sources */,
 				9D4408DF211FF67E005E2116 /* Task+Convenience.swift in Sources */,
 				9D4408E1211FF6A0005E2116 /* CoreDataStack.swift in Sources */,
+				A20DA53621FFBC470062A1F9 /* UIColor+Hex.swift in Sources */,
+				A20DA53821FFBC9B0062A1F9 /* UIColor+FlatColors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,7 +376,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lambdaschool.Tasks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -365,7 +394,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lambdaschool.Tasks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
