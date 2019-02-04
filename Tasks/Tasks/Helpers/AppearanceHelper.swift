@@ -18,9 +18,11 @@ enum AppearanceHelper {
     
     static func generalStyle() {
         UINavigationBar.appearance().backgroundColor = citron
-        let textAttr: [NSAttributedString.Key: Any] = [.foregroundColor: beige]
-        UINavigationBar.appearance().titleTextAttributes = textAttr
-        UINavigationBar.appearance().largeTitleTextAttributes = textAttr
+        let titleTextAttr: [NSAttributedString.Key: Any] = [.foregroundColor: beige, .font: styleFont(with: .largeTitle, pointSize: 40)]
+        let barTextAttr: [NSAttributedString.Key: Any] = [.foregroundColor: tuscan, .font: styleFont(with: .callout, pointSize: 26)]
+        UINavigationBar.appearance().titleTextAttributes = titleTextAttr
+        UINavigationBar.appearance().largeTitleTextAttributes = titleTextAttr
+        UIBarButtonItem.appearance().setTitleTextAttributes(barTextAttr, for: .normal)
         UIBarButtonItem.appearance().tintColor = tuscan
         UINavigationBar.appearance().barTintColor = citron
         UISegmentedControl.appearance().tintColor = tuscan
