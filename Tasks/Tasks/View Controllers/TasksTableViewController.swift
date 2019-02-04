@@ -84,7 +84,7 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         tableView.backgroundColor = .black
         
         navigationController?.toolbar.barTintColor = AppearanceHelper.neonGreen
-        navigationItem.title.
+        navigationItem.title.f
         
       //  AppearanceHelper.styleButton(refresh)  ---- add outlet
     }
