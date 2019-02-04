@@ -23,7 +23,7 @@ enum AppearanceHelper {
         
         button.layer.cornerRadius = 7
         
-        button.setTitleColor(.white, for: .normal)
+        button.setTitleColor(.purple, for: .normal)
         button.titleLabel?.font = godFatherFont(with: .callout, pointSize: 30)
     }
     

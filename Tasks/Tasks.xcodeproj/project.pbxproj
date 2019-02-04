@@ -107,7 +107,6 @@
 			isa = PBXGroup;
 			children = (
 				847DDC4D2208D4310061E388 /* ThemeViewController.swift */,
-				847DDC4F2208D5E90061E388 /* AppearanceHelper.swift */,
 				9D4408E2211FF752005E2116 /* TasksTableViewController.swift */,
 				9D4408E4211FF7CC005E2116 /* TaskDetailViewController.swift */,
 			);
@@ -118,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				9D70DFF821248F8E006D4DF5 /* TaskController.swift */,
+				847DDC4F2208D5E90061E388 /* AppearanceHelper.swift */,
 			);
 			path = "Model Controllers";
 			sourceTree = "<group>";

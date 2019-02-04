@@ -11,6 +11,11 @@ import CoreData
 
 class TasksTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setupAppearances()
+    }
+    
     @IBAction func refresh(_ sender: Any) {
         taskController.fetchTasksFromServer { _ in
             DispatchQueue.main.async {
@@ -34,6 +39,8 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         
         let task = fetchedResultsController.object(at: indexPath)
         cell.textLabel?.text = task.name
+        
+        style(cell)
         
         return cell
     }
@@ -67,6 +74,39 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
             }
         }
     }
+    
+    // MARK: - Private
+    
+    private func setupAppearances() {
+        view.backgroundColor = .green
+    //    tableView.tableHeaderView?.backgroundColor = .black
+        tableView.tableHeaderView?.backgroundColor = AppearanceHelper.neonGreen
+        tableView.backgroundColor = .black
+        
+        navigationController?.toolbar.barTintColor = AppearanceHelper.neonGreen
+        navigationItem.title.
+        
+      //  AppearanceHelper.styleButton(refresh)  ---- add outlet
+    }
+    
+    private func style(_ cell: UITableViewCell) {
+    cell.backgroundColor = .black
+    cell.textLabel?.textColor = AppearanceHelper.neonGreen
+    cell.detailTextLabel?.textColor = AppearanceHelper.neonGreen
+    
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     // MARK: - NSFetchedResultsControllerDelegate
     
