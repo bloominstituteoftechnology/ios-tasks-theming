@@ -51,13 +51,24 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         guard let sectionInfo = fetchedResultsController.sections?[section] else { return nil }
         
         let view = UIView()
-        view.backgroundColor = AppearanceHelper.citron
         
         let label = UILabel()
         label.font = AppearanceHelper.styleFont(with: .caption1, pointSize: 20)
         label.text = sectionInfo.name.capitalized
         label.frame = CGRect(x: 15, y: 5, width: tableView.bounds.maxX, height: 25)
         view.addSubview(label)
+        
+        switch sectionInfo.name {
+        case "critical":
+            label.textColor = AppearanceHelper.citron
+            view.backgroundColor = AppearanceHelper.beige
+        case "high":
+            label.textColor = AppearanceHelper.citron
+            view.backgroundColor = AppearanceHelper.tuscan
+        default:
+            label.textColor = AppearanceHelper.straw
+            view.backgroundColor = AppearanceHelper.citron
+        }
         
         return view
     }
@@ -92,27 +103,30 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
     private func setAppearance() {
         view.backgroundColor = AppearanceHelper.citron
         tableView.backgroundColor = AppearanceHelper.citron
-        tableView.separatorColor = AppearanceHelper.citron
+        tableView.separatorColor = .clear
     }
     
     private func cellStyle(for cell: UITableViewCell, priority: String) {
-        cell.backgroundColor = AppearanceHelper.citron
-
         switch priority {
         case "low":
-            cell.tintColor = AppearanceHelper.straw
+            cell.textLabel?.textColor = AppearanceHelper.straw
+            cell.backgroundColor = AppearanceHelper.citron
             cell.textLabel?.font = AppearanceHelper.styleFont(with: .body, pointSize: 28)
         case "normal":
-            cell.tintColor = AppearanceHelper.tuscan
+            cell.textLabel?.textColor = AppearanceHelper.tuscan
+            cell.backgroundColor = AppearanceHelper.citron
             cell.textLabel?.font = AppearanceHelper.styleFont(with: .title3, pointSize: 31)
         case "high":
-            cell.tintColor = AppearanceHelper.tuscan
+            cell.textLabel?.textColor = .darkGray
+            cell.backgroundColor = AppearanceHelper.tuscan
             cell.textLabel?.font = AppearanceHelper.styleFont(with: .title2, pointSize: 34)
         case "critical":
-            cell.tintColor = AppearanceHelper.beige
+            cell.backgroundColor = AppearanceHelper.beige
+            cell.textLabel?.textColor = .darkGray
             cell.textLabel?.font = AppearanceHelper.styleFont(with: .title1, pointSize: 38)
         default:
-            cell.tintColor = AppearanceHelper.straw
+            cell.backgroundColor = AppearanceHelper.citron
+            cell.textLabel?.textColor = AppearanceHelper.straw
             cell.textLabel?.font = AppearanceHelper.styleFont(with: .body, pointSize: 28)
         }
     }
