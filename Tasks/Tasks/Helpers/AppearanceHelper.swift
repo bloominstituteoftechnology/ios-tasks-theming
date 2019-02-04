@@ -25,7 +25,7 @@ enum AppearanceHelper {
         UIBarButtonItem.appearance().setTitleTextAttributes(barTextAttr, for: .normal)
         UIBarButtonItem.appearance().tintColor = tuscan
         UINavigationBar.appearance().barTintColor = citron
-        UISegmentedControl.appearance().tintColor = tuscan
+        UISegmentedControl.appearance().tintColor = citron
     }
     
     static func styleFont(with textStyle: UIFont.TextStyle, pointSize: CGFloat) -> UIFont {
