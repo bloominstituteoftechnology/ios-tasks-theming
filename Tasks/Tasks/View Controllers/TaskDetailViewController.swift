@@ -82,6 +82,7 @@ class TaskDetailViewController: UIViewController {
         
         nameLabel.textColor = AppearanceHelper.citron
         notesLabel.textColor = AppearanceHelper.citron
+        
     }
     
     // MARK: Properties
@@ -100,5 +101,6 @@ class TaskDetailViewController: UIViewController {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var notesLabel: UILabel!
+    
     
 }
