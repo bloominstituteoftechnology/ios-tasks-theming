@@ -26,6 +26,9 @@ enum AppearanceHelper {
         UISegmentedControl.appearance().tintColor = tuscan
     }
     
-    
+    static func styleFont(with textStyle: UIFont.TextStyle, pointSize: CGFloat) -> UIFont {
+        let font = UIFont(name: "Damai Kpk Polri", size: pointSize)!
+        return UIFontMetrics(forTextStyle: textStyle).scaledFont(for: font)
+    }
     
 }
