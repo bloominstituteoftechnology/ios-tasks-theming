@@ -62,6 +62,7 @@ class TaskDetailViewController: UIViewController {
     }
     
     private func setAppearance() {
+        
         view.backgroundColor = AppearanceHelper.beige
         
         nameTextField.font = AppearanceHelper.styleFont(with: .body, pointSize: 25)
@@ -74,14 +75,13 @@ class TaskDetailViewController: UIViewController {
         nameTextField.backgroundColor = AppearanceHelper.beige
         notesTextView.backgroundColor = AppearanceHelper.beige
         
-        nameTextField.layer.borderColor = UIColor.clear.cgColor
+        nameTextField.borderStyle = .none
         
         nameLabel.font = AppearanceHelper.styleFont(with: .caption1, pointSize: 20)
         notesLabel.font = AppearanceHelper.styleFont(with: .caption1, pointSize: 20)
         
         nameLabel.textColor = AppearanceHelper.citron
         notesLabel.textColor = AppearanceHelper.citron
-        
     }
     
     // MARK: Properties
