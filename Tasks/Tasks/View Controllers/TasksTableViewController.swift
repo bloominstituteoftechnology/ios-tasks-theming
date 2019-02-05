@@ -1,15 +1,9 @@
-//
-//  TasksTableViewController.swift
-//  Tasks
-//
-//  Created by Andrew R Madsen on 8/11/18.
-//  Copyright © 2018 Andrew R Madsen. All rights reserved.
-//
-
 import UIKit
 import CoreData
 
 class TasksTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
+    
+    @IBOutlet weak var outletLeftBB: UIBarButtonItem!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

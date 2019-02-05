@@ -18,6 +18,7 @@ enum AppearanceHelper {
         UITextField.appearance().tintColor = neonGreen
         UITextView.appearance().tintColor = neonGreen
         UINavigationBar.appearance().tintColor = neonGreen
+        //UINavigationController.allo = neonGreen
         
     }
     

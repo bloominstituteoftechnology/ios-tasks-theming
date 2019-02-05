@@ -11,6 +11,10 @@ class ThemeViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
+//
+//    func updateTheme() {
+//        AppearanceHelper.godFatherFont(with: greenThemePressed, pointSize: 30)
+//    }
 
 
 }

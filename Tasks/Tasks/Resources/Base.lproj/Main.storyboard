@@ -118,6 +118,9 @@
                             <action selector="refresh:" destination="NEY-So-hQF" eventType="valueChanged" id="y30-88-1jY"/>
                         </connections>
                     </refreshControl>
+                    <connections>
+                        <outlet property="outletLeftBB" destination="Zjx-NK-1rY" id="5Nk-f0-o2n"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p1s-Ss-srs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -206,6 +209,12 @@
                     <connections>
                         <outlet property="nameTextField" destination="QoX-Lu-hGg" id="zXv-1m-WVN"/>
                         <outlet property="notesTextView" destination="0Ff-ma-Dqn" id="rQ9-5a-buS"/>
+                        <outlet property="outletBackButton" destination="z9b-u2-D5W" id="c2X-YR-VcB"/>
+                        <outlet property="outletMasterView" destination="CoU-0a-20L" id="AP9-nH-0MO"/>
+                        <outlet property="outletName" destination="6Ee-Sa-gkn" id="P6C-sX-CD0"/>
+                        <outlet property="outletNotes" destination="bac-5o-rL6" id="iBn-0S-pWx"/>
+                        <outlet property="outletPriorty" destination="uuc-2H-ovn" id="0Fr-Ez-748"/>
+                        <outlet property="outletSaveButton" destination="FS3-p2-Jxo" id="l6Z-7g-LH7"/>
                         <outlet property="priorityControl" destination="UUk-vn-i5S" id="Fpc-rO-bng"/>
                     </connections>
                 </viewController>

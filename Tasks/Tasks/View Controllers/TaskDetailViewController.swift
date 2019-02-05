@@ -63,21 +63,28 @@ class TaskDetailViewController: UIViewController {
     }
     
     private func setupAppearances() {
-        view.backgroundColor = .black
-      // AppearanceHelper.styleButton(save)  -- add outlet
+        view.backgroundColor = .blue
+     //  AppearanceHelper.styleButton(<#T##button: UIButton##UIButton#>)
         
     //     nameTextField.font = AppearanceHelper.godFatherFont(with: .callout, pointSize: 30)
         nameTextField.tintColor = AppearanceHelper.neonGreen
+        nameTextField.backgroundColor = .black
         notesTextView.tintColor = AppearanceHelper.neonGreen
         nameTextField.textColor = AppearanceHelper.neonGreen
+        notesTextView.backgroundColor = .black
         notesTextView.textColor = AppearanceHelper.neonGreen
         priorityControl.tintColor = AppearanceHelper.neonGreen
         navigationItem.rightBarButtonItem?.tintColor = AppearanceHelper.neonGreen
         navigationItem.leftBarButtonItem?.tintColor = AppearanceHelper.neonGreen
         navigationItem.backBarButtonItem?.tintColor = AppearanceHelper.neonGreen
-     //   navigationItem  .tintColor = AppearanceHelper.neonGreen
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : AppearanceHelper.neonGreen]
         
         navigationController?.navigationBar.tintColor = AppearanceHelper.neonGreen
+        
+        nameTextField.tintColor = AppearanceHelper.neonGreen
+        outletName.textColor = AppearanceHelper.neonGreen
+        outletPriorty.textColor = AppearanceHelper.neonGreen
+        outletNotes.textColor = AppearanceHelper.neonGreen
         
     }
     
@@ -94,4 +101,12 @@ class TaskDetailViewController: UIViewController {
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var priorityControl: UISegmentedControl!
     @IBOutlet var notesTextView: UITextView!
+    @IBOutlet weak var outletName: UILabel!
+    @IBOutlet weak var outletPriorty: UILabel!
+    @IBOutlet weak var outletNotes: UILabel!
+    @IBOutlet weak var outletSaveButton: UIBarButtonItem!
+    @IBOutlet weak var outletBackButton: UINavigationItem!
+    @IBOutlet var outletMasterView: UIView!
+    
+    
 }
