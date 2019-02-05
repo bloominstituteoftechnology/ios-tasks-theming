@@ -11,6 +11,11 @@ import CoreData
 
 class TasksTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setAppearance()
+    }
+    
     @IBAction func refresh(_ sender: Any) {
         taskController.fetchTasksFromServer { _ in
             DispatchQueue.main.async {
@@ -35,15 +40,40 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         let task = fetchedResultsController.object(at: indexPath)
         cell.textLabel?.text = task.name
         
+        guard let priority = task.priority else { return cell }
+        
+        cellStyle(for: cell, priority: priority)
+        
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         guard let sectionInfo = fetchedResultsController.sections?[section] else { return nil }
-        return sectionInfo.name.capitalized
+        
+        let view = UIView()
+        
+        let label = UILabel()
+        label.font = AppearanceHelper.styleFont(with: .caption1, pointSize: 20)
+        label.text = sectionInfo.name.capitalized
+        label.frame = CGRect(x: 15, y: 5, width: tableView.bounds.maxX, height: 25)
+        view.addSubview(label)
+        
+        switch sectionInfo.name {
+        case "critical":
+            label.textColor = AppearanceHelper.citron
+            view.backgroundColor = AppearanceHelper.beige
+        case "high":
+            label.textColor = AppearanceHelper.citron
+            view.backgroundColor = AppearanceHelper.tuscan
+        default:
+            label.textColor = AppearanceHelper.straw
+            view.backgroundColor = AppearanceHelper.citron
+        }
+        
+        return view
     }
     
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let task = fetchedResultsController.object(at: indexPath)
             
@@ -65,6 +95,39 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
                     }
                 }
             }
+        }
+    }
+    
+    // MARK: Styling
+    
+    private func setAppearance() {
+        view.backgroundColor = AppearanceHelper.citron
+        tableView.backgroundColor = AppearanceHelper.citron
+        tableView.separatorColor = .clear
+    }
+    
+    private func cellStyle(for cell: UITableViewCell, priority: String) {
+        switch priority {
+        case "low":
+            cell.textLabel?.textColor = AppearanceHelper.straw
+            cell.backgroundColor = AppearanceHelper.citron
+            cell.textLabel?.font = AppearanceHelper.styleFont(with: .body, pointSize: 28)
+        case "normal":
+            cell.textLabel?.textColor = AppearanceHelper.tuscan
+            cell.backgroundColor = AppearanceHelper.citron
+            cell.textLabel?.font = AppearanceHelper.styleFont(with: .title3, pointSize: 31)
+        case "high":
+            cell.textLabel?.textColor = .darkGray
+            cell.backgroundColor = AppearanceHelper.tuscan
+            cell.textLabel?.font = AppearanceHelper.styleFont(with: .title2, pointSize: 34)
+        case "critical":
+            cell.backgroundColor = AppearanceHelper.beige
+            cell.textLabel?.textColor = .darkGray
+            cell.textLabel?.font = AppearanceHelper.styleFont(with: .title1, pointSize: 38)
+        default:
+            cell.backgroundColor = AppearanceHelper.citron
+            cell.textLabel?.textColor = AppearanceHelper.straw
+            cell.textLabel?.font = AppearanceHelper.styleFont(with: .body, pointSize: 28)
         }
     }
     
