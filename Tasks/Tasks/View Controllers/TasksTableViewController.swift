@@ -35,6 +35,7 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         let task = fetchedResultsController.object(at: indexPath)
         cell.textLabel?.text = task.name
         
+        style(cell)
         return cell
     }
     
@@ -148,4 +149,30 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         try! frc.performFetch()
         return frc
     }()
+    
+    // MARK: Appearance
+    
+    override func viewDidLoad() {
+        setupAppearances()
+    }
+    
+    private func setupAppearances() {
+        
+        view.backgroundColor = AppearanceHelper.lightGray
+        tableView.backgroundColor = AppearanceHelper.lightGray
+        tableView.tableHeaderView?.backgroundColor = AppearanceHelper.lightGray
+        
+        
+    }
+    
+    private func style(_ cell: UITableViewCell) {
+        
+        cell.backgroundColor = AppearanceHelper.lightGray
+        cell.textLabel?.textColor = .white
+        
+    }
+    
+    
+    
+    
 }
