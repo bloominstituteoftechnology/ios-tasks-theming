@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		4B13589522091C8F009F6A12 /* AppearanceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B13589422091C8F009F6A12 /* AppearanceHelper.swift */; };
 		4B13589822094D46009F6A12 /* Architex.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B13589722094C5A009F6A12 /* Architex.ttf */; };
+		4B13589A2209E788009F6A12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B1358992209E788009F6A12 /* Assets.xcassets */; };
 		9D4408C7211FF431005E2116 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4408C6211FF431005E2116 /* AppDelegate.swift */; };
 		9D4408CC211FF431005E2116 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D4408CA211FF431005E2116 /* Main.storyboard */; };
-		9D4408CE211FF434005E2116 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D4408CD211FF434005E2116 /* Assets.xcassets */; };
 		9D4408D1211FF434005E2116 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D4408CF211FF434005E2116 /* LaunchScreen.storyboard */; };
 		9D4408DD211FF51C005E2116 /* Tasks.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9D4408DB211FF51C005E2116 /* Tasks.xcdatamodeld */; };
 		9D4408DF211FF67E005E2116 /* Task+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4408DE211FF67E005E2116 /* Task+Convenience.swift */; };
@@ -25,10 +25,10 @@
 /* Begin PBXFileReference section */
 		4B13589422091C8F009F6A12 /* AppearanceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceHelper.swift; sourceTree = "<group>"; };
 		4B13589722094C5A009F6A12 /* Architex.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Architex.ttf; sourceTree = "<group>"; };
+		4B1358992209E788009F6A12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D4408C3211FF431005E2116 /* Tasks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tasks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D4408C6211FF431005E2116 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D4408CB211FF431005E2116 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9D4408CD211FF434005E2116 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D4408D0211FF434005E2116 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9D4408D2211FF434005E2116 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D4408DC211FF51C005E2116 /* Tasks.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Tasks.xcdatamodel; sourceTree = "<group>"; };
@@ -94,7 +94,7 @@
 			children = (
 				9D4408C6211FF431005E2116 /* AppDelegate.swift */,
 				9D4408CA211FF431005E2116 /* Main.storyboard */,
-				9D4408CD211FF434005E2116 /* Assets.xcassets */,
+				4B1358992209E788009F6A12 /* Assets.xcassets */,
 				9D4408CF211FF434005E2116 /* LaunchScreen.storyboard */,
 				9D4408D2211FF434005E2116 /* Info.plist */,
 				4B13589722094C5A009F6A12 /* Architex.ttf */,
@@ -190,7 +190,7 @@
 			files = (
 				4B13589822094D46009F6A12 /* Architex.ttf in Resources */,
 				9D4408D1211FF434005E2116 /* LaunchScreen.storyboard in Resources */,
-				9D4408CE211FF434005E2116 /* Assets.xcassets in Resources */,
+				4B13589A2209E788009F6A12 /* Assets.xcassets in Resources */,
 				9D4408CC211FF431005E2116 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
