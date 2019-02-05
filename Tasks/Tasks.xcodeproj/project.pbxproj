@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		847DDC4E2208D4310061E388 /* ThemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847DDC4D2208D4310061E388 /* ThemeViewController.swift */; };
 		847DDC502208D5E90061E388 /* AppearanceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847DDC4F2208D5E90061E388 /* AppearanceHelper.swift */; };
+		84D43B2F2209EFA200C3E178 /* TheGodfather-v2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84D43B2E2209EFA200C3E178 /* TheGodfather-v2.ttf */; };
 		9D4408C7211FF431005E2116 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4408C6211FF431005E2116 /* AppDelegate.swift */; };
 		9D4408CC211FF431005E2116 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D4408CA211FF431005E2116 /* Main.storyboard */; };
 		9D4408CE211FF434005E2116 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D4408CD211FF434005E2116 /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 		847DDC4D2208D4310061E388 /* ThemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeViewController.swift; sourceTree = "<group>"; };
 		847DDC4F2208D5E90061E388 /* AppearanceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceHelper.swift; sourceTree = "<group>"; };
 		84C2AF0F2209077B001B7B35 /* TheGodfather-v2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TheGodfather-v2.ttf"; sourceTree = "<group>"; };
+		84D43B2E2209EFA200C3E178 /* TheGodfather-v2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "TheGodfather-v2.ttf"; path = "../../../../../../../Downloads/the-godfather/TheGodfather-v2.ttf"; sourceTree = "<group>"; };
 		9D4408C3211FF431005E2116 /* Tasks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tasks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D4408C6211FF431005E2116 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D4408CB211FF431005E2116 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				9D4408CD211FF434005E2116 /* Assets.xcassets */,
 				9D4408CF211FF434005E2116 /* LaunchScreen.storyboard */,
 				9D4408D2211FF434005E2116 /* Info.plist */,
+				84D43B2E2209EFA200C3E178 /* TheGodfather-v2.ttf */,
 				84C2AF0F2209077B001B7B35 /* TheGodfather-v2.ttf */,
 			);
 			path = Resources;
@@ -183,6 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D4408D1211FF434005E2116 /* LaunchScreen.storyboard in Resources */,
+				84D43B2F2209EFA200C3E178 /* TheGodfather-v2.ttf in Resources */,
 				9D4408CE211FF434005E2116 /* Assets.xcassets in Resources */,
 				9D4408CC211FF431005E2116 /* Main.storyboard in Resources */,
 			);

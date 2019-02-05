@@ -85,6 +85,7 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         navigationItem.rightBarButtonItem?.tintColor = AppearanceHelper.neonGreen
       //  AppearanceHelper.styleButton(refresh)  ---- add outlet
         navigationController?.tabBarItem.badgeColor = AppearanceHelper.neonGreen
+        
     }
     
     private func style(_ cell: UITableViewCell) {

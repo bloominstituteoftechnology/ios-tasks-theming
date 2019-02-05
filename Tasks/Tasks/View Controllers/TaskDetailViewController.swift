@@ -66,7 +66,7 @@ class TaskDetailViewController: UIViewController {
         view.backgroundColor = .blue
      //  AppearanceHelper.styleButton(<#T##button: UIButton##UIButton#>)
         
-    //     nameTextField.font = AppearanceHelper.godFatherFont(with: .callout, pointSize: 30)
+        nameTextField.font = AppearanceHelper.godFatherFont(with: .callout, pointSize: 30)
         nameTextField.tintColor = AppearanceHelper.neonGreen
         nameTextField.backgroundColor = .black
         notesTextView.tintColor = AppearanceHelper.neonGreen

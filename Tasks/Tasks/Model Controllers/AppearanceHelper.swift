@@ -41,4 +41,14 @@ enum AppearanceHelper {
         
     }
     
+//    func setTheme() {
+//        guard let theme = themeHelper.themePreference else { return }
+//
+//        if theme == "Dark" {
+//            collectionView.backgroundColor = .gray
+//        } else {
+//            collectionView.backgroundColor = .white
+//        }
+//    }
+    
 }

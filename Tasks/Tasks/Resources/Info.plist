@@ -4,10 +4,8 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string></string>
+		<string>TheGodfather-v2.ttf</string>
 	</array>
-	<key>item 0</key>
-	<string>The Godfather</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
