@@ -14,6 +14,8 @@ class TaskDetailViewController: UIViewController {
         super.viewDidLoad()
 
         updateViews()
+        
+        setupAppearance()
     }
 
     @IBAction func save(_ sender: Any) {
@@ -73,4 +75,19 @@ class TaskDetailViewController: UIViewController {
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var priorityControl: UISegmentedControl!
     @IBOutlet var notesTextView: UITextView!
+    
+    
+    // MARK: Appearance
+    
+    private func setupAppearance() {
+        
+        view.backgroundColor = AppearanceHelper.lightGray
+//        name.textColor = .white
+        
+        
+        
+    }
+    
+    
+    
 }

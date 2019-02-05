@@ -24,9 +24,19 @@ enum AppearanceHelper {
         UINavigationBar.appearance().largeTitleTextAttributes = textAttributes
         UINavigationBar.appearance().barTintColor = lightGray
         
+        UITextField.appearance().tintColor = purpleSwatch
+        UITextView.appearance().tintColor = purpleSwatch
+        
+        UITextField.appearance().keyboardAppearance = .dark
+//        UITextView.appearance().keyboardAppearance = .dark
         
     }
     
+//    static func style(_ button: UIButton, titleColor: UIColor = .white) {
+//        button.titleLabel?.font = expresswayFont(with: .callout, pointSize: 14)
+//
+//    }
+//
     
     
     

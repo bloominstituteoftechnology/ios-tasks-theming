@@ -80,7 +80,6 @@
 		9D4408C5211FF431005E2116 /* Tasks */ = {
 			isa = PBXGroup;
 			children = (
-				9D4408C6211FF431005E2116 /* AppDelegate.swift */,
 				273113A12209D4FD00F93243 /* Helpers */,
 				9D4408D9211FF4EA005E2116 /* Model */,
 				9D4408E6211FF988005E2116 /* Model Controllers */,
@@ -93,6 +92,7 @@
 		9D4408D8211FF4BA005E2116 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9D4408C6211FF431005E2116 /* AppDelegate.swift */,
 				9D4408CA211FF431005E2116 /* Main.storyboard */,
 				9D4408CD211FF434005E2116 /* Assets.xcassets */,
 				9D4408CF211FF434005E2116 /* LaunchScreen.storyboard */,
