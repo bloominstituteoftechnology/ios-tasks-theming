@@ -13,10 +13,12 @@ enum AppearanceHelper {
         UINavigationBar.appearance().titleTextAttributes = textAttributes
         UINavigationBar.appearance().largeTitleTextAttributes = textAttributes
         UINavigationBar.appearance().barTintColor = .black
+        UINavigationBar.appearance().tintColor = neonGreen
         
         UITextField.appearance().tintColor = neonGreen
         UITextView.appearance().tintColor = neonGreen
         UINavigationBar.appearance().tintColor = neonGreen
+        
     }
     
     static func styleButton(_ button: UIButton) {

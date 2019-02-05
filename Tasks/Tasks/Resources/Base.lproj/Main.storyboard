@@ -39,7 +39,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JeX-gF-erI">
-                                <rect key="frame" x="76" y="308" width="49" height="31"/>
+                                <rect key="frame" x="76" y="308" width="83" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Godfather" family="The Godfather" pointSize="17"/>
                                 <state key="normal" title="Buttonsdaasf"/>
@@ -62,7 +62,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WkI-63-QgS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="673" y="-568"/>
+            <point key="canvasLocation" x="672.79999999999995" y="-568.06596701649175"/>
         </scene>
         <!--Tasks-->
         <scene sceneID="5la-8G-DbN">

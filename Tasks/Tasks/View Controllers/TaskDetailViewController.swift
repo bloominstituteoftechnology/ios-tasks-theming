@@ -77,7 +77,7 @@ class TaskDetailViewController: UIViewController {
         navigationItem.backBarButtonItem?.tintColor = AppearanceHelper.neonGreen
      //   navigationItem  .tintColor = AppearanceHelper.neonGreen
         
-        
+        navigationController?.navigationBar.tintColor = AppearanceHelper.neonGreen
         
     }
     
