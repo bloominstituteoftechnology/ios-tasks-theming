@@ -67,7 +67,7 @@ class TaskDetailViewController: UIViewController {
         
         nameTextField.font = AppearanceHelper.styleFont(with: .body, pointSize: 25)
         notesTextView.font = AppearanceHelper.styleFont(with: .body, pointSize: 25)
-        priorityControl.setTitleTextAttributes([.font: AppearanceHelper.styleFont(with: .body, pointSize: 25)], for: .normal)
+        priorityControl.setTitleTextAttributes([.font: UIFont(name: "Damai Kpk Polri", size: 25)!], for: .normal)
         
         nameTextField.textColor = .darkGray
         notesTextView.textColor = .darkGray
@@ -79,9 +79,13 @@ class TaskDetailViewController: UIViewController {
         
         nameLabel.font = AppearanceHelper.styleFont(with: .caption1, pointSize: 20)
         notesLabel.font = AppearanceHelper.styleFont(with: .caption1, pointSize: 20)
+        priorityLabel.font = AppearanceHelper.styleFont(with: .caption1, pointSize: 20)
         
         nameLabel.textColor = AppearanceHelper.citron
         notesLabel.textColor = AppearanceHelper.citron
+        priorityLabel.textColor = AppearanceHelper.citron
+        
+        priorityControl.apportionsSegmentWidthsByContent = true
         
     }
     
@@ -101,6 +105,5 @@ class TaskDetailViewController: UIViewController {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var notesLabel: UILabel!
-    
-    
+    @IBOutlet weak var priorityLabel: UILabel!
 }
