@@ -1,15 +1,14 @@
-//
-//  TasksTableViewController.swift
-//  Tasks
-//
-//  Created by Andrew R Madsen on 8/11/18.
-//  Copyright © 2018 Andrew R Madsen. All rights reserved.
-//
-
 import UIKit
 import CoreData
 
 class TasksTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
+    
+    @IBOutlet weak var outletLeftBB: UIBarButtonItem!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setupAppearances()
+    }
     
     @IBAction func refresh(_ sender: Any) {
         taskController.fetchTasksFromServer { _ in
@@ -34,6 +33,8 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         
         let task = fetchedResultsController.object(at: indexPath)
         cell.textLabel?.text = task.name
+        
+        style(cell)
         
         return cell
     }
@@ -67,6 +68,44 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
             }
         }
     }
+    
+    // MARK: - Private
+    
+    private func setupAppearances() {
+        view.backgroundColor = .green
+    //    tableView.tableHeaderView?.backgroundColor = .black
+        tableView.tableHeaderView?.backgroundColor = AppearanceHelper.neonGreen
+        tableView.backgroundColor = .black
+        
+      //  navigation
+        
+     //   navigationItem.title?.textColor = AppearanceHelper.neonGreen
+        navigationController?.toolbar.barTintColor = AppearanceHelper.neonGreen
+        navigationItem.leftBarButtonItem?.tintColor = AppearanceHelper.neonGreen
+        navigationItem.rightBarButtonItem?.tintColor = AppearanceHelper.neonGreen
+      //  AppearanceHelper.styleButton(refresh)  ---- add outlet
+        navigationController?.tabBarItem.badgeColor = AppearanceHelper.neonGreen
+        
+    }
+    
+    private func style(_ cell: UITableViewCell) {
+    cell.backgroundColor = .black
+    cell.textLabel?.textColor = AppearanceHelper.neonGreen
+    cell.detailTextLabel?.textColor = AppearanceHelper.neonGreen
+    
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     // MARK: - NSFetchedResultsControllerDelegate
     

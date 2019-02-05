@@ -1,19 +1,21 @@
-//
-//  TaskDetailViewController.swift
-//  Tasks
-//
-//  Created by Andrew R Madsen on 8/11/18.
-//  Copyright © 2018 Andrew R Madsen. All rights reserved.
-//
-
 import UIKit
 
 class TaskDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupAppearances()
         updateViews()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setupAppearances()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        setupAppearances()
     }
 
     @IBAction func save(_ sender: Any) {
@@ -60,6 +62,32 @@ class TaskDetailViewController: UIViewController {
         notesTextView.text = task?.notes
     }
     
+    private func setupAppearances() {
+        view.backgroundColor = .blue
+     //  AppearanceHelper.styleButton(<#T##button: UIButton##UIButton#>)
+        
+        nameTextField.font = AppearanceHelper.godFatherFont(with: .callout, pointSize: 30)
+        nameTextField.tintColor = AppearanceHelper.neonGreen
+        nameTextField.backgroundColor = .black
+        notesTextView.tintColor = AppearanceHelper.neonGreen
+        nameTextField.textColor = AppearanceHelper.neonGreen
+        notesTextView.backgroundColor = .black
+        notesTextView.textColor = AppearanceHelper.neonGreen
+        priorityControl.tintColor = AppearanceHelper.neonGreen
+        navigationItem.rightBarButtonItem?.tintColor = AppearanceHelper.neonGreen
+        navigationItem.leftBarButtonItem?.tintColor = AppearanceHelper.neonGreen
+        navigationItem.backBarButtonItem?.tintColor = AppearanceHelper.neonGreen
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : AppearanceHelper.neonGreen]
+        
+        navigationController?.navigationBar.tintColor = AppearanceHelper.neonGreen
+        
+        nameTextField.tintColor = AppearanceHelper.neonGreen
+        outletName.textColor = AppearanceHelper.neonGreen
+        outletPriorty.textColor = AppearanceHelper.neonGreen
+        outletNotes.textColor = AppearanceHelper.neonGreen
+        
+    }
+    
     // MARK: Properties
     
     var task: Task? {
@@ -73,4 +101,12 @@ class TaskDetailViewController: UIViewController {
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var priorityControl: UISegmentedControl!
     @IBOutlet var notesTextView: UITextView!
+    @IBOutlet weak var outletName: UILabel!
+    @IBOutlet weak var outletPriorty: UILabel!
+    @IBOutlet weak var outletNotes: UILabel!
+    @IBOutlet weak var outletSaveButton: UIBarButtonItem!
+    @IBOutlet weak var outletBackButton: UINavigationItem!
+    @IBOutlet var outletMasterView: UIView!
+    
+    
 }
