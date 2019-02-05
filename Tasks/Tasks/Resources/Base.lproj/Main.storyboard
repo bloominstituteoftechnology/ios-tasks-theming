@@ -10,6 +10,11 @@
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="TheGodfather-v2.ttf">
+            <string>Godfather</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Theme View Controller-->
         <scene sceneID="tuA-Q5-ee7">
@@ -34,9 +39,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JeX-gF-erI">
-                                <rect key="frame" x="76" y="307" width="46" height="30"/>
+                                <rect key="frame" x="76" y="308" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <fontDescription key="fontDescription" name="Godfather" family="The Godfather" pointSize="17"/>
+                                <state key="normal" title="Buttonsdaasf"/>
                                 <connections>
                                     <action selector="regThemePressed:" destination="KO5-Bv-I9J" eventType="touchUpInside" id="Gvv-zx-7yr"/>
                                 </connections>

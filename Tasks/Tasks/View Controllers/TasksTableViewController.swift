@@ -83,10 +83,14 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         tableView.tableHeaderView?.backgroundColor = AppearanceHelper.neonGreen
         tableView.backgroundColor = .black
         
-        navigationController?.toolbar.barTintColor = AppearanceHelper.neonGreen
-        navigationItem.title.f
+      //  navigation
         
+     //   navigationItem.title?.textColor = AppearanceHelper.neonGreen
+        navigationController?.toolbar.barTintColor = AppearanceHelper.neonGreen
+        navigationItem.leftBarButtonItem?.tintColor = AppearanceHelper.neonGreen
+        navigationItem.rightBarButtonItem?.tintColor = AppearanceHelper.neonGreen
       //  AppearanceHelper.styleButton(refresh)  ---- add outlet
+        navigationController?.tabBarItem.badgeColor = AppearanceHelper.neonGreen
     }
     
     private func style(_ cell: UITableViewCell) {

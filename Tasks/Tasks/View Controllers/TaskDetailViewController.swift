@@ -1,19 +1,21 @@
-//
-//  TaskDetailViewController.swift
-//  Tasks
-//
-//  Created by Andrew R Madsen on 8/11/18.
-//  Copyright © 2018 Andrew R Madsen. All rights reserved.
-//
-
 import UIKit
 
 class TaskDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupAppearances()
         updateViews()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setupAppearances()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        setupAppearances()
     }
 
     @IBAction func save(_ sender: Any) {
@@ -58,6 +60,25 @@ class TaskDetailViewController: UIViewController {
         }
         priorityControl.selectedSegmentIndex = TaskPriority.allPriorities.index(of: priority)!
         notesTextView.text = task?.notes
+    }
+    
+    private func setupAppearances() {
+        view.backgroundColor = .black
+      // AppearanceHelper.styleButton(save)  -- add outlet
+        
+    //     nameTextField.font = AppearanceHelper.godFatherFont(with: .callout, pointSize: 30)
+        nameTextField.tintColor = AppearanceHelper.neonGreen
+        notesTextView.tintColor = AppearanceHelper.neonGreen
+        nameTextField.textColor = AppearanceHelper.neonGreen
+        notesTextView.textColor = AppearanceHelper.neonGreen
+        priorityControl.tintColor = AppearanceHelper.neonGreen
+        navigationItem.rightBarButtonItem?.tintColor = AppearanceHelper.neonGreen
+        navigationItem.leftBarButtonItem?.tintColor = AppearanceHelper.neonGreen
+        navigationItem.backBarButtonItem?.tintColor = AppearanceHelper.neonGreen
+     //   navigationItem  .tintColor = AppearanceHelper.neonGreen
+        
+        
+        
     }
     
     // MARK: Properties

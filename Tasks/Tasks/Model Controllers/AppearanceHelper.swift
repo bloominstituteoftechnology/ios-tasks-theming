@@ -8,7 +8,7 @@ enum AppearanceHelper {
         
         UIBarButtonItem.appearance().tintColor = neonGreen
         
-        let textAttributes: [NSAttributedString.Key: Any] = [ .foregroundColor: UIColor.blue]
+        let textAttributes: [NSAttributedString.Key: Any] = [ .foregroundColor: AppearanceHelper.neonGreen]
         
         UINavigationBar.appearance().titleTextAttributes = textAttributes
         UINavigationBar.appearance().largeTitleTextAttributes = textAttributes
@@ -16,6 +16,7 @@ enum AppearanceHelper {
         
         UITextField.appearance().tintColor = neonGreen
         UITextView.appearance().tintColor = neonGreen
+        UINavigationBar.appearance().tintColor = neonGreen
     }
     
     static func styleButton(_ button: UIButton) {
