@@ -48,6 +48,8 @@ class TaskDetailViewController: UIViewController {
     private func updateViews() {
         guard isViewLoaded else { return }
         
+        setupAppearance()
+        
         title = task?.name ?? "Create Task"
         nameTextField.text = task?.name
         let priority: TaskPriority
@@ -58,6 +60,12 @@ class TaskDetailViewController: UIViewController {
         }
         priorityControl.selectedSegmentIndex = TaskPriority.allPriorities.index(of: priority)!
         notesTextView.text = task?.notes
+    }
+    
+    private func setupAppearance() {
+        view.backgroundColor = AppearanceHelper.twitterBlue
+        
+        
     }
     
     // MARK: Properties

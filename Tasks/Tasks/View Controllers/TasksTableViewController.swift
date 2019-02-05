@@ -19,6 +19,12 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         }
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setupAppearance()
+    }
+    
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -34,6 +40,7 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         
         let task = fetchedResultsController.object(at: indexPath)
         cell.textLabel?.text = task.name
+        style(cell)
         
         return cell
     }
@@ -66,6 +73,24 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
                 }
             }
         }
+    }
+    
+    // MARK: - Private
+    
+    private func setupAppearance() {
+        view.backgroundColor = AppearanceHelper.twitterBlue
+        tableView.backgroundColor = AppearanceHelper.twitterBlue
+        tableView.tableHeaderView?.backgroundColor = AppearanceHelper.twitterBlue
+    }
+    
+    private func style(_ cell: UITableViewCell) {
+        cell.backgroundColor = AppearanceHelper.twitterBlue
+        cell.textLabel?.textColor = .white
+        cell.detailTextLabel?.textColor = .white
+        
+        cell.textLabel?.font = AppearanceHelper.architexFont(with: .caption1, pointSize: 30)
+        cell.detailTextLabel?.font = AppearanceHelper.architexFont(with: .caption2, pointSize: 25)
+        
     }
     
     // MARK: - NSFetchedResultsControllerDelegate
