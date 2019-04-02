@@ -35,6 +35,9 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         let task = fetchedResultsController.object(at: indexPath)
         cell.textLabel?.text = task.name
         
+        tableView.backgroundColor = Theme.nickel
+        cell.backgroundColor = Theme.ashGrey
+        
         return cell
     }
     
@@ -133,6 +136,8 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
             detailVC.taskController = taskController
         }
     }
+    
+
     
     // MARK: Properties
     
