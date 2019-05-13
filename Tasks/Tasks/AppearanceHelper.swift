@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 enum AppearencHelper {
 	static var taskGreen = UIColor(red: 1/255, green: 102/255, blue: 51/255, alpha: 1)
@@ -20,6 +21,10 @@ enum AppearencHelper {
 		return UIFontMetrics(forTextStyle: textStyle).scaledFont(for: font)
 	}
 	
-	
+	static func setDarkGreemAppearance() {
+		UINavigationBar.appearance().barTintColor = taskGreen
+		UISegmentedControl.appearance().tintColor = taskGreen
+		UIBarButtonItem.appearance().tintColor = taskGreen
+	}
 	
 }
