@@ -9,9 +9,11 @@
 import Foundation
 import CoreData
 
-let baseURL = URL(string: "https://tasks-b6a43.firebaseio.com/")!
+
 
 class TaskController {
+    
+    let baseURL = URL(string: "https://tasks-b6a43.firebaseio.com/")!
     
     typealias CompletionHandler = (Error?) -> Void
     

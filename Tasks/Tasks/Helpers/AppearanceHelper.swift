@@ -47,7 +47,7 @@ struct AppearanceHelper {
     static func style(button: UIButton) {
         
         button.titleLabel?.font = AppearanceHelper.typerighterFont(with: .body, pointSize: 30)
-        button.titleLabel?.adjustsFontForContentSizeCategory = true
+        button.titleLabel?.sizeToFit()
         
         button.setTitleColor(.white, for: .normal)
         
