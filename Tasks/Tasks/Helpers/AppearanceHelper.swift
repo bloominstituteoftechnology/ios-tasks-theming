@@ -24,10 +24,11 @@ enum AppearanceHelper {
 		UITableView.appearance().backgroundColor = .clear
 		UITableViewHeaderFooterView.appearance().tintColor = accentRed
 
-		let textAttributes = [NSAttributedString.Key.foregroundColor: accentRed]
+		let textAttributes = [NSAttributedString.Key.foregroundColor: accentRed, NSAttributedString.Key.font: headerFont(with: .headline, pointSize: 20)]
 		UINavigationBar.appearance().titleTextAttributes = textAttributes
 		UINavigationBar.appearance().largeTitleTextAttributes = textAttributes
 		UINavigationBar.appearance().barTintColor = backgroundColor
+
 
 		UITextView.appearance().tintColor = accentRed
 		UITextView.appearance().textColor = accentRed
@@ -36,5 +37,15 @@ enum AppearanceHelper {
 		UITextField.appearance().tintColor = accentRed
 		UITextField.appearance().textColor = .white
 		UITextField.appearance().backgroundColor = .clear
+	}
+
+	static func headerFont(with textStyle: UIFont.TextStyle, pointSize: CGFloat) -> UIFont {
+		let font = UIFont(name: "Sin City", size: pointSize)!
+		return UIFontMetrics(forTextStyle: textStyle).scaledFont(for: font)
+	}
+
+	static func bodyFont(with textStyle: UIFont.TextStyle, pointSize: CGFloat) -> UIFont {
+		let font = UIFont(name: "H.H. Samuel", size: pointSize)!
+		return UIFontMetrics(forTextStyle: textStyle).scaledFont(for: font)
 	}
 }

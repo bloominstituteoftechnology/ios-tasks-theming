@@ -36,6 +36,8 @@ class TaskDetailViewController: UIViewController {
 		nameTextField.layer.borderWidth = 0.5
 		nameTextField.layer.cornerRadius = 8
 
+		notesTextView.font = AppearanceHelper.bodyFont(with: .body, pointSize: 18)
+
 		for subview in view.allSubviews() {
 			if let vfxView = subview as? UIVisualEffectView {
 //				vfxView.layer.cornerRadius = 25
