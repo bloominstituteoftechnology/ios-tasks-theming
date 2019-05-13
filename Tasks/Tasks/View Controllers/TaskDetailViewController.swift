@@ -71,6 +71,8 @@ class TaskDetailViewController: UIViewController {
 		AppearencHelper.style(textView: notesTextView)
 		AppearencHelper.style(textField: nameTextField)
 		
+		[nameLabel, priorityLabel, notesLabel].forEach( { AppearencHelper.style(label: $0 ) })
+		
 	}
     
     // MARK: Properties
@@ -83,7 +85,10 @@ class TaskDetailViewController: UIViewController {
     
     var taskController: TaskController!
 
-    @IBOutlet var nameTextField: UITextField!
+	@IBOutlet var notesLabel: UILabel!
+	@IBOutlet var priorityLabel: UILabel!
+	@IBOutlet var nameLabel: UILabel!
+	@IBOutlet var nameTextField: UITextField!
     @IBOutlet var priorityControl: UISegmentedControl!
     @IBOutlet var notesTextView: UITextView!
 }

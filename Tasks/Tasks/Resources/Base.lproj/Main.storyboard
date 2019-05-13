@@ -151,9 +151,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="nameLabel" destination="6Ee-Sa-gkn" id="vhi-3H-N1h"/>
                         <outlet property="nameTextField" destination="QoX-Lu-hGg" id="zXv-1m-WVN"/>
+                        <outlet property="notesLabel" destination="bac-5o-rL6" id="IRh-aY-wqI"/>
                         <outlet property="notesTextView" destination="0Ff-ma-Dqn" id="rQ9-5a-buS"/>
                         <outlet property="priorityControl" destination="UUk-vn-i5S" id="Fpc-rO-bng"/>
+                        <outlet property="priorityLabel" destination="uuc-2H-ovn" id="ybz-SL-WuE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bh8-ef-2je" userLabel="First Responder" sceneMemberID="firstResponder"/>

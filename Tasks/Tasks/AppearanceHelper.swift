@@ -52,7 +52,7 @@ enum AppearencHelper {
 		textView.tintColor = taskGreen
 		textView.layer.borderWidth = 1
 		textView.layer.borderColor = taskGreen.cgColor
-		textView.layer.cornerRadius = 10
+		textView.layer.cornerRadius = 14
 	}
 	
 	static func style(textField: UITextField) {
@@ -61,7 +61,16 @@ enum AppearencHelper {
 		textField.tintColor = taskGreen
 		textField.layer.borderWidth = 1
 		textField.layer.borderColor = taskGreen.cgColor
-		textField.layer.cornerRadius = 10
+		textField.layer.cornerRadius = 8
+	}
+	
+	static func style(label: UILabel) {
+		label.backgroundColor = taskbackGroundColor
+		label.font = ASensibleArmadilloFont(with: .caption1, pointSize:30)
+		label.tintColor = taskGreen
+//		label.layer.borderWidth = 1
+//		label.layer.borderColor = taskGreen.cgColor
+		label.layer.cornerRadius = 8
 	}
 	
 }
