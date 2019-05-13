@@ -19,10 +19,43 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         }
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setUpAppearance()
+    }
+    
+    private func setUpAppearance() {
+        view.backgroundColor = Appearance.backgroundColor
+        tableView.backgroundColor = Appearance.backgroundColor
+    }
+    
+    private func style(for cell: UITableViewCell) {
+        cell.textLabel?.font = Appearance.robotoFont(with: .caption1, pointSize: 18)
+        cell.textLabel?.backgroundColor = .clear
+        cell.textLabel?.textColor = Appearance.textColor
+        cell.backgroundColor = Appearance.backgroundColor
+    }
+    
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return fetchedResultsController.sections?.count ?? 1
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+        headerView.backgroundColor = Appearance.separator
+        
+        let headerLabel = UILabel(frame: CGRect(x: 30, y: 0, width:
+            tableView.bounds.size.width, height: tableView.bounds.size.height))
+        headerLabel.font = Appearance.robotoFontBold(with: .caption1, pointSize: 22)
+        headerLabel.textColor = Appearance.secondaryTextColor
+        headerLabel.text = self.tableView(self.tableView, titleForHeaderInSection: section)
+        headerLabel.sizeToFit()
+        headerView.addSubview(headerLabel)
+        
+        return headerView
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -34,7 +67,7 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         
         let task = fetchedResultsController.object(at: indexPath)
         cell.textLabel?.text = task.name
-        
+        style(for: cell)
         return cell
     }
     
@@ -43,7 +76,7 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         return sectionInfo.name.capitalized
     }
     
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let task = fetchedResultsController.object(at: indexPath)
             
