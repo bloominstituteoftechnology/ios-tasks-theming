@@ -10,6 +10,20 @@ import UIKit
 import CoreData
 
 class TasksTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
+
+	// MARK: - Properties
+	var taskController: TaskController!
+
+	lazy var fetchedResultsController: NSFetchedResultsController<Task> = {
+		let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
+		fetchRequest.sortDescriptors = [NSSortDescriptor(key: "priority", ascending: true),
+										NSSortDescriptor(key: "name", ascending: true)]
+		let moc = CoreDataStack.shared.mainContext
+		let frc = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: moc, sectionNameKeyPath: "priority", cacheName: nil)
+		frc.delegate = self
+		try! frc.performFetch()
+		return frc
+	}()
     
     @IBAction func refresh(_ sender: Any) {
         taskController.fetchTasksFromServer { _ in
@@ -31,9 +45,10 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TaskCell", for: indexPath)
+		guard let hitCell = cell as? HitTableViewCell else { return cell }
         
         let task = fetchedResultsController.object(at: indexPath)
-        cell.textLabel?.text = task.name
+        hitCell.victimLabel.text = task.name
         
         return cell
     }
@@ -127,25 +142,7 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
             }
             detailVC.taskController = taskController
         }
-        
-        if segue.identifier == "ShowCreateTask" {
-            let detailVC = segue.destination as! TaskDetailViewController
-            detailVC.taskController = taskController
-        }
     }
     
-    // MARK: Properties
-    
-    private let taskController = TaskController()
-    
-    lazy var fetchedResultsController: NSFetchedResultsController<Task> = {
-        let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
-        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "priority", ascending: true),
-                                        NSSortDescriptor(key: "name", ascending: true)]
-        let moc = CoreDataStack.shared.mainContext
-        let frc = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: moc, sectionNameKeyPath: "priority", cacheName: nil)
-        frc.delegate = self
-        try! frc.performFetch()
-        return frc
-    }()
+
 }

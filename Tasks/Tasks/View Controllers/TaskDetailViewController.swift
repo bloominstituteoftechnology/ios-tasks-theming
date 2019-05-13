@@ -10,6 +10,20 @@ import UIKit
 
 class TaskDetailViewController: UIViewController {
 
+	// MARK: Properties
+
+	var task: Task? {
+		didSet {
+			updateViews()
+		}
+	}
+
+	var taskController: TaskController!
+
+	@IBOutlet var nameTextField: UITextField!
+	@IBOutlet var priorityControl: UISegmentedControl!
+	@IBOutlet var notesTextView: UITextView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -59,18 +73,5 @@ class TaskDetailViewController: UIViewController {
         priorityControl.selectedSegmentIndex = TaskPriority.allPriorities.index(of: priority)!
         notesTextView.text = task?.notes
     }
-    
-    // MARK: Properties
-    
-    var task: Task? {
-        didSet {
-            updateViews()
-        }
-    }
-    
-    var taskController: TaskController!
 
-    @IBOutlet var nameTextField: UITextField!
-    @IBOutlet var priorityControl: UISegmentedControl!
-    @IBOutlet var notesTextView: UITextView!
 }
