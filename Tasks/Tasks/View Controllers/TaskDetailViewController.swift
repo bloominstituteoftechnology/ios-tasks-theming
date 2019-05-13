@@ -14,7 +14,11 @@ class TaskDetailViewController: UIViewController {
         super.viewDidLoad()
 
         updateViews()
+		setupViews()
     }
+	
+	
+	
 
     @IBAction func save(_ sender: Any) {
         guard let name = nameTextField.text, !name.isEmpty else {
@@ -59,6 +63,15 @@ class TaskDetailViewController: UIViewController {
         priorityControl.selectedSegmentIndex = TaskPriority.allPriorities.index(of: priority)!
         notesTextView.text = task?.notes
     }
+	
+	private func setupViews() {
+		AppearencHelper.setDarkGreemAppearance()
+		view.backgroundColor = AppearencHelper.taskbackGroundColor
+		
+		AppearencHelper.style(textView: notesTextView)
+		AppearencHelper.style(textField: nameTextField)
+		
+	}
     
     // MARK: Properties
     

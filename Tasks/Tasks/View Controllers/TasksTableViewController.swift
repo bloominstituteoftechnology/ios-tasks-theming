@@ -10,7 +10,23 @@ import UIKit
 import CoreData
 
 class TasksTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
-    
+	
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		setupView()
+	}
+	
+	private func setupView() {
+		view.backgroundColor = AppearencHelper.taskbackGroundColor
+		
+	}
+	
+	private func style(cell: UITableViewCell) {
+		cell.textLabel?.font = AppearencHelper.ASensibleArmadilloFont(with: .caption1, pointSize: 25)
+		cell.textLabel?.backgroundColor = .clear
+		cell.backgroundColor = AppearencHelper.taskbackGroundColor
+	}
+	
     @IBAction func refresh(_ sender: Any) {
         taskController.fetchTasksFromServer { _ in
             DispatchQueue.main.async {
@@ -34,7 +50,8 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         
         let task = fetchedResultsController.object(at: indexPath)
         cell.textLabel?.text = task.name
-        
+		
+		AppearencHelper.style(cell: cell)
         return cell
     }
     
