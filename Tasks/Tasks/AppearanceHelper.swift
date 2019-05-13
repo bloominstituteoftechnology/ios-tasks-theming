@@ -22,13 +22,17 @@ enum AppearencHelper {
 		UINavigationBar.appearance().barTintColor = taskbackGroundColor
 		UISegmentedControl.appearance().tintColor = taskGreen
 		UIBarButtonItem.appearance().tintColor = taskGreen
-		let textAttributes = [NSAttributedString.Key.foregroundColor: taskGreen, NSAttributedString.Key.font: ASensibleArmadilloFont(with: .caption1, pointSize: 35)]
-		UIBarButtonItem.appearance().setTitleTextAttributes(textAttributes, for: .normal)
 		
+		let font = ASensibleArmadilloFont(with: .caption1, pointSize: 35)
+		let textAttributes = [NSAttributedString.Key.foregroundColor: taskGreen, NSAttributedString.Key.font: font]
+		
+		UIBarButtonItem.appearance().setTitleTextAttributes(textAttributes, for: .normal)
 		UINavigationBar.appearance().titleTextAttributes = textAttributes
 		UINavigationBar.appearance().largeTitleTextAttributes = textAttributes
 		UITextView.appearance().tintColor = taskGreen
 		UITextField.appearance().tintColor = taskGreen
+		UILabel.appearance().tintColor = taskGreen
+		
 	}
 	static func style(cell: UITableViewCell) {
 		cell.textLabel?.font = AppearencHelper.ASensibleArmadilloFont(with: .caption1, pointSize: 31)

@@ -14,7 +14,17 @@ class TaskDetailViewController: UIViewController {
         super.viewDidLoad()
 
         updateViews()
+		setupViews()
     }
+	
+	private func setupViews() {
+		AppearencHelper.setDarkGreemAppearance()
+		view.backgroundColor = AppearencHelper.taskbackGroundColor
+		nameTextField.textColor = AppearencHelper.taskGreen
+		notesTextView.textColor = AppearencHelper.taskGreen
+		
+	}
+	
 
     @IBAction func save(_ sender: Any) {
         guard let name = nameTextField.text, !name.isEmpty else {
