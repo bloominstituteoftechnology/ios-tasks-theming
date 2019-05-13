@@ -41,4 +41,19 @@ enum AppearencHelper {
 		cell.backgroundColor = AppearencHelper.taskbackGroundColor
 	}
 	
+	static func style(button: UIButton) {
+		button.backgroundColor = .clear
+		button.tintColor = taskGreen
+	}
+	
+	static func style(textView: UITextView) {
+		textView.backgroundColor = .clear
+		textView.tintColor = taskGreen
+	}
+	
+	static func style(textField: UITextField) {
+		textField.backgroundColor = .clear
+		textField.tintColor = taskGreen
+	}
+	
 }
