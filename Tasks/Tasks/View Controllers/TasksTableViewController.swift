@@ -10,7 +10,17 @@ import UIKit
 import CoreData
 
 class TasksTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
-    
+	
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		setupView()
+	}
+	
+	func setupView() {
+		view.backgroundColor = AppearencHelper.taskbackGroundColor
+		
+	}
+	
     @IBAction func refresh(_ sender: Any) {
         taskController.fetchTasksFromServer { _ in
             DispatchQueue.main.async {
