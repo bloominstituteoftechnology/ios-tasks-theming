@@ -11,6 +11,17 @@ import CoreData
 
 class TasksTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    private func style(cell: UITableViewCell) {
+        cell.textLabel?.backgroundColor = .clear
+        cell.backgroundColor = AppearanceHelper.aqua
+        cell.textLabel?.font = AppearanceHelper.kabrioFont(with: .caption1, pointSize: 26)
+        cell.textLabel?.textColor = AppearanceHelper.darkGrey
+    }
+    
     @IBAction func refresh(_ sender: Any) {
         taskController.fetchTasksFromServer { _ in
             DispatchQueue.main.async {
@@ -20,6 +31,13 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
     }
     
     // MARK: - Table view data source
+    
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        view.tintColor = AppearanceHelper.darkAqua
+        let header = view as! UITableViewHeaderFooterView
+        header.textLabel?.textColor = AppearanceHelper.darkGrey
+        header.textLabel?.font = AppearanceHelper.kabrioFont(with: .caption1, pointSize: 18)
+    }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return fetchedResultsController.sections?.count ?? 1
@@ -35,6 +53,8 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         let task = fetchedResultsController.object(at: indexPath)
         cell.textLabel?.text = task.name
         
+        style(cell: cell)
+        
         return cell
     }
     
@@ -43,7 +63,7 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         return sectionInfo.name.capitalized
     }
     
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let task = fetchedResultsController.object(at: indexPath)
             

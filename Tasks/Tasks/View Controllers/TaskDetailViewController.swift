@@ -14,6 +14,23 @@ class TaskDetailViewController: UIViewController {
         super.viewDidLoad()
 
         updateViews()
+        setupAppearances()
+    }
+    
+    private func setupAppearances() {
+        
+        let labelColor = AppearanceHelper.darkGrey
+        let labelFont = AppearanceHelper.kabrioFont(with: .headline, pointSize: 22)
+        
+        view.backgroundColor = AppearanceHelper.aqua
+        
+        nameLabel.textColor = labelColor
+        priorityLabel.textColor = labelColor
+        notesLabel.textColor = labelColor
+        
+        nameLabel.font = labelFont
+        priorityLabel.font = labelFont
+        notesLabel.font = labelFont
     }
 
     @IBAction func save(_ sender: Any) {
@@ -56,7 +73,7 @@ class TaskDetailViewController: UIViewController {
         } else {
             priority = .normal
         }
-        priorityControl.selectedSegmentIndex = TaskPriority.allPriorities.index(of: priority)!
+        priorityControl.selectedSegmentIndex = TaskPriority.allPriorities.firstIndex(of: priority)!
         notesTextView.text = task?.notes
     }
     
@@ -73,4 +90,7 @@ class TaskDetailViewController: UIViewController {
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var priorityControl: UISegmentedControl!
     @IBOutlet var notesTextView: UITextView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var notesLabel: UILabel!
+    @IBOutlet weak var priorityLabel: UILabel!
 }
