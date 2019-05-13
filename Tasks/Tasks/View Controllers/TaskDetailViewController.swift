@@ -28,7 +28,23 @@ class TaskDetailViewController: UIViewController {
         super.viewDidLoad()
 
         updateViews()
+		setupAppearance()
     }
+
+	private func setupAppearance() {
+		nameTextField.layer.borderColor = UIColor.white.cgColor
+		nameTextField.layer.borderWidth = 0.5
+		nameTextField.layer.cornerRadius = 8
+
+		for subview in view.allSubviews() {
+			if let vfxView = subview as? UIVisualEffectView {
+//				vfxView.layer.cornerRadius = 25
+				for subvfx in vfxView.subviews {
+					subvfx.layer.cornerRadius = 8
+				}
+			}
+		}
+	}
 
     @IBAction func save(_ sender: Any) {
         guard let name = nameTextField.text, !name.isEmpty else {
