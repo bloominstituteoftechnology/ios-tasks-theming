@@ -22,8 +22,8 @@ enum AppearencHelper {
 		UINavigationBar.appearance().barTintColor = taskbackGroundColor
 		UISegmentedControl.appearance().tintColor = taskGreen
 		UIBarButtonItem.appearance().tintColor = taskGreen
-		
-		let textAttributes = [NSAttributedString.Key.foregroundColor: taskGreen, NSAttributedString.Key.font: ASensibleArmadilloFont(with: .caption1, pointSize: 50)]
+		let textAttributes = [NSAttributedString.Key.foregroundColor: taskGreen, NSAttributedString.Key.font: ASensibleArmadilloFont(with: .caption1, pointSize: 35)]
+		UIBarButtonItem.appearance().setTitleTextAttributes(textAttributes, for: .normal)
 		
 		UINavigationBar.appearance().titleTextAttributes = textAttributes
 		UINavigationBar.appearance().largeTitleTextAttributes = textAttributes
