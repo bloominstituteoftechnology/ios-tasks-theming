@@ -11,6 +11,31 @@ import CoreData
 
 class TasksTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupAppearances()
+    }
+    
+    private func setupAppearances() {
+        view.backgroundColor = AppearanceHelper.deepPurple
+        tableView.backgroundColor = AppearanceHelper.deepPurple
+        tableView.tableHeaderView?.backgroundColor = AppearanceHelper.deepPurple
+    }
+    
+    private func style(cell: UITableViewCell) {
+        cell.textLabel?.font = AppearanceHelper.expresswayFont(with: .caption1, pointSize: 20)
+//        cell.textLabel?.backgroundColor = .clear
+        cell.backgroundColor = AppearanceHelper.deepPurple
+        cell.textLabel?.textColor = AppearanceHelper.greyText
+        cell.textLabel?.backgroundColor = .clear
+        
+//        tableView.headerView(forSection: 0)?.backgroundColor
+    }
+    
+    private func style(header: UITableView) {
+        
+    }
+    
     @IBAction func refresh(_ sender: Any) {
         taskController.fetchTasksFromServer { _ in
             DispatchQueue.main.async {
@@ -34,6 +59,9 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         
         let task = fetchedResultsController.object(at: indexPath)
         cell.textLabel?.text = task.name
+        
+        style(cell: cell)
+        
         
         return cell
     }

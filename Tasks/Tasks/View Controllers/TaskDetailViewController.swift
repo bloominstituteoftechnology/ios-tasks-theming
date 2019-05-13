@@ -14,6 +14,25 @@ class TaskDetailViewController: UIViewController {
         super.viewDidLoad()
 
         updateViews()
+        setupAppearances()
+    }
+    
+    func setupAppearances() {
+        view.backgroundColor = AppearanceHelper.deepPurple
+        nameTextField.backgroundColor = AppearanceHelper.deepPurple
+        nameTextField.layer.borderColor = AppearanceHelper.greyText.cgColor
+        nameTextField.layer.borderWidth = 0.3
+        nameTextField.layer.cornerRadius = 8
+        nameLabel.textColor = AppearanceHelper.greyText
+        
+        priorityLabel.textColor = AppearanceHelper.greyText
+        
+        notesLabel.textColor = AppearanceHelper.greyText
+        
+        notesTextView.backgroundColor = AppearanceHelper.deepPurple
+        notesTextView.layer.borderWidth = 0.3
+        notesTextView.layer.borderColor = AppearanceHelper.greyText.cgColor
+        notesTextView.layer.cornerRadius = 8
     }
 
     @IBAction func save(_ sender: Any) {
@@ -73,4 +92,8 @@ class TaskDetailViewController: UIViewController {
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var priorityControl: UISegmentedControl!
     @IBOutlet var notesTextView: UITextView!
+    
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var priorityLabel: UILabel!
+    @IBOutlet var notesLabel: UILabel!
 }
