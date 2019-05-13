@@ -47,7 +47,8 @@ enum AppearencHelper {
 	}
 	
 	static func style(textView: UITextView) {
-		textView.backgroundColor = .clear
+		textView.backgroundColor = taskbackGroundColor
+		textView.font = ASensibleArmadilloFont(with: .caption2, pointSize: 30)
 		textView.tintColor = taskGreen
 		textView.layer.borderWidth = 1
 		textView.layer.borderColor = taskGreen.cgColor
@@ -55,9 +56,11 @@ enum AppearencHelper {
 	}
 	
 	static func style(textField: UITextField) {
-		textField.backgroundColor = .clear
+		textField.backgroundColor = taskbackGroundColor
+		textField.font = ASensibleArmadilloFont(with: .caption1, pointSize: 24)
 		textField.tintColor = taskGreen
-		
+		textField.layer.borderWidth = 1
+		textField.layer.borderColor = taskGreen.cgColor
 		textField.layer.cornerRadius = 10
 	}
 	
