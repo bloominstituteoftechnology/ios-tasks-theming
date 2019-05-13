@@ -16,8 +16,18 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
 		setupView()
 	}
 	
-	func setupView() {
+	private func setupView() {
 		view.backgroundColor = AppearencHelper.taskbackGroundColor
+		
+	}
+	
+	private func style(cell: UITableViewCell) {
+		
+		
+		cell.textLabel?.textColor = .white
+		cell.textLabel?.backgroundColor = .clear
+		
+		cell.backgroundColor = AppearencHelper.taskbackGroundColor
 		
 	}
 	
@@ -44,7 +54,9 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         
         let task = fetchedResultsController.object(at: indexPath)
         cell.textLabel?.text = task.name
-        
+		
+		
+		style(cell: cell)
         return cell
     }
     
