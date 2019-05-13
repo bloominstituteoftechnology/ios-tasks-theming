@@ -45,11 +45,14 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TaskCell", for: indexPath)
-		guard let hitCell = cell as? HitTableViewCell else { return cell }
+		guard let taskCell = cell as? TaskTableViewCell else { return cell }
         
         let task = fetchedResultsController.object(at: indexPath)
-        hitCell.victimLabel.text = task.name
-        
+		taskCell.task = task
+		taskCell.victimLabel.characterSpacing = 1.5
+        taskCell.victimLabel.text = task.name
+		taskCell.victimLabel.font = AppearanceHelper.bodyFont(with: .caption1, pointSize: 18)
+
         return cell
     }
     

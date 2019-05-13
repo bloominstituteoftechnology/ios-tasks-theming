@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		3339E4B7228A0B02002AD6E2 /* AppearanceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3339E4B6228A0B02002AD6E2 /* AppearanceHelper.swift */; };
-		3339E4BA228A113C002AD6E2 /* HitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3339E4B9228A113C002AD6E2 /* HitTableViewCell.swift */; };
+		3339E4BA228A113C002AD6E2 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3339E4B9228A113C002AD6E2 /* TaskTableViewCell.swift */; };
 		3339E4BC228A1310002AD6E2 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3339E4BB228A1310002AD6E2 /* ContainerViewController.swift */; };
 		3339E4BE228A215C002AD6E2 /* ALLTHESUBVIEWS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3339E4BD228A215C002AD6E2 /* ALLTHESUBVIEWS.swift */; };
 		3339E4C0228A2430002AD6E2 /* Sin City.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3339E4BF228A23FB002AD6E2 /* Sin City.ttf */; };
 		3339E4C2228A25B9002AD6E2 /* HHSamuel.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3339E4C1228A25B9002AD6E2 /* HHSamuel.ttf */; };
+		3339E4C4228A2A10002AD6E2 /* SpacedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3339E4C3228A2A10002AD6E2 /* SpacedLabel.swift */; };
 		9D4408C7211FF431005E2116 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4408C6211FF431005E2116 /* AppDelegate.swift */; };
 		9D4408CC211FF431005E2116 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D4408CA211FF431005E2116 /* Main.storyboard */; };
 		9D4408CE211FF434005E2116 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D4408CD211FF434005E2116 /* Assets.xcassets */; };
@@ -28,11 +29,12 @@
 
 /* Begin PBXFileReference section */
 		3339E4B6228A0B02002AD6E2 /* AppearanceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceHelper.swift; sourceTree = "<group>"; };
-		3339E4B9228A113C002AD6E2 /* HitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitTableViewCell.swift; sourceTree = "<group>"; };
+		3339E4B9228A113C002AD6E2 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
 		3339E4BB228A1310002AD6E2 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		3339E4BD228A215C002AD6E2 /* ALLTHESUBVIEWS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALLTHESUBVIEWS.swift; sourceTree = "<group>"; };
 		3339E4BF228A23FB002AD6E2 /* Sin City.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Sin City.ttf"; path = "../../../assets/sin-city/Sin City.ttf"; sourceTree = "<group>"; };
 		3339E4C1228A25B9002AD6E2 /* HHSamuel.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = HHSamuel.ttf; path = "../../../assets/h-h-samuel/HHSamuel.ttf"; sourceTree = "<group>"; };
+		3339E4C3228A2A10002AD6E2 /* SpacedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacedLabel.swift; sourceTree = "<group>"; };
 		9D4408C3211FF431005E2116 /* Tasks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tasks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D4408C6211FF431005E2116 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D4408CB211FF431005E2116 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -73,7 +75,8 @@
 		3339E4B8228A1119002AD6E2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				3339E4B9228A113C002AD6E2 /* HitTableViewCell.swift */,
+				3339E4B9228A113C002AD6E2 /* TaskTableViewCell.swift */,
+				3339E4C3228A2A10002AD6E2 /* SpacedLabel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -230,8 +233,9 @@
 				9D4408E5211FF7CC005E2116 /* TaskDetailViewController.swift in Sources */,
 				3339E4BE228A215C002AD6E2 /* ALLTHESUBVIEWS.swift in Sources */,
 				9D4408DD211FF51C005E2116 /* Tasks.xcdatamodeld in Sources */,
-				3339E4BA228A113C002AD6E2 /* HitTableViewCell.swift in Sources */,
+				3339E4BA228A113C002AD6E2 /* TaskTableViewCell.swift in Sources */,
 				9D4408E3211FF752005E2116 /* TasksTableViewController.swift in Sources */,
+				3339E4C4228A2A10002AD6E2 /* SpacedLabel.swift in Sources */,
 				9D4408C7211FF431005E2116 /* AppDelegate.swift in Sources */,
 				9D4408DF211FF67E005E2116 /* Task+Convenience.swift in Sources */,
 				9D4408E1211FF6A0005E2116 /* CoreDataStack.swift in Sources */,

@@ -29,7 +29,6 @@ enum AppearanceHelper {
 		UINavigationBar.appearance().largeTitleTextAttributes = textAttributes
 		UINavigationBar.appearance().barTintColor = backgroundColor
 
-
 		UITextView.appearance().tintColor = accentRed
 		UITextView.appearance().textColor = accentRed
 		UITextView.appearance().backgroundColor = .clear

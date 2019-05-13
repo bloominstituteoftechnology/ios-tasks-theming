@@ -35,6 +35,7 @@ class TaskDetailViewController: UIViewController {
 		nameTextField.layer.borderColor = UIColor.white.cgColor
 		nameTextField.layer.borderWidth = 0.5
 		nameTextField.layer.cornerRadius = 8
+		nameTextField.font = AppearanceHelper.bodyFont(with: .body, pointSize: 18)
 
 		notesTextView.font = AppearanceHelper.bodyFont(with: .body, pointSize: 18)
 
