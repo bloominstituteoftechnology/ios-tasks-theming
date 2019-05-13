@@ -10,14 +10,11 @@ import UIKit
 import Foundation
 
 enum AppearencHelper {
-	static var taskGreen = UIColor(red: 1/255, green: 102/255, blue: 51/255, alpha: 1)
+	static var taskGreen = UIColor(red: 30/255, green: 72/255, blue: 10/255, alpha: 1)
 	static var taskbackGroundColor = UIColor(red: 228/255, green: 236/255, blue: 226/255, alpha: 1)
 	
 	static func ASensibleArmadilloFont(with textStyle: UIFont.TextStyle, pointSize: CGFloat) -> UIFont {
 		let font  = UIFont(name: "ASensibleArmadillo", size: pointSize)!
-//			print("error: A_Sensible_Armadillo")
-//			return nil
-//
 		return UIFontMetrics(forTextStyle: textStyle).scaledFont(for: font)
 	}
 	
@@ -25,6 +22,19 @@ enum AppearencHelper {
 		UINavigationBar.appearance().barTintColor = taskbackGroundColor
 		UISegmentedControl.appearance().tintColor = taskGreen
 		UIBarButtonItem.appearance().tintColor = taskGreen
+		
+		let textAttributes = [NSAttributedString.Key.foregroundColor: taskGreen, NSAttributedString.Key.font: ASensibleArmadilloFont(with: .caption1, pointSize: 50)]
+		
+		UINavigationBar.appearance().titleTextAttributes = textAttributes
+		UINavigationBar.appearance().largeTitleTextAttributes = textAttributes
+		UITextView.appearance().tintColor = taskGreen
+		UITextField.appearance().tintColor = taskGreen
+	}
+	static func style(cell: UITableViewCell) {
+		cell.textLabel?.font = AppearencHelper.ASensibleArmadilloFont(with: .caption1, pointSize: 31)
+		cell.textLabel?.backgroundColor = .clear
+		cell.textLabel?.textColor = AppearencHelper.taskGreen
+		cell.backgroundColor = AppearencHelper.taskbackGroundColor
 	}
 	
 }

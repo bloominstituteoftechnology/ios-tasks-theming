@@ -22,14 +22,9 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
 	}
 	
 	private func style(cell: UITableViewCell) {
-//		if let font  =  AppearencHelper.ASensibleArmadilloFont(with: .caption1, pointSize: 25) {
-			cell.textLabel?.font = AppearencHelper.ASensibleArmadilloFont(with: .caption1, pointSize: 25)
-//		}
-//		cell.textLabel?.textColor = .magenta
+		cell.textLabel?.font = AppearencHelper.ASensibleArmadilloFont(with: .caption1, pointSize: 25)
 		cell.textLabel?.backgroundColor = .clear
-		
 		cell.backgroundColor = AppearencHelper.taskbackGroundColor
-		
 	}
 	
     @IBAction func refresh(_ sender: Any) {
@@ -56,8 +51,7 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         let task = fetchedResultsController.object(at: indexPath)
         cell.textLabel?.text = task.name
 		
-		
-		style(cell: cell)
+		AppearencHelper.style(cell: cell)
         return cell
     }
     
