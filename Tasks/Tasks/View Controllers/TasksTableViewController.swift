@@ -22,10 +22,10 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
 	}
 	
 	private func style(cell: UITableViewCell) {
-		if let font  =  AppearencHelper.ASensibleArmadilloFont(with: .caption1, pointSize: 25) {
-			cell.textLabel?.font = font
-		}
-		cell.textLabel?.textColor = .white
+//		if let font  =  AppearencHelper.ASensibleArmadilloFont(with: .caption1, pointSize: 25) {
+			cell.textLabel?.font = AppearencHelper.ASensibleArmadilloFont(with: .caption1, pointSize: 25)
+//		}
+//		cell.textLabel?.textColor = .magenta
 		cell.textLabel?.backgroundColor = .clear
 		
 		cell.backgroundColor = AppearencHelper.taskbackGroundColor
