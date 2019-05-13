@@ -49,11 +49,16 @@ enum AppearencHelper {
 	static func style(textView: UITextView) {
 		textView.backgroundColor = .clear
 		textView.tintColor = taskGreen
+		textView.layer.borderWidth = 1
+		textView.layer.borderColor = taskGreen.cgColor
+		textView.layer.cornerRadius = 10
 	}
 	
 	static func style(textField: UITextField) {
 		textField.backgroundColor = .clear
 		textField.tintColor = taskGreen
+		
+		textField.layer.cornerRadius = 10
 	}
 	
 }
