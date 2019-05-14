@@ -14,10 +14,23 @@ enum TaskPriority: String {
     case normal
     case high
     case critical
-    
-    static var allPriorities: [TaskPriority] {
-        return [.low, .normal, .high, .critical]
-    }
+
+	static var allPriorities: [TaskPriority] {
+		return [.low, .normal, .high, .critical]
+	}
+
+	func starString() -> String {
+		switch self {
+		case .low:
+			return "✦"
+		case .normal:
+			return "✦✦"
+		case .high:
+			return "✦✦✦"
+		case .critical:
+			return "✦✦✦✦"
+		}
+	}
 }
 
 extension Task {
