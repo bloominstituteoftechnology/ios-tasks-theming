@@ -34,6 +34,19 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         view.backgroundColor = TasksAppearanceHelper.lightBrown
     }
     
+    private func style(cell: UITableViewCell) {
+        cell.textLabel?.font = TasksAppearanceHelper.attackOfCucumbersFont(with: .body, pointSize: 20)
+        cell.detailTextLabel?.font = TasksAppearanceHelper.attackOfCucumbersFont(with: .body, pointSize: 20)
+        cell.textLabel?.backgroundColor = .clear
+        cell.detailTextLabel?.backgroundColor = .clear
+        
+        cell.textLabel?.textColor = TasksAppearanceHelper.navbarBrown
+        cell.detailTextLabel?.textColor = TasksAppearanceHelper.navbarBrown
+        
+        cell.backgroundColor = TasksAppearanceHelper.barelyBrown
+    }
+    
+    
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -47,6 +60,8 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TaskCell", for: indexPath)
         
+        style(cell: cell)
+        
         let task = fetchedResultsController.object(at: indexPath)
         cell.textLabel?.text = task.name
         
@@ -55,6 +70,7 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         guard let sectionInfo = fetchedResultsController.sections?[section] else { return nil }
+        
         return sectionInfo.name.capitalized
     }
     

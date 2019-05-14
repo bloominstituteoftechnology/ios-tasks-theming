@@ -23,6 +23,18 @@ class TaskDetailViewController: UIViewController {
     private func  setupCustomAppearance() {
         // Background
         view.backgroundColor = TasksAppearanceHelper.lightBrown
+        nameTextField.font = TasksAppearanceHelper.attackOfCucumbersFont(with: .body, pointSize: 18 )
+        notesTextView.font = TasksAppearanceHelper.attackOfCucumbersFont(with: .body, pointSize: 20)
+        
+        // Label fonts.  There's got to be a better way!
+        nameLabel.textColor = TasksAppearanceHelper.navbarBrown
+        priorityLabel.textColor = TasksAppearanceHelper.navbarBrown
+        notesLabel.textColor = TasksAppearanceHelper.navbarBrown
+        
+        // Customize segmented control font  Setting the weight seems really involved.
+        //let segmentedControlFont: [AnyHashable : Any] = [NSAttributedStringKey.font : (TasksAppearanceHelper.attackOfCucumbersFont(with: .body, pointSize: 12.0))]
+        //priorityControl.setTitleTextAttributes(segmentedControlFont, for: .normal)
+
         
         // Name text field
         nameTextField.backgroundColor = TasksAppearanceHelper.barelyBrown
@@ -30,6 +42,7 @@ class TaskDetailViewController: UIViewController {
         nameTextField.layer.borderWidth = 0.5
         nameTextField.layer.cornerRadius = 6.0
         
+        // Textview
         notesTextView.backgroundColor = TasksAppearanceHelper.barelyBrown
         notesTextView.layer.borderColor = TasksAppearanceHelper.navbarBrown.cgColor
         notesTextView.layer.borderWidth = 0.5
@@ -95,4 +108,11 @@ class TaskDetailViewController: UIViewController {
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var priorityControl: UISegmentedControl!
     @IBOutlet var notesTextView: UITextView!
+    
+    // How do I set all label colors for this VC?
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var priorityLabel: UILabel!
+    @IBOutlet weak var notesLabel: UILabel!
+    
+    
 }
