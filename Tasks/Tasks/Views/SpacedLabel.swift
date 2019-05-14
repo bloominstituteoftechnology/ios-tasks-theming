@@ -12,19 +12,16 @@ class SpacedLabel: UILabel {
 
 	private var _text: String?
 	override var text: String? {
-//		get {
-//			return _text
-//		}
-//		set {
-//			_text = newValue
-//			setCharacterSpacing()
-//		}
 		didSet {
 			setCharacterSpacing()
 		}
 	}
 
-	var characterSpacing: Double?
+	var characterSpacing: Double? {
+		didSet {
+			setCharacterSpacing()
+		}
+	}
 
 	private func setCharacterSpacing() {
 		if let labelText = text, let spacing = characterSpacing {

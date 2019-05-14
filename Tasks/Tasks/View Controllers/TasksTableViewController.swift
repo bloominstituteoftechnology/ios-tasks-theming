@@ -58,7 +58,18 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         guard let sectionInfo = fetchedResultsController.sections?[section] else { return nil }
-        return sectionInfo.name.capitalized
+		switch sectionInfo.name.lowercased() {
+		case "critical":
+			return "✦✦✦✦"
+		case "high":
+			return "✦✦✦"
+		case "low":
+			return "✦"
+		case "normal":
+			return "✦✦"
+		default:
+			return "✦?"
+		}
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
