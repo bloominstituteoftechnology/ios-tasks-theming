@@ -11,12 +11,27 @@ import CoreData
 
 class TasksTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Apply custom appearance to TVC
+        setupCustomAppearance()
+    }
+    
     @IBAction func refresh(_ sender: Any) {
         taskController.fetchTasksFromServer { _ in
             DispatchQueue.main.async {
                 self.refreshControl?.endRefreshing()
             }
         }
+    }
+    
+    
+    // MARK: - Custom appearance
+    
+    private func  setupCustomAppearance() {
+        self.tableView.backgroundColor = TasksAppearanceHelper.lightBrown
+        view.backgroundColor = TasksAppearanceHelper.lightBrown
     }
     
     // MARK: - Table view data source

@@ -12,9 +12,31 @@ class TaskDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupCustomAppearance()
 
         updateViews()
     }
+    
+    // MARK: - Custom appearance
+    
+    private func  setupCustomAppearance() {
+        // Background
+        view.backgroundColor = TasksAppearanceHelper.lightBrown
+        
+        // Name text field
+        nameTextField.backgroundColor = TasksAppearanceHelper.barelyBrown
+        nameTextField.layer.borderColor = TasksAppearanceHelper.navbarBrown.cgColor
+        nameTextField.layer.borderWidth = 0.5
+        nameTextField.layer.cornerRadius = 6.0
+        
+        notesTextView.backgroundColor = TasksAppearanceHelper.barelyBrown
+        notesTextView.layer.borderColor = TasksAppearanceHelper.navbarBrown.cgColor
+        notesTextView.layer.borderWidth = 0.5
+        notesTextView.layer.cornerRadius = 6.0
+    }
+    
+    
 
     @IBAction func save(_ sender: Any) {
         guard let name = nameTextField.text, !name.isEmpty else {
