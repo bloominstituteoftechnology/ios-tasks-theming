@@ -11,6 +11,10 @@ import CoreData
 
 class TasksTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
+    override func viewDidLoad() {
+        setupAppearances()
+    }
+    
     @IBAction func refresh(_ sender: Any) {
         taskController.fetchTasksFromServer { _ in
             DispatchQueue.main.async {
@@ -34,7 +38,10 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         
         let task = fetchedResultsController.object(at: indexPath)
         cell.textLabel?.text = task.name
-        
+        cell.backgroundColor = AppearanceHelper.taskGreen
+        cell.textLabel?.textColor = AppearanceHelper.backgroundWhite
+        cell.detailTextLabel?.textColor = AppearanceHelper.backgroundWhite
+        cell.textLabel?.font = AppearanceHelper.primeFont(with: .caption1, pointSize: 30)
         return cell
     }
     
@@ -65,6 +72,12 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
                     }
                 }
             }
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        if let view = view as? UITableViewHeaderFooterView {
+            view.textLabel?.font = AppearanceHelper.primeFont(with: .body, pointSize: 20)
         }
     }
     
@@ -148,4 +161,10 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         try! frc.performFetch()
         return frc
     }()
+    
+    private func setupAppearances() {
+        view.backgroundColor = AppearanceHelper.backgroundSteel
+        tableView.backgroundColor = AppearanceHelper.backgroundWhite
+        tableView.tableHeaderView?.backgroundColor = AppearanceHelper.taskGreen
+    }
 }
