@@ -10,6 +10,12 @@ import UIKit
 import CoreData
 
 class TasksTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
+
+
+    override func viewDidLoad() {
+        setupAppearances()
+    }
+
     
     @IBAction func refresh(_ sender: Any) {
         taskController.fetchTasksFromServer { _ in
@@ -20,6 +26,18 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
     }
     
     // MARK: - Table view data source
+
+    private func setupAppearances() {
+        view.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+    }
+
+    func style(cell: UITableViewCell) {
+        cell.textLabel?.font = AppearanceHelper.attackOfTheCucumbersFont(with: .body, pointSize: 22)
+
+        cell.textLabel?.textColor = #colorLiteral(red: 0, green: 0.9768045545, blue: 0, alpha: 1)
+        cell.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+
+    }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return fetchedResultsController.sections?.count ?? 1
@@ -34,6 +52,7 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         
         let task = fetchedResultsController.object(at: indexPath)
         cell.textLabel?.text = task.name
+        style(cell: cell)
         
         return cell
     }

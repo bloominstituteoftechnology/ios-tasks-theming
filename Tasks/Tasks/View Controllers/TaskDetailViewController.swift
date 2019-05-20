@@ -12,8 +12,13 @@ class TaskDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupAppearances()
         updateViews()
+    }
+
+
+    private func setupAppearances() {
+        view.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
     }
 
     @IBAction func save(_ sender: Any) {
