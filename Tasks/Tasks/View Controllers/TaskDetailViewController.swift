@@ -56,7 +56,7 @@ class TaskDetailViewController: UIViewController {
         } else {
             priority = .normal
         }
-        priorityControl.selectedSegmentIndex = TaskPriority.allPriorities.index(of: priority)!
+        priorityControl.selectedSegmentIndex = TaskPriority.allPriorities.firstIndex(of: priority)!
         notesTextView.text = task?.notes
     }
     
