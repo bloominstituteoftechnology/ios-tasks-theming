@@ -12,8 +12,13 @@ class TaskDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupAppearances()
         updateViews()
+    }
+
+
+    private func setupAppearances() {
+        view.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
     }
 
     @IBAction func save(_ sender: Any) {
@@ -56,7 +61,7 @@ class TaskDetailViewController: UIViewController {
         } else {
             priority = .normal
         }
-        priorityControl.selectedSegmentIndex = TaskPriority.allPriorities.index(of: priority)!
+        priorityControl.selectedSegmentIndex = TaskPriority.allPriorities.firstIndex(of: priority)!
         notesTextView.text = task?.notes
     }
     
