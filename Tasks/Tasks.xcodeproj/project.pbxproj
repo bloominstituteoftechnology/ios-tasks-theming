@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D2A4935229334E300AB37DA /* AppearanceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2A4934229334E200AB37DA /* AppearanceHelper.swift */; };
+		3D2A4939229343C200AB37DA /* Prime-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D2A4938229343C200AB37DA /* Prime-Regular.ttf */; };
 		9D4408C7211FF431005E2116 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4408C6211FF431005E2116 /* AppDelegate.swift */; };
 		9D4408CC211FF431005E2116 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D4408CA211FF431005E2116 /* Main.storyboard */; };
 		9D4408CE211FF434005E2116 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D4408CD211FF434005E2116 /* Assets.xcassets */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D2A4934229334E200AB37DA /* AppearanceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceHelper.swift; sourceTree = "<group>"; };
+		3D2A4938229343C200AB37DA /* Prime-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Prime-Regular.ttf"; sourceTree = "<group>"; };
 		9D4408C3211FF431005E2116 /* Tasks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tasks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D4408C6211FF431005E2116 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D4408CB211FF431005E2116 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -84,6 +88,7 @@
 				9D4408CD211FF434005E2116 /* Assets.xcassets */,
 				9D4408CF211FF434005E2116 /* LaunchScreen.storyboard */,
 				9D4408D2211FF434005E2116 /* Info.plist */,
+				3D2A4938229343C200AB37DA /* Prime-Regular.ttf */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -94,6 +99,7 @@
 				9D4408DB211FF51C005E2116 /* Tasks.xcdatamodeld */,
 				9D4408E0211FF6A0005E2116 /* CoreDataStack.swift */,
 				9D4408DE211FF67E005E2116 /* Task+Convenience.swift */,
+				3D2A4934229334E200AB37DA /* AppearanceHelper.swift */,
 				9D70DFFB21249442006D4DF5 /* TaskRepresentation.swift */,
 			);
 			path = Model;
@@ -175,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D4408D1211FF434005E2116 /* LaunchScreen.storyboard in Resources */,
+				3D2A4939229343C200AB37DA /* Prime-Regular.ttf in Resources */,
 				9D4408CE211FF434005E2116 /* Assets.xcassets in Resources */,
 				9D4408CC211FF431005E2116 /* Main.storyboard in Resources */,
 			);
@@ -189,6 +196,7 @@
 			files = (
 				9D70DFF921248F8E006D4DF5 /* TaskController.swift in Sources */,
 				9D70DFFC21249442006D4DF5 /* TaskRepresentation.swift in Sources */,
+				3D2A4935229334E300AB37DA /* AppearanceHelper.swift in Sources */,
 				9D4408E5211FF7CC005E2116 /* TaskDetailViewController.swift in Sources */,
 				9D4408DD211FF51C005E2116 /* Tasks.xcdatamodeld in Sources */,
 				9D4408E3211FF752005E2116 /* TasksTableViewController.swift in Sources */,

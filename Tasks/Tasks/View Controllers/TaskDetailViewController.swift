@@ -12,7 +12,7 @@ class TaskDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupAppearances()
         updateViews()
     }
 
@@ -73,4 +73,14 @@ class TaskDetailViewController: UIViewController {
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var priorityControl: UISegmentedControl!
     @IBOutlet var notesTextView: UITextView!
+    
+    private func setupAppearances() {
+        view.backgroundColor = AppearanceHelper.taskGreen
+        nameTextField.backgroundColor = AppearanceHelper.backgroundWhite
+        priorityControl.tintColor = AppearanceHelper.backgroundSteel
+        priorityControl.backgroundColor = AppearanceHelper.backgroundWhite
+        notesTextView.backgroundColor = AppearanceHelper.backgroundWhite
+        nameTextField.font = AppearanceHelper.primeFont(with: .callout, pointSize: 18)
+        notesTextView.font = AppearanceHelper.primeFont(with: .callout, pointSize: 18)
+    }
 }
