@@ -14,6 +14,7 @@ class TaskDetailViewController: UIViewController {
         super.viewDidLoad()
 
         updateViews()
+        setupAppearance()
     }
 
     @IBAction func save(_ sender: Any) {
@@ -60,6 +61,15 @@ class TaskDetailViewController: UIViewController {
         notesTextView.text = task?.notes
     }
     
+    func setupAppearance() {
+        view.backgroundColor = AppearanceHelper.blueColor
+        nameLabel.font = AppearanceHelper.blackChanceryFont(with: .body, pointSize: 25)
+        nameTextField.font = AppearanceHelper.blackChanceryFont(with: .body, pointSize: 25)
+        priorityLabel.font = AppearanceHelper.blackChanceryFont(with: .body, pointSize: 25)
+        notesLabel.font = AppearanceHelper.blackChanceryFont(with: .body, pointSize: 25)
+        notesTextView.font = AppearanceHelper.blackChanceryFont(with: .body, pointSize: 25)
+    }
+    
     // MARK: Properties
     
     var task: Task? {
@@ -70,6 +80,9 @@ class TaskDetailViewController: UIViewController {
     
     var taskController: TaskController!
 
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var priorityLabel: UILabel!
+    @IBOutlet weak var notesLabel: UILabel!
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var priorityControl: UISegmentedControl!
     @IBOutlet var notesTextView: UITextView!
