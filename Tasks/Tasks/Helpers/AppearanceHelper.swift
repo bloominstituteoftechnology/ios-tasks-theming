@@ -29,6 +29,7 @@ enum AppearanceHelper {
         
         UISegmentedControl.appearance().tintColor = lightBlue
         
+        
         UITextView.appearance().tintColor = backgroundColor
         UITextField.appearance().tintColor = backgroundColor
     }

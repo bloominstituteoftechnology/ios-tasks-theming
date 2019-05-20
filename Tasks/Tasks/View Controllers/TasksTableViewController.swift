@@ -44,6 +44,18 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         cell.layer.cornerRadius = 5
         cell.layer.shadowColor = UIColor.black.cgColor
         
+        cell.subviews.forEach({
+            if let btn = $0 as? UIButton {
+                btn.subviews.forEach({
+                    if let imageView = $0 as? UIImageView {
+                        let image = imageView.image?.withRenderingMode(.alwaysTemplate)
+                        imageView.image = image
+                        imageView.tintColor = UIColor.red
+                    }
+                })
+            }
+        })
+        
         style(cell: cell)
         
         return cell
