@@ -18,6 +18,9 @@
 		9D4408E5211FF7CC005E2116 /* TaskDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4408E4211FF7CC005E2116 /* TaskDetailViewController.swift */; };
 		9D70DFF921248F8E006D4DF5 /* TaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D70DFF821248F8E006D4DF5 /* TaskController.swift */; };
 		9D70DFFC21249442006D4DF5 /* TaskRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D70DFFB21249442006D4DF5 /* TaskRepresentation.swift */; };
+		EF1CBCBB22932F280005F065 /* AppearanceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1CBCBA22932F280005F065 /* AppearanceHelper.swift */; };
+		EF1CBCBD229349FF0005F065 /* AMERD___.TTF in Resources */ = {isa = PBXBuildFile; fileRef = EF1CBCBC229349FF0005F065 /* AMERD___.TTF */; };
+		EF1CBCBF22934DE50005F065 /* 28 Days Later.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF1CBCBE22934DE50005F065 /* 28 Days Later.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		9D70DFF821248F8E006D4DF5 /* TaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskController.swift; sourceTree = "<group>"; };
 		9D70DFFA21249145006D4DF5 /* Tasks 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Tasks 3.xcdatamodel"; sourceTree = "<group>"; };
 		9D70DFFB21249442006D4DF5 /* TaskRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRepresentation.swift; sourceTree = "<group>"; };
+		EF1CBCBA22932F280005F065 /* AppearanceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceHelper.swift; sourceTree = "<group>"; };
+		EF1CBCBC229349FF0005F065 /* AMERD___.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AMERD___.TTF"; sourceTree = "<group>"; };
+		EF1CBCBE22934DE50005F065 /* 28 Days Later.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "28 Days Later.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +74,7 @@
 		9D4408C5211FF431005E2116 /* Tasks */ = {
 			isa = PBXGroup;
 			children = (
+				EF1CBCB922932F0F0005F065 /* Helpers */,
 				9D4408C6211FF431005E2116 /* AppDelegate.swift */,
 				9D4408D9211FF4EA005E2116 /* Model */,
 				9D4408E6211FF988005E2116 /* Model Controllers */,
@@ -84,6 +91,8 @@
 				9D4408CD211FF434005E2116 /* Assets.xcassets */,
 				9D4408CF211FF434005E2116 /* LaunchScreen.storyboard */,
 				9D4408D2211FF434005E2116 /* Info.plist */,
+				EF1CBCBC229349FF0005F065 /* AMERD___.TTF */,
+				EF1CBCBE22934DE50005F065 /* 28 Days Later.ttf */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -114,6 +123,14 @@
 				9D70DFF821248F8E006D4DF5 /* TaskController.swift */,
 			);
 			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		EF1CBCB922932F0F0005F065 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				EF1CBCBA22932F280005F065 /* AppearanceHelper.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,8 +191,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF1CBCBF22934DE50005F065 /* 28 Days Later.ttf in Resources */,
 				9D4408D1211FF434005E2116 /* LaunchScreen.storyboard in Resources */,
 				9D4408CE211FF434005E2116 /* Assets.xcassets in Resources */,
+				EF1CBCBD229349FF0005F065 /* AMERD___.TTF in Resources */,
 				9D4408CC211FF431005E2116 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -189,6 +208,7 @@
 			files = (
 				9D70DFF921248F8E006D4DF5 /* TaskController.swift in Sources */,
 				9D70DFFC21249442006D4DF5 /* TaskRepresentation.swift in Sources */,
+				EF1CBCBB22932F280005F065 /* AppearanceHelper.swift in Sources */,
 				9D4408E5211FF7CC005E2116 /* TaskDetailViewController.swift in Sources */,
 				9D4408DD211FF51C005E2116 /* Tasks.xcdatamodeld in Sources */,
 				9D4408E3211FF752005E2116 /* TasksTableViewController.swift in Sources */,
