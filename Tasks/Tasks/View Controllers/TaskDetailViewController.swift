@@ -82,5 +82,6 @@ class TaskDetailViewController: UIViewController {
         notesTextView.backgroundColor = AppearanceHelper.backgroundWhite
         nameTextField.font = AppearanceHelper.primeFont(with: .callout, pointSize: 18)
         notesTextView.font = AppearanceHelper.primeFont(with: .callout, pointSize: 18)
+        priorityControl.setTitleTextAttributes(AppearanceHelper.textAttributes, for: .normal)
     }
 }

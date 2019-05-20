@@ -12,12 +12,12 @@ enum AppearanceHelper {
     static var taskGreen = UIColor(red: 0/255, green: 104/255, blue: 43/255, alpha: 1.0)
     static var backgroundWhite = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0)
     static var backgroundSteel = UIColor(red: 155/255, green: 155/255, blue: 155/255, alpha: 1.0)
+    static let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont(name: "Prime", size: 20)!]
     
     static func setAppearance() {
         UINavigationBar.appearance().barTintColor = backgroundSteel
         UISegmentedControl.appearance().tintColor = backgroundSteel
         UIBarButtonItem.appearance().tintColor = backgroundWhite
-        let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont(name: "Prime", size: 40)!]
         UINavigationBar.appearance().titleTextAttributes = textAttributes
         UINavigationBar.appearance().largeTitleTextAttributes = textAttributes
         UITextView.appearance().tintColor = taskGreen
