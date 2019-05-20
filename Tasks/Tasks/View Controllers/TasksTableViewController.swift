@@ -11,6 +11,11 @@ import CoreData
 
 class TasksTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setUpAppearance()
+    }
+    
     @IBAction func refresh(_ sender: Any) {
         taskController.fetchTasksFromServer { _ in
             DispatchQueue.main.async {
@@ -35,12 +40,48 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         let task = fetchedResultsController.object(at: indexPath)
         cell.textLabel?.text = task.name
         
+        cell.backgroundColor = AppearanceHelper.lightBackgroundColor
+        cell.layer.cornerRadius = 5
+        cell.layer.shadowColor = UIColor.black.cgColor
+        
+        cell.subviews.forEach({
+            if let btn = $0 as? UIButton {
+                btn.subviews.forEach({
+                    if let imageView = $0 as? UIImageView {
+                        let image = imageView.image?.withRenderingMode(.alwaysTemplate)
+                        imageView.image = image
+                        imageView.tintColor = UIColor.red
+                    }
+                })
+            }
+        })
+        
+        style(cell: cell)
+        
         return cell
+    }
+    
+    func setUpAppearance() {
+        tableView.backgroundColor = AppearanceHelper.backgroundColor
+        
+    }
+    
+    func style(cell: UITableViewCell) {
+        cell.textLabel?.font = AppearanceHelper.usaFont(with: .body, pointSize: 30)
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         guard let sectionInfo = fetchedResultsController.sections?[section] else { return nil }
         return sectionInfo.name.capitalized
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        if let view = view as? UITableViewHeaderFooterView {
+            view.backgroundView?.backgroundColor = AppearanceHelper.backgroundColor
+            view.textLabel?.textColor = AppearanceHelper.lightBlue
+            
+            view.textLabel?.font = AppearanceHelper.daysLaterFont(with: .body, pointSize: 20)
+        }
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
@@ -135,6 +176,10 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
     }
     
     // MARK: Properties
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     
     private let taskController = TaskController()
     

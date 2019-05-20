@@ -14,6 +14,7 @@ class TaskDetailViewController: UIViewController {
         super.viewDidLoad()
 
         updateViews()
+        setUpAppearance()
     }
 
     @IBAction func save(_ sender: Any) {
@@ -60,7 +61,19 @@ class TaskDetailViewController: UIViewController {
         notesTextView.text = task?.notes
     }
     
+    func setUpAppearance() {
+        view.backgroundColor = AppearanceHelper.backgroundColor
+        notesTextView.backgroundColor = AppearanceHelper.lightBackgroundColor
+        nameTextField.backgroundColor = AppearanceHelper.lightBackgroundColor
+        nameTextField.textColor = AppearanceHelper.backgroundColor
+        notesTextView.textColor = AppearanceHelper.backgroundColor
+    }
+    
     // MARK: Properties
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .default
+    }
     
     var task: Task? {
         didSet {
