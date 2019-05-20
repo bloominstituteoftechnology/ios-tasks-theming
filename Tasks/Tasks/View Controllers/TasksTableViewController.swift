@@ -75,6 +75,12 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         }
     }
     
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        if let view = view as? UITableViewHeaderFooterView {
+            view.textLabel?.font = AppearanceHelper.primeFont(with: .body, pointSize: 20)
+        }
+    }
+    
     // MARK: - NSFetchedResultsControllerDelegate
     
     

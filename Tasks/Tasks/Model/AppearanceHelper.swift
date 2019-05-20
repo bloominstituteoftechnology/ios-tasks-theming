@@ -17,12 +17,11 @@ enum AppearanceHelper {
         UINavigationBar.appearance().barTintColor = backgroundSteel
         UISegmentedControl.appearance().tintColor = backgroundSteel
         UIBarButtonItem.appearance().tintColor = backgroundWhite
-        let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont(name: "Prime", size: 40)!]
         UINavigationBar.appearance().titleTextAttributes = textAttributes
         UINavigationBar.appearance().largeTitleTextAttributes = textAttributes
         UITextView.appearance().tintColor = taskGreen
         UITextField.appearance().tintColor = taskGreen
-        
     }
     
     static func primeFont(with textStyle: UIFont.TextStyle, pointSize: CGFloat) -> UIFont {
