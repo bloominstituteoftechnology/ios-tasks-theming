@@ -10,10 +10,38 @@ import UIKit
 
 class TaskDetailViewController: UIViewController {
 
+    @IBOutlet weak var notesLable: UILabel!
+    @IBOutlet weak var priorityLable: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupAppearances()
         updateViews()
+    }
+    
+    private func setupAppearances() {
+        nameTextField.textColor = AppearanceHelper.purpleish
+        nameTextField.backgroundColor = AppearanceHelper.tanPink
+        nameTextField.layer.borderColor = UIColor(displayP3Red: 61 / 255, green: 35 / 255, blue: 64 / 255, alpha: 1.0).cgColor
+        nameTextField.layer.borderWidth = 0.5
+        nameTextField.layer.cornerRadius = 8.0
+        
+        
+        view.backgroundColor = AppearanceHelper.tanPink
+        
+        notesTextView.backgroundColor = AppearanceHelper.lightTanPink
+        notesTextView.textColor = AppearanceHelper.purpleish
+        notesTextView.layer.borderWidth = 0.5
+        notesTextView.layer.borderColor = UIColor(displayP3Red: 61 / 255, green: 35 / 255, blue: 64 / 255, alpha: 1.0).cgColor
+        notesTextView.layer.cornerRadius = 8.0
+        
+        priorityControl.tintColor = AppearanceHelper.backgroundBlue
+       
+        
+        nameLabel.textColor = AppearanceHelper.darkPurpleish
+        priorityLable.textColor = AppearanceHelper.darkPurpleish
+        notesLable.textColor = AppearanceHelper.darkPurpleish
+//        nameLabel.font = AppearanceHelper.typerighterFont(with: .caption1, pointSize: 30)
     }
 
     @IBAction func save(_ sender: Any) {
