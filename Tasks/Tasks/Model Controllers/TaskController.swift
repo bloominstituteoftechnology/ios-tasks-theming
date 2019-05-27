@@ -19,6 +19,7 @@ class TaskController {
         fetchTasksFromServer()
     }
     
+    
     func fetchTasksFromServer(completion: @escaping CompletionHandler = { _ in }) {
         
         let requestURL = baseURL.appendingPathExtension("json")

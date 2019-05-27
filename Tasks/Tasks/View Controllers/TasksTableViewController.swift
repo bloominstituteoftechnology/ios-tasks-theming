@@ -11,12 +11,32 @@ import CoreData
 
 class TasksTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupAppearances()
+    }
+    
     @IBAction func refresh(_ sender: Any) {
         taskController.fetchTasksFromServer { _ in
             DispatchQueue.main.async {
                 self.refreshControl?.endRefreshing()
             }
         }
+    }
+    
+    private func setupAppearances() {
+        view.backgroundColor = AppearanceHelper.backgroundGray
+        tableView.backgroundColor = AppearanceHelper.backgroundGray
+        tableView.tableHeaderView?.backgroundColor = AppearanceHelper.backgroundGray
+        
+    }
+    
+    private func stye(cell: UITableViewCell) {
+        cell.textLabel?.font = AppearanceHelper.preciousFont(with: .caption1, pointSize: 30)
+        cell.textLabel?.backgroundColor = .clear
+        
+        cell.textLabel?.textColor = .white
+        cell.backgroundColor = AppearanceHelper.backgroundGray
     }
     
     // MARK: - Table view data source
@@ -34,6 +54,8 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         
         let task = fetchedResultsController.object(at: indexPath)
         cell.textLabel?.text = task.name
+        
+        stye(cell: cell)
         
         return cell
     }

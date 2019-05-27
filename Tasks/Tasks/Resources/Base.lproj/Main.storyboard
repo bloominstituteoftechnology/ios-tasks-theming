@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9Uj-aG-aHH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9Uj-aG-aHH">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -54,6 +54,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="6Pd-Tn-6U5">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <connections>
                             <action selector="refresh:" destination="NEY-So-hQF" eventType="valueChanged" id="y30-88-1jY"/>
@@ -145,9 +146,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="nameLabel" destination="6Ee-Sa-gkn" id="0XM-yj-RVH"/>
                         <outlet property="nameTextField" destination="QoX-Lu-hGg" id="zXv-1m-WVN"/>
+                        <outlet property="notesLabel" destination="bac-5o-rL6" id="lUM-km-WPP"/>
                         <outlet property="notesTextView" destination="0Ff-ma-Dqn" id="rQ9-5a-buS"/>
                         <outlet property="priorityControl" destination="UUk-vn-i5S" id="Fpc-rO-bng"/>
+                        <outlet property="priorityLabel" destination="uuc-2H-ovn" id="V4c-mY-qi7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bh8-ef-2je" userLabel="First Responder" sceneMemberID="firstResponder"/>
