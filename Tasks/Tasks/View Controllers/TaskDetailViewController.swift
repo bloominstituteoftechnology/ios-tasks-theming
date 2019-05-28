@@ -20,34 +20,24 @@ class TaskDetailViewController: UIViewController {
         guard let name = nameTextField.text, !name.isEmpty else {
             return
         }
+        
         let priorityIndex = priorityControl.selectedSegmentIndex
         let priority = TaskPriority.allPriorities[priorityIndex]
         let notes = notesTextView.text
         
         if let task = task {
             // Editing existing task
-            task.name = name
-            task.priority = priority.rawValue
-            task.notes = notes
-            taskController.put(task: task)
+            taskController.update(task: task, with: name, notes: notes, priority: priority)
         } else {
-            let task = Task(name: name, notes: notes, priority: priority)
-            taskController.put(task: task)
+            taskController.createTask(with: name, notes: notes, priority: priority)
         }
-        
-        do {
-            let moc = CoreDataStack.shared.mainContext
-            try moc.save()
-        } catch {
-            NSLog("Error saving managed object context: \(error)")
-        }
-        
+
         navigationController?.popViewController(animated: true)
     }
     
     private func updateViews() {
         guard isViewLoaded else { return }
-        
+                
         title = task?.name ?? "Create Task"
         nameTextField.text = task?.name
         let priority: TaskPriority
@@ -56,7 +46,7 @@ class TaskDetailViewController: UIViewController {
         } else {
             priority = .normal
         }
-        priorityControl.selectedSegmentIndex = TaskPriority.allPriorities.index(of: priority)!
+        priorityControl.selectedSegmentIndex = TaskPriority.allPriorities.firstIndex(of: priority)!
         notesTextView.text = task?.notes
     }
     
