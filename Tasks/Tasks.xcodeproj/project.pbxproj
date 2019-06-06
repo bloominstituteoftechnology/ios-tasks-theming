@@ -16,6 +16,8 @@
 		9D4408E3211FF752005E2116 /* TasksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4408E2211FF752005E2116 /* TasksTableViewController.swift */; };
 		9D4408E5211FF7CC005E2116 /* TaskDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4408E4211FF7CC005E2116 /* TaskDetailViewController.swift */; };
 		9D70DFF921248F8E006D4DF5 /* TaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D70DFF821248F8E006D4DF5 /* TaskController.swift */; };
+		D6A67C8B22A89DF1005F9BDD /* AppearanceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A67C8A22A89DF1005F9BDD /* AppearanceHelper.swift */; };
+		D6A67C8D22A89FFF005F9BDD /* NewYorkMedium.otf in Resources */ = {isa = PBXBuildFile; fileRef = D6A67C8C22A89FFF005F9BDD /* NewYorkMedium.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		9D4408E2211FF752005E2116 /* TasksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTableViewController.swift; sourceTree = "<group>"; };
 		9D4408E4211FF7CC005E2116 /* TaskDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailViewController.swift; sourceTree = "<group>"; };
 		9D70DFF821248F8E006D4DF5 /* TaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskController.swift; sourceTree = "<group>"; };
+		D6A67C8A22A89DF1005F9BDD /* AppearanceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppearanceHelper.swift; path = Tasks/AppearanceHelper.swift; sourceTree = SOURCE_ROOT; };
+		D6A67C8C22A89FFF005F9BDD /* NewYorkMedium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NewYorkMedium.otf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +50,7 @@
 		4B13589322091C55009F6A12 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				D6A67C8A22A89DF1005F9BDD /* AppearanceHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -86,6 +91,7 @@
 				9D4408CD211FF434005E2116 /* Assets.xcassets */,
 				9D4408CF211FF434005E2116 /* LaunchScreen.storyboard */,
 				9D4408D2211FF434005E2116 /* Info.plist */,
+				D6A67C8C22A89FFF005F9BDD /* NewYorkMedium.otf */,
 				46179D3B229D8257009CE2C4 /* Architex.ttf */,
 			);
 			path = Resources;
@@ -175,6 +181,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6A67C8D22A89FFF005F9BDD /* NewYorkMedium.otf in Resources */,
 				46179D3C229D8257009CE2C4 /* Architex.ttf in Resources */,
 				9D4408D1211FF434005E2116 /* LaunchScreen.storyboard in Resources */,
 				9D4408CE211FF434005E2116 /* Assets.xcassets in Resources */,
@@ -194,6 +201,7 @@
 				9D4408E3211FF752005E2116 /* TasksTableViewController.swift in Sources */,
 				9D4408C7211FF431005E2116 /* AppDelegate.swift in Sources */,
 				9D4408DF211FF67E005E2116 /* Task.swift in Sources */,
+				D6A67C8B22A89DF1005F9BDD /* AppearanceHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,6 +15,16 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
     
     private let taskController = TaskController()
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.setupAppearances()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tableView.reloadData()
+    }
+    
     // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -27,6 +37,8 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         let task = taskController.tasks[indexPath.row]
         cell.textLabel?.text = task.name
         
+        style(cell: cell)
+        
         return cell
     }
     
@@ -37,6 +49,23 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
             taskController.delete(task)
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
+    }
+    
+    private func style(cell: UITableViewCell) {
+        cell.backgroundColor = AppearanceHelper.darkGrey
+        cell.layer.cornerRadius = 10.0
+        cell.clipsToBounds = true
+        
+        cell.textLabel?.font = AppearanceHelper.newYorkMediumFont(with: .body, pointSize: 20)
+        cell.textLabel?.backgroundColor = .clear
+        cell.textLabel?.textColor = AppearanceHelper.slightWhite
+
+    }
+    
+    private func setupAppearances() {
+        self.tableView.backgroundColor = AppearanceHelper.darkBlue
+        self.tableView.separatorStyle = .none
+        self.tableView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0);
     }
     
     // MARK: - Navigation
