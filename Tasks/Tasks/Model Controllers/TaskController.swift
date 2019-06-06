@@ -12,8 +12,7 @@ import CoreData
 let baseURL = URL(string: "https://tasks-b6a43.firebaseio.com/")!
 
 class TaskController {
-    
-    var tasks: [Task] = [Task(name: "Get groceries", notes: "Eggs, bacon, milk", priority: .normal)]
+    var tasks: [Task] = [Task(name: "Get groceries", notes: "Eggs, bacon, milk", priority: .normal), Task(name: "Walk the dog", notes: "Just want to walk around the block.", priority: .normal)]
 
     func delete(_ task: Task) {
         guard let index = tasks.firstIndex(of: task) else { return }
