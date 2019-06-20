@@ -12,7 +12,7 @@ class TaskDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupAppearence()
         updateViews()
     }
 
@@ -31,7 +31,7 @@ class TaskDetailViewController: UIViewController {
         } else {
             taskController.createTask(with: name, notes: notes, priority: priority)
         }
-
+        
         navigationController?.popViewController(animated: true)
     }
     
@@ -48,6 +48,17 @@ class TaskDetailViewController: UIViewController {
         }
         priorityControl.selectedSegmentIndex = TaskPriority.allPriorities.firstIndex(of: priority)!
         notesTextView.text = task?.notes
+    }
+    
+    private func setupAppearence() {
+        self.view.backgroundColor = AppearenceHelper.backGroundGray
+        nameTextField.font = AppearenceHelper.armaliteRifleFont(with: .callout, pointSize: 17)
+        notesTextView.font = AppearenceHelper.armaliteRifleFont(with: .callout, pointSize: 17)
+        notesTextView.textColor = AppearenceHelper.greenMachine
+        notesTextView.layer.borderWidth = 3
+        notesTextView.layer.borderColor = UIColor.gray.cgColor
+        notesTextView.backgroundColor = .clear
+        
     }
     
     // MARK: Properties
