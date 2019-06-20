@@ -11,6 +11,11 @@ import CoreData
 
 class TasksTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.setupAppearence()
+    }
+    
     // MARK: Properties
     
     private let taskController = TaskController()
@@ -27,7 +32,22 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         let task = taskController.tasks[indexPath.row]
         cell.textLabel?.text = task.name
         
+        self.cellStyle(for: cell)
+        
         return cell
+    }
+    
+    private func cellStyle(for cell: UITableViewCell) {
+        cell.textLabel?.font = AppearenceHelper.armaliteRifleFont(with: .caption1, pointSize: 25)
+        
+        cell.textLabel?.backgroundColor = .clear
+        
+        cell.textLabel?.textColor = AppearenceHelper.greenMachine
+        cell.backgroundColor = AppearenceHelper.backGroundGray
+    }
+    
+    private func setupAppearence() {
+        self.view.backgroundColor = AppearenceHelper.backGroundGray
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {

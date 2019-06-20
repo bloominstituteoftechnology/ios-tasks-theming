@@ -6,6 +6,7 @@
 	<false/>
 	<key>UIAppFonts</key>
 	<array>
+		<string>armalite.ttf</string>
 		<string>Architex.ttf</string>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>
