@@ -14,6 +14,8 @@ class TaskDetailViewController: UIViewController {
         super.viewDidLoad()
         setUpAppearances()
         updateViews()
+        
+        let logo = UIImage(named: "tmlogo")
     }
 
     @IBAction func save(_ sender: Any) {

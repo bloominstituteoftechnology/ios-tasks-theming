@@ -45,6 +45,10 @@ enum AppearanceHelper {
         UITextField.appearance().font = alegreyaSansFont(with: .headline, pointSize: 20)
         UITextField.appearance().backgroundColor = paleBlueFontColor
         
+        
+        
     }
+    
+    
     
 }

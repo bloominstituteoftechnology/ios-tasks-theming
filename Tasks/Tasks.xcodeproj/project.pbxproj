@@ -10,6 +10,7 @@
 		6FD9BADB22DD094C00B6C703 /* AppearanceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD9BADA22DD094C00B6C703 /* AppearanceHelper.swift */; };
 		6FD9BAE122DD0F6300B6C703 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD9BAE022DD0F6300B6C703 /* TaskTableViewCell.swift */; };
 		6FD9BAE322DD19C300B6C703 /* AlegreyaSansSC-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6FD9BADD22DD0AC800B6C703 /* AlegreyaSansSC-Regular.ttf */; };
+		6FD9BAE922DD317A00B6C703 /* tmlogo3.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FD9BAE822DD317A00B6C703 /* tmlogo3.png */; };
 		9D4408C7211FF431005E2116 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4408C6211FF431005E2116 /* AppDelegate.swift */; };
 		9D4408CC211FF431005E2116 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D4408CA211FF431005E2116 /* Main.storyboard */; };
 		9D4408CE211FF434005E2116 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D4408CD211FF434005E2116 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 		6FD9BADA22DD094C00B6C703 /* AppearanceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceHelper.swift; sourceTree = "<group>"; };
 		6FD9BADD22DD0AC800B6C703 /* AlegreyaSansSC-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlegreyaSansSC-Regular.ttf"; sourceTree = "<group>"; };
 		6FD9BAE022DD0F6300B6C703 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
+		6FD9BAE822DD317A00B6C703 /* tmlogo3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tmlogo3.png; sourceTree = "<group>"; };
 		9D4408C3211FF431005E2116 /* Tasks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tasks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D4408C6211FF431005E2116 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D4408CB211FF431005E2116 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				9D4408CD211FF434005E2116 /* Assets.xcassets */,
 				9D4408CF211FF434005E2116 /* LaunchScreen.storyboard */,
 				9D4408D2211FF434005E2116 /* Info.plist */,
+				6FD9BAE822DD317A00B6C703 /* tmlogo3.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				9D4408CE211FF434005E2116 /* Assets.xcassets in Resources */,
 				6FD9BAE322DD19C300B6C703 /* AlegreyaSansSC-Regular.ttf in Resources */,
 				9D4408CC211FF431005E2116 /* Main.storyboard in Resources */,
+				6FD9BAE922DD317A00B6C703 /* tmlogo3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

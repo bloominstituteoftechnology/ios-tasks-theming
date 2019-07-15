@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tasks-->
+        <!--Tasks Table View Controller-->
         <scene sceneID="5la-8G-DbN">
             <objects>
                 <tableViewController id="NEY-So-hQF" customClass="TasksTableViewController" customModule="Tasks" customModuleProvider="target" sceneMemberID="viewController">
@@ -77,7 +77,7 @@
                             <outlet property="delegate" destination="NEY-So-hQF" id="jW8-61-piG"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Tasks" id="FUm-j1-Dc8">
+                    <navigationItem key="navigationItem" id="FUm-j1-Dc8">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="aIU-0T-di6">
                             <connections>
                                 <segue destination="WI2-wJ-dAU" kind="show" identifier="ShowCreateTask" id="37B-hs-oKJ"/>
