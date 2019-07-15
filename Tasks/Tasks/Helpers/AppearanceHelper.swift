@@ -35,6 +35,10 @@ enum AppearanceHelper {
         UINavigationBar.appearance().largeTitleTextAttributes = textAttributes
         
         
+        UISegmentedControl.appearance().tintColor = paleBlue
+        UITextField.appearance().tintColor = paleBlue
+        UITextView.appearance().tintColor = paleBlue
+        
         
     }
     

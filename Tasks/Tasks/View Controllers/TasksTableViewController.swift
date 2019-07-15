@@ -22,10 +22,27 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TaskCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TaskCell", for: indexPath) as! TaskTableViewCell
         
         let task = taskController.tasks[indexPath.row]
-        cell.textLabel?.text = task.name
+        cell.taskNameLabel.text = task.name
+        cell.taskDescriptionLabel.text = task.notes
+        cell.cellBackgroundView.layer.cornerRadius = 8
+        cell.cellBackgroundView.layer.shadowOpacity = 1
+        cell.cellBackgroundView.layer.shadowOffset = .zero
+        cell.cellBackgroundView.layer.shadowRadius = 2
+        
+        switch task.priority {
+            case "normal" :
+                cell.cellBackgroundView.backgroundColor = AppearanceHelper.mediumYellow
+            case "high" :
+                cell.cellBackgroundView.backgroundColor = AppearanceHelper.highOrange
+            case "critical" :
+                cell.cellBackgroundView.backgroundColor = AppearanceHelper.criticalRed
+            default:
+                cell.cellBackgroundView.backgroundColor = AppearanceHelper.lowGreen
+        }
+        
         
         return cell
     }

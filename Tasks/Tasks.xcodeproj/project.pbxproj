@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6FD9BADB22DD094C00B6C703 /* AppearanceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD9BADA22DD094C00B6C703 /* AppearanceHelper.swift */; };
 		6FD9BADF22DD0AF800B6C703 /* AlegreyaSansSC-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6FD9BADE22DD0AF800B6C703 /* AlegreyaSansSC-Regular.ttf */; };
+		6FD9BAE122DD0F6300B6C703 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD9BAE022DD0F6300B6C703 /* TaskTableViewCell.swift */; };
 		9D4408C7211FF431005E2116 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4408C6211FF431005E2116 /* AppDelegate.swift */; };
 		9D4408CC211FF431005E2116 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D4408CA211FF431005E2116 /* Main.storyboard */; };
 		9D4408CE211FF434005E2116 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D4408CD211FF434005E2116 /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 		6FD9BADA22DD094C00B6C703 /* AppearanceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceHelper.swift; sourceTree = "<group>"; };
 		6FD9BADD22DD0AC800B6C703 /* AlegreyaSansSC-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlegreyaSansSC-Regular.ttf"; sourceTree = "<group>"; };
 		6FD9BADE22DD0AF800B6C703 /* AlegreyaSansSC-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AlegreyaSansSC-Regular.ttf"; path = "../../AlegreyaSansSC-Regular.ttf"; sourceTree = "<group>"; };
+		6FD9BAE022DD0F6300B6C703 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
 		9D4408C3211FF431005E2116 /* Tasks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tasks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D4408C6211FF431005E2116 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D4408CB211FF431005E2116 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -54,6 +56,14 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		6FD9BAE222DD0F6A00B6C703 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6FD9BAE022DD0F6300B6C703 /* TaskTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		9D4408BA211FF430005E2116 = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +83,7 @@
 		9D4408C5211FF431005E2116 /* Tasks */ = {
 			isa = PBXGroup;
 			children = (
+				6FD9BAE222DD0F6A00B6C703 /* Views */,
 				6FD9BADC22DD095100B6C703 /* Helpers */,
 				9D4408D9211FF4EA005E2116 /* Model */,
 				9D4408E6211FF988005E2116 /* Model Controllers */,
@@ -194,6 +205,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FD9BAE122DD0F6300B6C703 /* TaskTableViewCell.swift in Sources */,
 				9D70DFF921248F8E006D4DF5 /* TaskController.swift in Sources */,
 				9D4408E5211FF7CC005E2116 /* TaskDetailViewController.swift in Sources */,
 				9D4408E3211FF752005E2116 /* TasksTableViewController.swift in Sources */,
