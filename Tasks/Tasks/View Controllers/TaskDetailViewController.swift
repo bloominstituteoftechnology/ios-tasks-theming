@@ -68,11 +68,11 @@ class TaskDetailViewController: UIViewController {
         
         
         
-        nameTextField.layer.borderColor = ApperanceHelper.myBoyBlue.cgColor
+        nameTextField.layer.borderColor = ApperanceHelper.myBoyBlues.cgColor
         nameTextField.layer.borderWidth = 1
         nameTextField.layer.cornerRadius = 4
         
-        notesTextView.layer.borderColor = ApperanceHelper.myBoyBlue.cgColor
+        notesTextView.layer.borderColor = ApperanceHelper.myBoyBlues.cgColor
         notesTextView.layer.cornerRadius = 4
         notesTextView.layer.borderWidth = 1
         
