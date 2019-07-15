@@ -27,11 +27,15 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="127"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mEt-cF-tG1">
+                                            <rect key="frame" x="5" y="7" width="75" height="113"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U7h-6A-jtN">
-                                            <rect key="frame" x="5" y="5" width="365" height="117"/>
+                                            <rect key="frame" x="30" y="5" width="340" height="117"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zmI-JZ-AWg">
-                                                    <rect key="frame" x="16" y="8" width="333" height="25"/>
+                                                    <rect key="frame" x="16" y="8" width="308" height="25"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                     <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                                     <nil key="highlightedColor"/>
@@ -39,13 +43,13 @@
                                                     <size key="shadowOffset" width="1" height="1"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S8y-7B-G5Y">
-                                                    <rect key="frame" x="16" y="41" width="333" height="68"/>
+                                                    <rect key="frame" x="16" y="41" width="308" height="68"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                                     <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="S8y-7B-G5Y" firstAttribute="leading" secondItem="U7h-6A-jtN" secondAttribute="leading" constant="16" id="0Wt-Kg-3ex"/>
                                                 <constraint firstAttribute="bottom" secondItem="S8y-7B-G5Y" secondAttribute="bottom" constant="8" id="AtX-rM-Xur"/>
@@ -58,14 +62,19 @@
                                         </view>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="U7h-6A-jtN" firstAttribute="leading" secondItem="zPv-8t-BnY" secondAttribute="leading" constant="5" id="1Rd-QQ-4qI"/>
+                                        <constraint firstItem="U7h-6A-jtN" firstAttribute="leading" secondItem="zPv-8t-BnY" secondAttribute="leading" constant="30" id="1Rd-QQ-4qI"/>
+                                        <constraint firstItem="mEt-cF-tG1" firstAttribute="leading" secondItem="zPv-8t-BnY" secondAttribute="leading" constant="5" id="91X-kK-Z0I"/>
                                         <constraint firstAttribute="trailing" secondItem="U7h-6A-jtN" secondAttribute="trailing" constant="5" id="HUu-f0-300"/>
+                                        <constraint firstItem="mEt-cF-tG1" firstAttribute="top" secondItem="zPv-8t-BnY" secondAttribute="top" constant="7" id="Hhr-5w-TT7"/>
                                         <constraint firstItem="U7h-6A-jtN" firstAttribute="top" secondItem="zPv-8t-BnY" secondAttribute="top" constant="5" id="Mby-RO-d8b"/>
+                                        <constraint firstItem="U7h-6A-jtN" firstAttribute="leading" secondItem="mEt-cF-tG1" secondAttribute="trailing" constant="-50" id="S1s-ah-vAV"/>
+                                        <constraint firstAttribute="bottom" secondItem="mEt-cF-tG1" secondAttribute="bottom" constant="7" id="X2a-oZ-bqb"/>
                                         <constraint firstAttribute="bottom" secondItem="U7h-6A-jtN" secondAttribute="bottom" constant="5" id="gkD-zP-80K"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="cellBackgroundView" destination="U7h-6A-jtN" id="gnZ-XL-Gn3"/>
+                                    <outlet property="cellColorView" destination="mEt-cF-tG1" id="IPl-he-EQQ"/>
                                     <outlet property="taskDescriptionLabel" destination="S8y-7B-G5Y" id="oHT-Me-vjK"/>
                                     <outlet property="taskNameLabel" destination="zmI-JZ-AWg" id="0gQ-53-fbc"/>
                                     <segue destination="WI2-wJ-dAU" kind="show" identifier="ShowTaskDetail" id="xgq-Wl-Nga"/>

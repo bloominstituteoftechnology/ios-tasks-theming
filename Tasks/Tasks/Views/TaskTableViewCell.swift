@@ -13,6 +13,7 @@ class TaskTableViewCell: UITableViewCell {
     @IBOutlet var cellBackgroundView: UIView!
     @IBOutlet var taskNameLabel: UILabel!
     @IBOutlet var taskDescriptionLabel: UILabel!
+    @IBOutlet var cellColorView: UIView!
     
     
     

@@ -55,7 +55,6 @@ class TaskDetailViewController: UIViewController {
     }
     
     @objc func priorityControlDidChangeValue(sender: UISegmentedControl) {
-        print("Segmented value did change.")
         switch priorityControl.selectedSegmentIndex {
         case 0 :
             navigationController?.navigationBar.barTintColor = AppearanceHelper.lowGreen

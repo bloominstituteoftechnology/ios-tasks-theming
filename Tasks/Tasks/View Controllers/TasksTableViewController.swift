@@ -49,21 +49,24 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         cell.cellBackgroundView.layer.shadowOpacity = 1
         cell.cellBackgroundView.layer.shadowOffset = .zero
         cell.cellBackgroundView.layer.shadowRadius = 2
-        
+        cell.cellColorView.layer.cornerRadius = 8
+        cell.cellColorView.layer.shadowOpacity = 1
+        cell.cellColorView.layer.shadowOffset = .zero
+        cell.cellColorView.layer.shadowRadius = 2
         
         cell.taskNameLabel.font = AppearanceHelper.alegreyaSansFont(with: .title2, pointSize: 25)
         cell.taskDescriptionLabel.font = AppearanceHelper.alegreyaSansFont(with: .caption1, pointSize: 17)
         
         switch task.priority {
             case "normal" :
-                cell.cellBackgroundView.backgroundColor = AppearanceHelper.mediumYellow
+                cell.cellColorView.backgroundColor = AppearanceHelper.mediumYellow
                 
             case "high" :
-                cell.cellBackgroundView.backgroundColor = AppearanceHelper.highOrange
+                cell.cellColorView.backgroundColor = AppearanceHelper.highOrange
             case "critical" :
-                cell.cellBackgroundView.backgroundColor = AppearanceHelper.criticalRed
+                cell.cellColorView.backgroundColor = AppearanceHelper.criticalRed
             default:
-                cell.cellBackgroundView.backgroundColor = AppearanceHelper.lowGreen
+                cell.cellColorView.backgroundColor = AppearanceHelper.lowGreen
         }
         
         
