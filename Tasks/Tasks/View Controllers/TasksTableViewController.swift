@@ -28,6 +28,7 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         
+        navigationController?.navigationBar.barTintColor = AppearanceHelper.deepBlue
         tableView.reloadData()
     }
     

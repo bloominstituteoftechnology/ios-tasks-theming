@@ -34,7 +34,7 @@ class TaskDetailViewController: UIViewController {
         }
 
         navigationController?.popViewController(animated: true)
-        navigationController?.navigationBar.barTintColor = AppearanceHelper.deepBlue
+
     }
     
     private func updateViews() {
