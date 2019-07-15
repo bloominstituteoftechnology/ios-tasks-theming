@@ -42,7 +42,7 @@ enum AppearanceHelper {
         
         UILabel.appearance(whenContainedInInstancesOf: [UITableViewCell.self]).tintColor = paleBlueFontColor
         UILabel.appearance().font = alegreyaSansFont(with: .headline, pointSize: 18)
-        UITextField.appearance().font = alegreyaSansFont(with: .headline, pointSize: 20)
+        UITextField.appearance().font = alegreyaSansFont(with: .caption1, pointSize: 20)
         UITextField.appearance().backgroundColor = paleBlueFontColor
         
         
