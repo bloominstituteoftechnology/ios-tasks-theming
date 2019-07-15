@@ -15,7 +15,6 @@ class TaskDetailViewController: UIViewController {
         setUpAppearances()
         updateViews()
         
-        let logo = UIImage(named: "tmlogo")
     }
 
     @IBAction func save(_ sender: Any) {
@@ -75,3 +74,5 @@ class TaskDetailViewController: UIViewController {
     @IBOutlet var priorityControl: UISegmentedControl!
     @IBOutlet var notesTextView: UITextView!
 }
+
+
