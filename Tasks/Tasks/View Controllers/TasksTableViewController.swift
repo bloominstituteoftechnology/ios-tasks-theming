@@ -27,6 +27,8 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         let task = taskController.tasks[indexPath.row]
         cell.textLabel?.text = task.name
         
+        self.cellStyle(cell: cell)
+        
         return cell
     }
     
@@ -55,5 +57,11 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
             let detailVC = segue.destination as! TaskDetailViewController
             detailVC.taskController = taskController
         }
+    }
+    
+    private func cellStyle(cell: UITableViewCell) {
+        
+        cell.textLabel?.font = ApperanceHelper.customFont(with: .caption1, pointSize: 17)
+        cell.backgroundColor = ApperanceHelper.backgroundWhite
     }
 }
