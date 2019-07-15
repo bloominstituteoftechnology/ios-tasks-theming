@@ -95,6 +95,14 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         imageView.frame = CGRect(x: bannerX, y: bannerY, width: 180, height: bannerHeight)
         imageView.contentMode = .scaleAspectFit
         navigationItem.titleView = imageView
+        
+        // Add Shadow
+        
+        self.navigationController?.navigationBar.layer.masksToBounds = false
+        self.navigationController?.navigationBar.layer.shadowColor = UIColor.darkGray.cgColor
+        self.navigationController?.navigationBar.layer.shadowOpacity = 0.8
+        self.navigationController?.navigationBar.layer.shadowOffset = CGSize(width: 0, height: 2.0)
+        self.navigationController?.navigationBar.layer.shadowRadius = 2
     }
     
     
