@@ -51,11 +51,12 @@ class TaskDetailViewController: UIViewController {
     }
     
     func setUpAppearances() {
-        notesTextView.font = AppearanceHelper.alegreyaSansFont(with: .body, pointSize: 28)
+        notesTextView.font = AppearanceHelper.alegreyaSansFont(with: .body, pointSize: 25)
         notesTextView.layer.borderColor = AppearanceHelper.deepBlue.cgColor
         notesTextView.layer.borderWidth = 0.5
         notesTextView.layer.cornerRadius = 8
-        
+        view.backgroundColor = AppearanceHelper.paleBlueFontColor
+        notesTextView.backgroundColor = AppearanceHelper.paleBlueFontColor
     }
     
     // MARK: Properties

@@ -15,6 +15,13 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
     
     private let taskController = TaskController()
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        view.backgroundColor = AppearanceHelper.paleBlueFontColor
+        tableView.backgroundColor = AppearanceHelper.paleBlueFontColor
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         
@@ -31,12 +38,14 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         let cell = tableView.dequeueReusableCell(withIdentifier: "TaskCell", for: indexPath) as! TaskTableViewCell
         
         let task = taskController.tasks[indexPath.row]
+        cell.backgroundColor = AppearanceHelper.paleBlueFontColor
         cell.taskNameLabel.text = task.name
         cell.taskDescriptionLabel.text = task.notes
         cell.cellBackgroundView.layer.cornerRadius = 8
         cell.cellBackgroundView.layer.shadowOpacity = 1
         cell.cellBackgroundView.layer.shadowOffset = .zero
         cell.cellBackgroundView.layer.shadowRadius = 2
+        
         
         cell.taskNameLabel.font = AppearanceHelper.alegreyaSansFont(with: .title2, pointSize: 25)
         cell.taskDescriptionLabel.font = AppearanceHelper.alegreyaSansFont(with: .caption1, pointSize: 17)

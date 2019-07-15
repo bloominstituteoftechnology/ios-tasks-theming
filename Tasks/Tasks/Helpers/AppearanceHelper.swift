@@ -31,7 +31,7 @@ enum AppearanceHelper {
         UIButton.appearance().tintColor = paleBlue
         
         UINavigationBar.appearance().barTintColor = deepBlue
-        let textAttributes = [NSAttributedString.Key.foregroundColor: paleBlueFontColor]
+        let textAttributes = [NSAttributedString.Key.foregroundColor: paleBlueFontColor, NSAttributedString.Key.font: alegreyaSansFont(with: .largeTitle, pointSize: 40)]
         UINavigationBar.appearance().titleTextAttributes = textAttributes
         UINavigationBar.appearance().largeTitleTextAttributes = textAttributes
         
@@ -41,8 +41,9 @@ enum AppearanceHelper {
         UITextView.appearance().tintColor = paleBlue
         
         UILabel.appearance(whenContainedInInstancesOf: [UITableViewCell.self]).tintColor = paleBlueFontColor
-        UILabel.appearance().font = alegreyaSansFont(with: .headline, pointSize: 20)
+        UILabel.appearance().font = alegreyaSansFont(with: .headline, pointSize: 18)
         UITextField.appearance().font = alegreyaSansFont(with: .headline, pointSize: 20)
+        UITextField.appearance().backgroundColor = paleBlueFontColor
         
     }
     
