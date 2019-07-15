@@ -15,6 +15,12 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
     
     private let taskController = TaskController()
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        tableView.reloadData()
+    }
+    
     // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -32,9 +38,13 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         cell.cellBackgroundView.layer.shadowOffset = .zero
         cell.cellBackgroundView.layer.shadowRadius = 2
         
+        cell.taskNameLabel.font = AppearanceHelper.alegreyaSansFont(with: .title2, pointSize: 25)
+        cell.taskDescriptionLabel.font = AppearanceHelper.alegreyaSansFont(with: .caption1, pointSize: 17)
+        
         switch task.priority {
             case "normal" :
                 cell.cellBackgroundView.backgroundColor = AppearanceHelper.mediumYellow
+                
             case "high" :
                 cell.cellBackgroundView.backgroundColor = AppearanceHelper.highOrange
             case "critical" :
@@ -55,6 +65,9 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
     }
+    
+   
+    
     
     // MARK: - Navigation
     

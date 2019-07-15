@@ -15,8 +15,9 @@ enum AppearanceHelper {
     static var paleBlue = UIColor(red: 104.0/255.0, green: 134.0/255.0, blue: 135.0/255.0, alpha: 1.0)
     static var criticalRed = UIColor(red: 148.0/255.0, green: 54.0/255.0, blue: 49.0/255.0, alpha: 1.0)
     static var highOrange = UIColor(red: 194.0/255.0, green: 121.0/255.0, blue: 52.0/255.0, alpha: 1.0)
-    static var mediumYellow = UIColor(red: 227.0/255.0, green: 186.0/255.0, blue: 73.0/255.0, alpha: 1.0)
+    static var mediumYellow = UIColor(red: 219.0/255.0, green: 191.0/255.0, blue: 9.0/255.0, alpha: 1.0)
     static var lowGreen = UIColor(red: 166.0/255.0, green: 196.0/255.0, blue: 57.0/255.0, alpha: 1.0)
+    static var paleBlueFontColor = UIColor(red: 197.0/255.0, green: 232.0/255.0, blue: 218.0/255.0, alpha: 1.0)
     
     
     // Font
@@ -30,7 +31,7 @@ enum AppearanceHelper {
         UIButton.appearance().tintColor = paleBlue
         
         UINavigationBar.appearance().barTintColor = deepBlue
-        let textAttributes = [NSAttributedString.Key.foregroundColor: paleBlue]
+        let textAttributes = [NSAttributedString.Key.foregroundColor: paleBlueFontColor]
         UINavigationBar.appearance().titleTextAttributes = textAttributes
         UINavigationBar.appearance().largeTitleTextAttributes = textAttributes
         
@@ -39,6 +40,9 @@ enum AppearanceHelper {
         UITextField.appearance().tintColor = paleBlue
         UITextView.appearance().tintColor = paleBlue
         
+        UILabel.appearance(whenContainedInInstancesOf: [UITableViewCell.self]).tintColor = paleBlueFontColor
+        UILabel.appearance().font = alegreyaSansFont(with: .headline, pointSize: 20)
+        UITextField.appearance().font = alegreyaSansFont(with: .headline, pointSize: 20)
         
     }
     

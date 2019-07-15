@@ -12,7 +12,7 @@ class TaskDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setUpAppearances()
         updateViews()
     }
 
@@ -48,6 +48,14 @@ class TaskDetailViewController: UIViewController {
         }
         priorityControl.selectedSegmentIndex = TaskPriority.allPriorities.firstIndex(of: priority)!
         notesTextView.text = task?.notes
+    }
+    
+    func setUpAppearances() {
+        notesTextView.font = AppearanceHelper.alegreyaSansFont(with: .body, pointSize: 28)
+        notesTextView.layer.borderColor = AppearanceHelper.deepBlue.cgColor
+        notesTextView.layer.borderWidth = 0.5
+        notesTextView.layer.cornerRadius = 8
+        
     }
     
     // MARK: Properties
