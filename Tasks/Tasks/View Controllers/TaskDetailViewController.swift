@@ -15,6 +15,12 @@ class TaskDetailViewController: UIViewController {
         setUpAppearances()
         updateViews()
         
+        
+        
+        let tap = UITapGestureRecognizer(target: self.view, action: Selector("endEditing:"))
+        tap.cancelsTouchesInView = false
+        self.view.addGestureRecognizer(tap)
+        
     }
 
     @IBAction func save(_ sender: Any) {
@@ -109,5 +115,4 @@ class TaskDetailViewController: UIViewController {
     @IBOutlet var priorityControl: UISegmentedControl!
     @IBOutlet var notesTextView: UITextView!
 }
-
 
