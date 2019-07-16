@@ -14,6 +14,7 @@ class TaskDetailViewController: UIViewController {
         super.viewDidLoad()
         setUpAppearance()
         updateViews()
+        
     }
 
     @IBAction func save(_ sender: Any) {
