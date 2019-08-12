@@ -48,6 +48,8 @@ class TaskDetailViewController: UIViewController {
         }
         priorityControl.selectedSegmentIndex = TaskPriority.allPriorities.firstIndex(of: priority)!
         notesTextView.text = task?.notes
+		
+		notesTextView.font = AppearanceHelper.homoarakFont(with: .body, pointSize: 25)
     }
     
     // MARK: Properties

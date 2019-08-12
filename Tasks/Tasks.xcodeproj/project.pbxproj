@@ -16,6 +16,8 @@
 		9D4408E3211FF752005E2116 /* TasksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4408E2211FF752005E2116 /* TasksTableViewController.swift */; };
 		9D4408E5211FF7CC005E2116 /* TaskDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4408E4211FF7CC005E2116 /* TaskDetailViewController.swift */; };
 		9D70DFF921248F8E006D4DF5 /* TaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D70DFF821248F8E006D4DF5 /* TaskController.swift */; };
+		B516CC3E2301FB6400A790A2 /* AppearanceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B516CC3D2301FB6400A790A2 /* AppearanceHelper.swift */; };
+		B5722D9D2302005E003A9780 /* HOMOARAK.TTF in Resources */ = {isa = PBXBuildFile; fileRef = B5722D9C2302005E003A9780 /* HOMOARAK.TTF */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		9D4408E2211FF752005E2116 /* TasksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTableViewController.swift; sourceTree = "<group>"; };
 		9D4408E4211FF7CC005E2116 /* TaskDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailViewController.swift; sourceTree = "<group>"; };
 		9D70DFF821248F8E006D4DF5 /* TaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskController.swift; sourceTree = "<group>"; };
+		B516CC3D2301FB6400A790A2 /* AppearanceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceHelper.swift; sourceTree = "<group>"; };
+		B5722D9C2302005E003A9780 /* HOMOARAK.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = HOMOARAK.TTF; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +50,7 @@
 		4B13589322091C55009F6A12 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				B516CC3D2301FB6400A790A2 /* AppearanceHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -87,6 +92,7 @@
 				9D4408CF211FF434005E2116 /* LaunchScreen.storyboard */,
 				9D4408D2211FF434005E2116 /* Info.plist */,
 				46179D3B229D8257009CE2C4 /* Architex.ttf */,
+				B5722D9C2302005E003A9780 /* HOMOARAK.TTF */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -177,6 +183,7 @@
 			files = (
 				46179D3C229D8257009CE2C4 /* Architex.ttf in Resources */,
 				9D4408D1211FF434005E2116 /* LaunchScreen.storyboard in Resources */,
+				B5722D9D2302005E003A9780 /* HOMOARAK.TTF in Resources */,
 				9D4408CE211FF434005E2116 /* Assets.xcassets in Resources */,
 				9D4408CC211FF431005E2116 /* Main.storyboard in Resources */,
 			);
@@ -194,6 +201,7 @@
 				9D4408E3211FF752005E2116 /* TasksTableViewController.swift in Sources */,
 				9D4408C7211FF431005E2116 /* AppDelegate.swift in Sources */,
 				9D4408DF211FF67E005E2116 /* Task.swift in Sources */,
+				B516CC3E2301FB6400A790A2 /* AppearanceHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,6 +14,12 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
     // MARK: Properties
     
     private let taskController = TaskController()
+	
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		
+		AppearanceHelper.setupAppearance()
+	}
     
     // MARK: - Table view data source
     
