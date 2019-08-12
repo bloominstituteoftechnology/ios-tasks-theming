@@ -68,11 +68,10 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
             if let indexPath = tableView.indexPathForSelectedRow {
                 detailVC.task = taskController.tasks[indexPath.row]
             }
-            detailVC.taskController = taskController
         }
         
         if segue.identifier == "ShowCreateTask" {
-            let detailVC = segue.destination as! TaskDetailViewController
+            let detailVC = segue.destination as! AddTaskViewController
             detailVC.taskController = taskController
         }
     }
