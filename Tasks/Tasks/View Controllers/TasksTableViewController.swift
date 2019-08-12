@@ -14,6 +14,14 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
     // MARK: Properties
     
     private let taskController = TaskController()
+
+	// MARK: - Lifecycle
+
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		AppearanceHelper.setTheme()
+		tableView.tableFooterView = UIView()
+	}
     
     // MARK: - Table view data source
     
@@ -23,8 +31,8 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TaskCell", for: indexPath)
-        
-        let task = taskController.tasks[indexPath.row]
+        cell.backgroundColor = AppearanceHelper.mainBGColor
+		let task = taskController.tasks[indexPath.row]
         cell.textLabel?.text = task.name
         
         return cell
