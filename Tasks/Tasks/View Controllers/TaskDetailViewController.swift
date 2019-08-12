@@ -14,6 +14,17 @@ class TaskDetailViewController: UIViewController {
         super.viewDidLoad()
 
         updateViews()
+        setAppearance()
+    }
+    
+    func setAppearance() {
+        view.backgroundColor = AppearanceHelper.backgroundGray
+        priorityControl.tintColor = AppearanceHelper.slackRed
+        notesTextView.font = AppearanceHelper.metalMacabreFont(with: .callout, pointSize: 17)
+        nameTextField.font = AppearanceHelper.metalMacabreFont(with: .callout, pointSize: 15)
+        nameLabel.font = AppearanceHelper.metalMacabreFont(with: .callout, pointSize: 25)
+        priorityLabel.font = AppearanceHelper.metalMacabreFont(with: .callout, pointSize: 25)
+        notesLabel.font = AppearanceHelper.metalMacabreFont(with: .callout, pointSize: 25)
     }
 
     @IBAction func save(_ sender: Any) {
@@ -63,4 +74,7 @@ class TaskDetailViewController: UIViewController {
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var priorityControl: UISegmentedControl!
     @IBOutlet var notesTextView: UITextView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var priorityLabel: UILabel!
+    @IBOutlet weak var notesLabel: UILabel!
 }
