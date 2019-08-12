@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		46179D3C229D8257009CE2C4 /* Architex.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46179D3B229D8257009CE2C4 /* Architex.ttf */; };
+		759FD124230214A000201071 /* AppearanceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759FD123230214A000201071 /* AppearanceHelper.swift */; };
+		759FD127230220B200201071 /* good times rg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 759FD126230220B200201071 /* good times rg.ttf */; };
+		759FD128230220B700201071 /* beyond_wonderland.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 759FD12523021AFB00201071 /* beyond_wonderland.ttf */; };
 		9D4408C7211FF431005E2116 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4408C6211FF431005E2116 /* AppDelegate.swift */; };
 		9D4408CC211FF431005E2116 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D4408CA211FF431005E2116 /* Main.storyboard */; };
 		9D4408CE211FF434005E2116 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D4408CD211FF434005E2116 /* Assets.xcassets */; };
@@ -20,6 +23,9 @@
 
 /* Begin PBXFileReference section */
 		46179D3B229D8257009CE2C4 /* Architex.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Architex.ttf; sourceTree = "<group>"; };
+		759FD123230214A000201071 /* AppearanceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceHelper.swift; sourceTree = "<group>"; };
+		759FD12523021AFB00201071 /* beyond_wonderland.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = beyond_wonderland.ttf; sourceTree = "<group>"; };
+		759FD126230220B200201071 /* good times rg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "good times rg.ttf"; sourceTree = "<group>"; };
 		9D4408C3211FF431005E2116 /* Tasks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tasks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D4408C6211FF431005E2116 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D4408CB211FF431005E2116 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -43,11 +49,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4B13589322091C55009F6A12 /* Helpers */ = {
+		759FD1222302149200201071 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				759FD123230214A000201071 /* AppearanceHelper.swift */,
 			);
-			path = Helpers;
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		9D4408BA211FF430005E2116 = {
@@ -69,10 +76,10 @@
 		9D4408C5211FF431005E2116 /* Tasks */ = {
 			isa = PBXGroup;
 			children = (
+				759FD1222302149200201071 /* Helper */,
 				9D4408D9211FF4EA005E2116 /* Model */,
 				9D4408E6211FF988005E2116 /* Model Controllers */,
 				9D4408DA211FF50D005E2116 /* View Controllers */,
-				4B13589322091C55009F6A12 /* Helpers */,
 				9D4408D8211FF4BA005E2116 /* Resources */,
 			);
 			path = Tasks;
@@ -84,9 +91,11 @@
 				9D4408C6211FF431005E2116 /* AppDelegate.swift */,
 				9D4408CA211FF431005E2116 /* Main.storyboard */,
 				9D4408CD211FF434005E2116 /* Assets.xcassets */,
+				759FD12523021AFB00201071 /* beyond_wonderland.ttf */,
 				9D4408CF211FF434005E2116 /* LaunchScreen.storyboard */,
 				9D4408D2211FF434005E2116 /* Info.plist */,
 				46179D3B229D8257009CE2C4 /* Architex.ttf */,
+				759FD126230220B200201071 /* good times rg.ttf */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -175,8 +184,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				759FD127230220B200201071 /* good times rg.ttf in Resources */,
 				46179D3C229D8257009CE2C4 /* Architex.ttf in Resources */,
 				9D4408D1211FF434005E2116 /* LaunchScreen.storyboard in Resources */,
+				759FD128230220B700201071 /* beyond_wonderland.ttf in Resources */,
 				9D4408CE211FF434005E2116 /* Assets.xcassets in Resources */,
 				9D4408CC211FF431005E2116 /* Main.storyboard in Resources */,
 			);
@@ -194,6 +205,7 @@
 				9D4408E3211FF752005E2116 /* TasksTableViewController.swift in Sources */,
 				9D4408C7211FF431005E2116 /* AppDelegate.swift in Sources */,
 				9D4408DF211FF67E005E2116 /* Task.swift in Sources */,
+				759FD124230214A000201071 /* AppearanceHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

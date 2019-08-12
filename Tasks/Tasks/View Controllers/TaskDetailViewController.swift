@@ -13,6 +13,8 @@ class TaskDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupViews()
+        
         updateViews()
     }
 
@@ -33,6 +35,18 @@ class TaskDetailViewController: UIViewController {
         }
 
         navigationController?.popViewController(animated: true)
+    }
+    
+    private func setupViews() {
+        view.backgroundColor = .darkGray
+        notesTextView.backgroundColor = .lightGray
+        notesTextView.layer.cornerRadius = 20
+        notesTextView.textColor = .white
+        notesTextView.font = AppearanceHelper.goodTimesFont(with: .body, pointSize: 20)
+        
+        nameTextField.backgroundColor = .lightGray
+        nameTextField.textColor = .white
+        
     }
     
     private func updateViews() {

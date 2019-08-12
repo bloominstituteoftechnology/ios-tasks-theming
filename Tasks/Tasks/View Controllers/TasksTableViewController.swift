@@ -27,6 +27,9 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         let task = taskController.tasks[indexPath.row]
         cell.textLabel?.text = task.name
         
+        cell.textLabel?.font = AppearanceHelper.beyondWonderlandFont(with: .body, pointSize: 30)
+        cell.textLabel?.backgroundColor = .clear
+        
         return cell
     }
     
