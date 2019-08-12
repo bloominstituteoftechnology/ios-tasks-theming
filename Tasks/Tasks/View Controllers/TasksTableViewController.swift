@@ -11,6 +11,7 @@ import CoreData
 
 class TasksTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
+    @IBOutlet weak var addButton: UIBarButtonItem!
     // MARK: Properties
     
     private let taskController = TaskController()
@@ -26,6 +27,8 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         
         let task = taskController.tasks[indexPath.row]
         cell.textLabel?.text = task.name
+        cell.textLabel?.font = AppearanceHelper.fendersFont(with: .caption1, pointSize: 25)
+        cell.textLabel?.textColor = AppearanceHelper.blueTextColor
         
         return cell
     }
@@ -38,6 +41,8 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
     }
+    
+   
     
     // MARK: - Navigation
     

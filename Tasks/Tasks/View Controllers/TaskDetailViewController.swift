@@ -12,7 +12,7 @@ class TaskDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setUpAppearance()
         updateViews()
     }
 
@@ -50,6 +50,15 @@ class TaskDetailViewController: UIViewController {
         notesTextView.text = task?.notes
     }
     
+    private func setUpAppearance() {
+        AppearanceHelper.styleTextView(textView: notesTextView)
+        AppearanceHelper.styleLabel(label: nameLabel)
+        AppearanceHelper.styleLabel(label: priorityLabel)
+        AppearanceHelper.styleLabel(label: notesLabel)
+        
+        
+    }
+    
     // MARK: Properties
     
     var task: Task? {
@@ -63,4 +72,7 @@ class TaskDetailViewController: UIViewController {
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var priorityControl: UISegmentedControl!
     @IBOutlet var notesTextView: UITextView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var priorityLabel: UILabel!
+    @IBOutlet weak var notesLabel: UILabel!
 }

@@ -6,7 +6,7 @@
 	<false/>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Architex.ttf</string>
+		<string>SFChromeFenders.ttf</string>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
