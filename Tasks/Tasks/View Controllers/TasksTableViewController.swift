@@ -11,12 +11,26 @@ import CoreData
 
 class TasksTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
+    //
+    //MARK: - IBOutlets & Properties
+    //
+    
     @IBOutlet weak var addButton: UIBarButtonItem!
-    // MARK: Properties
     
     private let taskController = TaskController()
     
+    //
+    //MARK: - View LifeCycle
+    //
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        tableView.reloadData()
+    }
+    
+    //
     // MARK: - Table view data source
+    //
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return taskController.tasks.count
@@ -43,8 +57,9 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
     }
     
    
-    
+    //
     // MARK: - Navigation
+    //
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

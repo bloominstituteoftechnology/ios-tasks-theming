@@ -33,6 +33,7 @@ enum AppearanceHelper {
         UISegmentedControl.appearance().tintColor = blueTextColor
         UISegmentedControl.appearance().setTitleTextAttributes([.font: fendersFont(with: .caption1, pointSize: 20)], for: .normal)
         UITextView.appearance().tintColor = blueTextColor
+        UITextField.appearance().font = fendersFont(with: .caption1, pointSize: 20)
         UITextField.appearance().tintColor = blueTextColor
         UITableView.appearance().backgroundColor = backgroundPowder
     }
