@@ -17,6 +17,7 @@
 		9D4408E5211FF7CC005E2116 /* TaskDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4408E4211FF7CC005E2116 /* TaskDetailViewController.swift */; };
 		9D70DFF921248F8E006D4DF5 /* TaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D70DFF821248F8E006D4DF5 /* TaskController.swift */; };
 		F6568A5923036B9E00F89F16 /* ApperanceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6568A5823036B9E00F89F16 /* ApperanceHelper.swift */; };
+		F6568A662303806C00F89F16 /* Courier Prime Code.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6568A5A23036BEC00F89F16 /* Courier Prime Code.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -181,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46179D3C229D8257009CE2C4 /* Architex.ttf in Resources */,
+				F6568A662303806C00F89F16 /* Courier Prime Code.ttf in Resources */,
 				9D4408D1211FF434005E2116 /* LaunchScreen.storyboard in Resources */,
 				9D4408CE211FF434005E2116 /* Assets.xcassets in Resources */,
 				9D4408CC211FF431005E2116 /* Main.storyboard in Resources */,
