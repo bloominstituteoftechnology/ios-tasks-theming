@@ -15,11 +15,14 @@ class TaskDetailViewController: UIViewController {
 	override func viewDidLoad() {
         super.viewDidLoad()
 		
-		let font = UIFont(name: "Halo", size: 65)
+		guard let font = UIFont(name: "Halo", size: 65) else { return }
+		
+		let scaledFont = UIFontMetrics(forTextStyle: .title1).scaledFont(for: font)
 		
 		textView.font = font
+		textView.adjustsFontForContentSizeCategory = true
+		
 
-        updateViews()
     }
 
     @IBAction func save(_ sender: Any) {
