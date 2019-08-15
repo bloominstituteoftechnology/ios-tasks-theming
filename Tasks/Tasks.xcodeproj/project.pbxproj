@@ -16,6 +16,7 @@
 		9D4408E3211FF752005E2116 /* TasksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4408E2211FF752005E2116 /* TasksTableViewController.swift */; };
 		9D4408E5211FF7CC005E2116 /* TaskDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4408E4211FF7CC005E2116 /* TaskDetailViewController.swift */; };
 		9D70DFF921248F8E006D4DF5 /* TaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D70DFF821248F8E006D4DF5 /* TaskController.swift */; };
+		F5E9E1772305302E003E947E /* Halo3.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5E9E1762305302E003E947E /* Halo3.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		9D4408E2211FF752005E2116 /* TasksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTableViewController.swift; sourceTree = "<group>"; };
 		9D4408E4211FF7CC005E2116 /* TaskDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailViewController.swift; sourceTree = "<group>"; };
 		9D70DFF821248F8E006D4DF5 /* TaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskController.swift; sourceTree = "<group>"; };
+		F5E9E1762305302E003E947E /* Halo3.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Halo3.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				9D4408CF211FF434005E2116 /* LaunchScreen.storyboard */,
 				9D4408D2211FF434005E2116 /* Info.plist */,
 				46179D3B229D8257009CE2C4 /* Architex.ttf */,
+				F5E9E1762305302E003E947E /* Halo3.ttf */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46179D3C229D8257009CE2C4 /* Architex.ttf in Resources */,
+				F5E9E1772305302E003E947E /* Halo3.ttf in Resources */,
 				9D4408D1211FF434005E2116 /* LaunchScreen.storyboard in Resources */,
 				9D4408CE211FF434005E2116 /* Assets.xcassets in Resources */,
 				9D4408CC211FF431005E2116 /* Main.storyboard in Resources */,

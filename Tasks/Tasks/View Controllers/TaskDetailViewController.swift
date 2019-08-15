@@ -10,10 +10,19 @@ import UIKit
 
 class TaskDetailViewController: UIViewController {
 
-    override func viewDidLoad() {
+	@IBOutlet weak var textView: UITextView!
+	
+	override func viewDidLoad() {
         super.viewDidLoad()
+		
+		guard let font = UIFont(name: "Halo", size: 65) else { return }
+		
+		let scaledFont = UIFontMetrics(forTextStyle: .title1).scaledFont(for: font)
+		
+		textView.font = font
+		textView.adjustsFontForContentSizeCategory = true
+		
 
-        updateViews()
     }
 
     @IBAction func save(_ sender: Any) {
