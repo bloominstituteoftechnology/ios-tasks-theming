@@ -11,6 +11,18 @@ import CoreData
 
 class TasksTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
+    let layer = CAGradientLayer()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        setUI()
+        tableView.reloadData()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
     // MARK: Properties
     
     private let taskController = TaskController()
@@ -23,6 +35,9 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TaskCell", for: indexPath)
+        
+        cell.backgroundColor = .cellBackground
+        cell.textLabel?.textColor = .text
         
         let task = taskController.tasks[indexPath.row]
         cell.textLabel?.text = task.name
@@ -37,6 +52,25 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
             taskController.delete(task)
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
+    }
+    
+    func setUI() {
+        navigationController?.navigationBar.barTintColor = .navBar
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.text]
+        navigationController?.navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor.text]
+        
+        var height: CGFloat
+        
+        if tableView.contentSize.height > view.bounds.height {
+            height = tableView.contentSize.height
+        } else {
+            height = view.bounds.height
+        }
+        
+        layer.frame = CGRect(x: view.bounds.minX, y: view.bounds.minY, width: view.bounds.width, height: height + 300)
+        layer.colors = [UIColor.navBar.cgColor,
+                        UIColor(red:0.18, green:0.18, blue:0.18, alpha:1.00).cgColor]
+        tableView.layer.insertSublayer(layer, at: 0)
     }
     
     // MARK: - Navigation
