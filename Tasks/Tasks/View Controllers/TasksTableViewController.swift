@@ -11,11 +11,26 @@ import CoreData
 
 class TasksTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
-    // MARK: Properties
+    //
+    //MARK: - IBOutlets & Properties
+    //
+    
+    @IBOutlet weak var addButton: UIBarButtonItem!
     
     private let taskController = TaskController()
     
+    //
+    //MARK: - View LifeCycle
+    //
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        tableView.reloadData()
+    }
+    
+    //
     // MARK: - Table view data source
+    //
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return taskController.tasks.count
@@ -26,6 +41,8 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         
         let task = taskController.tasks[indexPath.row]
         cell.textLabel?.text = task.name
+        cell.textLabel?.font = AppearanceHelper.fendersFont(with: .caption1, pointSize: 25)
+        cell.textLabel?.textColor = AppearanceHelper.blueTextColor
         
         return cell
     }
@@ -39,7 +56,10 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
         }
     }
     
+   
+    //
     // MARK: - Navigation
+    //
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -48,11 +68,10 @@ class TasksTableViewController: UITableViewController, NSFetchedResultsControlle
             if let indexPath = tableView.indexPathForSelectedRow {
                 detailVC.task = taskController.tasks[indexPath.row]
             }
-            detailVC.taskController = taskController
         }
         
         if segue.identifier == "ShowCreateTask" {
-            let detailVC = segue.destination as! TaskDetailViewController
+            let detailVC = segue.destination as! AddTaskViewController
             detailVC.taskController = taskController
         }
     }
